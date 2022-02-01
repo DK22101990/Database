@@ -1,0 +1,24 @@
+C:\Users\kamleshk\source\repos\CFS\4. Infrastructure\CFS.Model\bin\Debug\net5.0\CFS.Model.deps.json
+C:\Users\kamleshk\source\repos\CFS\4. Infrastructure\CFS.Model\bin\Debug\net5.0\CFS.Model.dll
+C:\Users\kamleshk\source\repos\CFS\4. Infrastructure\CFS.Model\bin\Debug\net5.0\ref\CFS.Model.dll
+C:\Users\kamleshk\source\repos\CFS\4. Infrastructure\CFS.Model\bin\Debug\net5.0\CFS.Model.pdb
+C:\Users\kamleshk\source\repos\CFS\4. Infrastructure\CFS.Model\obj\Debug\net5.0\CFS.Model.csproj.AssemblyReference.cache
+C:\Users\kamleshk\source\repos\CFS\4. Infrastructure\CFS.Model\obj\Debug\net5.0\CFS.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kamleshk\source\repos\CFS\4. Infrastructure\CFS.Model\obj\Debug\net5.0\CFS.Model.AssemblyInfoInputs.cache
+C:\Users\kamleshk\source\repos\CFS\4. Infrastructure\CFS.Model\obj\Debug\net5.0\CFS.Model.AssemblyInfo.cs
+C:\Users\kamleshk\source\repos\CFS\4. Infrastructure\CFS.Model\obj\Debug\net5.0\CFS.Model.csproj.CoreCompileInputs.cache
+C:\Users\kamleshk\source\repos\CFS\4. Infrastructure\CFS.Model\obj\Debug\net5.0\CFS.Model.dll
+C:\Users\kamleshk\source\repos\CFS\4. Infrastructure\CFS.Model\obj\Debug\net5.0\ref\CFS.Model.dll
+C:\Users\kamleshk\source\repos\CFS\4. Infrastructure\CFS.Model\obj\Debug\net5.0\CFS.Model.pdb
+E:\Manoj Data\CFS\4. Infrastructure\CFS.Model\bin\Debug\net5.0\CFS.Model.deps.json
+E:\Manoj Data\CFS\4. Infrastructure\CFS.Model\bin\Debug\net5.0\CFS.Model.dll
+E:\Manoj Data\CFS\4. Infrastructure\CFS.Model\bin\Debug\net5.0\ref\CFS.Model.dll
+E:\Manoj Data\CFS\4. Infrastructure\CFS.Model\bin\Debug\net5.0\CFS.Model.pdb
+E:\Manoj Data\CFS\4. Infrastructure\CFS.Model\obj\Debug\net5.0\CFS.Model.csproj.AssemblyReference.cache
+E:\Manoj Data\CFS\4. Infrastructure\CFS.Model\obj\Debug\net5.0\CFS.Model.GeneratedMSBuildEditorConfig.editorconfig
+E:\Manoj Data\CFS\4. Infrastructure\CFS.Model\obj\Debug\net5.0\CFS.Model.AssemblyInfoInputs.cache
+E:\Manoj Data\CFS\4. Infrastructure\CFS.Model\obj\Debug\net5.0\CFS.Model.AssemblyInfo.cs
+E:\Manoj Data\CFS\4. Infrastructure\CFS.Model\obj\Debug\net5.0\CFS.Model.csproj.CoreCompileInputs.cache
+E:\Manoj Data\CFS\4. Infrastructure\CFS.Model\obj\Debug\net5.0\CFS.Model.dll
+E:\Manoj Data\CFS\4. Infrastructure\CFS.Model\obj\Debug\net5.0\ref\CFS.Model.dll
+E:\Manoj Data\CFS\4. Infrastructure\CFS.Model\obj\Debug\net5.0\CFS.Model.pdb

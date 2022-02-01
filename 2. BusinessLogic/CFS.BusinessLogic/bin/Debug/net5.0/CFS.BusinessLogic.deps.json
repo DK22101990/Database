@@ -1,0 +1,47 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "CFS.BusinessLogic/1.0.0": {
+        "dependencies": {
+          "CFS.Data": "1.0.0",
+          "CFS.Model": "1.0.0"
+        },
+        "runtime": {
+          "CFS.BusinessLogic.dll": {}
+        }
+      },
+      "CFS.Data/1.0.0": {
+        "runtime": {
+          "CFS.Data.dll": {}
+        }
+      },
+      "CFS.Model/1.0.0": {
+        "runtime": {
+          "CFS.Model.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CFS.BusinessLogic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CFS.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CFS.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

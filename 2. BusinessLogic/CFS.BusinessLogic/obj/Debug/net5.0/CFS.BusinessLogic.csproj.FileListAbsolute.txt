@@ -1,0 +1,34 @@
+C:\Users\kamleshk\source\repos\CFS\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net5.0\CFS.BusinessLogic.deps.json
+C:\Users\kamleshk\source\repos\CFS\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net5.0\CFS.BusinessLogic.dll
+C:\Users\kamleshk\source\repos\CFS\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net5.0\ref\CFS.BusinessLogic.dll
+C:\Users\kamleshk\source\repos\CFS\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net5.0\CFS.BusinessLogic.pdb
+C:\Users\kamleshk\source\repos\CFS\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net5.0\CFS.Data.dll
+C:\Users\kamleshk\source\repos\CFS\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net5.0\CFS.Model.dll
+C:\Users\kamleshk\source\repos\CFS\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net5.0\CFS.Data.pdb
+C:\Users\kamleshk\source\repos\CFS\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net5.0\CFS.Model.pdb
+C:\Users\kamleshk\source\repos\CFS\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net5.0\CFS.BusinessLogic.csproj.AssemblyReference.cache
+C:\Users\kamleshk\source\repos\CFS\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net5.0\CFS.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kamleshk\source\repos\CFS\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net5.0\CFS.BusinessLogic.AssemblyInfoInputs.cache
+C:\Users\kamleshk\source\repos\CFS\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net5.0\CFS.BusinessLogic.AssemblyInfo.cs
+C:\Users\kamleshk\source\repos\CFS\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net5.0\CFS.BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\kamleshk\source\repos\CFS\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net5.0\CFS.BusinessLogic.csproj.CopyComplete
+C:\Users\kamleshk\source\repos\CFS\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net5.0\CFS.BusinessLogic.dll
+C:\Users\kamleshk\source\repos\CFS\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net5.0\ref\CFS.BusinessLogic.dll
+C:\Users\kamleshk\source\repos\CFS\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net5.0\CFS.BusinessLogic.pdb
+E:\Manoj Data\CFS\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net5.0\CFS.BusinessLogic.deps.json
+E:\Manoj Data\CFS\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net5.0\CFS.BusinessLogic.dll
+E:\Manoj Data\CFS\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net5.0\ref\CFS.BusinessLogic.dll
+E:\Manoj Data\CFS\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net5.0\CFS.BusinessLogic.pdb
+E:\Manoj Data\CFS\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net5.0\CFS.Data.dll
+E:\Manoj Data\CFS\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net5.0\CFS.Model.dll
+E:\Manoj Data\CFS\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net5.0\CFS.Data.pdb
+E:\Manoj Data\CFS\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net5.0\CFS.Model.pdb
+E:\Manoj Data\CFS\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net5.0\CFS.BusinessLogic.csproj.AssemblyReference.cache
+E:\Manoj Data\CFS\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net5.0\CFS.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+E:\Manoj Data\CFS\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net5.0\CFS.BusinessLogic.AssemblyInfoInputs.cache
+E:\Manoj Data\CFS\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net5.0\CFS.BusinessLogic.AssemblyInfo.cs
+E:\Manoj Data\CFS\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net5.0\CFS.BusinessLogic.csproj.CoreCompileInputs.cache
+E:\Manoj Data\CFS\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net5.0\CFS.BusinessLogic.csproj.CopyComplete
+E:\Manoj Data\CFS\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net5.0\CFS.BusinessLogic.dll
+E:\Manoj Data\CFS\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net5.0\ref\CFS.BusinessLogic.dll
+E:\Manoj Data\CFS\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net5.0\CFS.BusinessLogic.pdb

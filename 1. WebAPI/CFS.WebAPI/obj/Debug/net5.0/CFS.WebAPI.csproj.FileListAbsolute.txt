@@ -1,0 +1,70 @@
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\appsettings.json
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\CFS.WebAPI.exe
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\CFS.WebAPI.deps.json
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\CFS.WebAPI.runtimeconfig.json
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\CFS.WebAPI.runtimeconfig.dev.json
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\CFS.WebAPI.dll
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\ref\CFS.WebAPI.dll
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\CFS.WebAPI.pdb
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\CFS.WebAPI.csproj.AssemblyReference.cache
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\CFS.WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\CFS.WebAPI.AssemblyInfoInputs.cache
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\CFS.WebAPI.AssemblyInfo.cs
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\CFS.WebAPI.csproj.CoreCompileInputs.cache
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\CFS.WebAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\CFS.WebAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\staticwebassets\CFS.WebAPI.StaticWebAssets.Manifest.cache
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\staticwebassets\CFS.WebAPI.StaticWebAssets.xml
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\scopedcss\bundle\CFS.WebAPI.styles.css
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\CFS.WebAPI.RazorTargetAssemblyInfo.cache
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\CFS.WebAPI.csproj.CopyComplete
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\CFS.WebAPI.dll
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\ref\CFS.WebAPI.dll
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\CFS.WebAPI.pdb
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\CFS.WebAPI.genruntimeconfig.cache
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\CFS.BusinessLogic.dll
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\CFS.Data.dll
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\CFS.Model.dll
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\CFS.BusinessLogic.pdb
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\CFS.Model.pdb
+C:\Users\kamleshk\source\repos\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\CFS.Data.pdb
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\appsettings.Development.json
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\appsettings.json
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\CFS.WebAPI.exe
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\CFS.WebAPI.deps.json
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\CFS.WebAPI.runtimeconfig.json
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\CFS.WebAPI.runtimeconfig.dev.json
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\CFS.WebAPI.dll
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\ref\CFS.WebAPI.dll
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\CFS.WebAPI.pdb
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\Microsoft.OpenApi.dll
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\CFS.BusinessLogic.dll
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\CFS.Data.dll
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\CFS.Model.dll
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\CFS.BusinessLogic.pdb
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\CFS.Model.pdb
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\bin\Debug\net5.0\CFS.Data.pdb
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\CFS.WebAPI.csproj.AssemblyReference.cache
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\CFS.WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\CFS.WebAPI.AssemblyInfoInputs.cache
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\CFS.WebAPI.AssemblyInfo.cs
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\CFS.WebAPI.csproj.CoreCompileInputs.cache
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\CFS.WebAPI.MvcApplicationPartsAssemblyInfo.cs
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\CFS.WebAPI.MvcApplicationPartsAssemblyInfo.cache
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\staticwebassets\CFS.WebAPI.StaticWebAssets.Manifest.cache
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\staticwebassets\CFS.WebAPI.StaticWebAssets.xml
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\scopedcss\bundle\CFS.WebAPI.styles.css
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\CFS.WebAPI.RazorTargetAssemblyInfo.cache
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\CFS.WebAPI.csproj.CopyComplete
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\CFS.WebAPI.dll
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\ref\CFS.WebAPI.dll
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\CFS.WebAPI.pdb
+E:\Manoj Data\CFS\1. WebAPI\CFS.WebAPI\obj\Debug\net5.0\CFS.WebAPI.genruntimeconfig.cache

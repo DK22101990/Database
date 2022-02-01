@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="BusinessLogic\" />
+    <Folder Include="IBusinessLogic\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\3. DataAccess\CFS.Data\CFS.Data.csproj" />
+    <ProjectReference Include="..\..\4. Infrastructure\CFS.Model\CFS.Model.csproj" />
+  </ItemGroup>
+
+</Project>

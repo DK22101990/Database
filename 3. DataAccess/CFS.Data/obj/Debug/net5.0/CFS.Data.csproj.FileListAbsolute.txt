@@ -1,0 +1,24 @@
+C:\Users\kamleshk\source\repos\CFS\3. DataAccess\CFS.Data\bin\Debug\net5.0\CFS.Data.deps.json
+C:\Users\kamleshk\source\repos\CFS\3. DataAccess\CFS.Data\bin\Debug\net5.0\CFS.Data.dll
+C:\Users\kamleshk\source\repos\CFS\3. DataAccess\CFS.Data\bin\Debug\net5.0\ref\CFS.Data.dll
+C:\Users\kamleshk\source\repos\CFS\3. DataAccess\CFS.Data\bin\Debug\net5.0\CFS.Data.pdb
+C:\Users\kamleshk\source\repos\CFS\3. DataAccess\CFS.Data\obj\Debug\net5.0\CFS.Data.csproj.AssemblyReference.cache
+C:\Users\kamleshk\source\repos\CFS\3. DataAccess\CFS.Data\obj\Debug\net5.0\CFS.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kamleshk\source\repos\CFS\3. DataAccess\CFS.Data\obj\Debug\net5.0\CFS.Data.AssemblyInfoInputs.cache
+C:\Users\kamleshk\source\repos\CFS\3. DataAccess\CFS.Data\obj\Debug\net5.0\CFS.Data.AssemblyInfo.cs
+C:\Users\kamleshk\source\repos\CFS\3. DataAccess\CFS.Data\obj\Debug\net5.0\CFS.Data.csproj.CoreCompileInputs.cache
+C:\Users\kamleshk\source\repos\CFS\3. DataAccess\CFS.Data\obj\Debug\net5.0\CFS.Data.dll
+C:\Users\kamleshk\source\repos\CFS\3. DataAccess\CFS.Data\obj\Debug\net5.0\ref\CFS.Data.dll
+C:\Users\kamleshk\source\repos\CFS\3. DataAccess\CFS.Data\obj\Debug\net5.0\CFS.Data.pdb
+E:\Manoj Data\CFS\3. DataAccess\CFS.Data\bin\Debug\net5.0\CFS.Data.deps.json
+E:\Manoj Data\CFS\3. DataAccess\CFS.Data\bin\Debug\net5.0\CFS.Data.dll
+E:\Manoj Data\CFS\3. DataAccess\CFS.Data\bin\Debug\net5.0\ref\CFS.Data.dll
+E:\Manoj Data\CFS\3. DataAccess\CFS.Data\bin\Debug\net5.0\CFS.Data.pdb
+E:\Manoj Data\CFS\3. DataAccess\CFS.Data\obj\Debug\net5.0\CFS.Data.csproj.AssemblyReference.cache
+E:\Manoj Data\CFS\3. DataAccess\CFS.Data\obj\Debug\net5.0\CFS.Data.GeneratedMSBuildEditorConfig.editorconfig
+E:\Manoj Data\CFS\3. DataAccess\CFS.Data\obj\Debug\net5.0\CFS.Data.AssemblyInfoInputs.cache
+E:\Manoj Data\CFS\3. DataAccess\CFS.Data\obj\Debug\net5.0\CFS.Data.AssemblyInfo.cs
+E:\Manoj Data\CFS\3. DataAccess\CFS.Data\obj\Debug\net5.0\CFS.Data.csproj.CoreCompileInputs.cache
+E:\Manoj Data\CFS\3. DataAccess\CFS.Data\obj\Debug\net5.0\CFS.Data.dll
+E:\Manoj Data\CFS\3. DataAccess\CFS.Data\obj\Debug\net5.0\ref\CFS.Data.dll
+E:\Manoj Data\CFS\3. DataAccess\CFS.Data\obj\Debug\net5.0\CFS.Data.pdb
