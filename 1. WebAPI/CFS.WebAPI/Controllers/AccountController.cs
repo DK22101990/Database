@@ -139,17 +139,17 @@ namespace CFS.WebAPI.Controllers
             return await _iAccountLogic.GetStageList(ProjectId, ComplianceTypeId);
         }
 
-        /// <summary>
-        /// Insert Kick Start Response 
-        /// </summary>
-        /// <param name="kickStartResponse"></param>
-        /// <returns></returns>
-        [Route("InsertProjectKickStartQuestion")]
-        [HttpPost]
-        public async Task InsertProjectKickStartQuestion([FromBody] InsertQuestion kickStartResponse)
-        {
-            await _iAccountLogic.InsertProjectKickStartQuestion(kickStartResponse);
-        }
+        ///// <summary>
+        ///// Insert Kick Start Response 
+        ///// </summary>
+        ///// <param name="kickStartResponse"></param>
+        ///// <returns></returns>
+        //[Route("InsertProjectKickStartQuestion")]
+        //[HttpPost]
+        //public async Task InsertProjectKickStartQuestion([FromBody] InsertQuestion kickStartResponse)
+        //{
+        //    await _iAccountLogic.InsertProjectKickStartQuestion(kickStartResponse);
+        //}
 
         /// <summary>
         /// Insert SOW Start Question 
