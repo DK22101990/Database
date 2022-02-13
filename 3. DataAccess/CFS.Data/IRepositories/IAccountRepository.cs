@@ -59,6 +59,13 @@ namespace CFS.Data.IRepositories
         Task<List<SelectList>> GetMasterList(string Entity);
 
         /// <summary>
+        /// Add Artifact
+        /// </summary>
+        /// <param name="artefact"></param>
+        /// <returns></returns>
+        Task<Artefact> AddArtifactAsync(Artefact artefact);
+
+        /// <summary>
         /// Get Project KickStart Questions
         /// </summary>
         /// <param name="ComplianceTypeId"></param>

@@ -2,12 +2,18 @@
 using CFS.BusinessLogic.IBusinessLogic;
 using CFS.Data.Domains;
 using CFS.Data.IRepositories;
+using CFS.Model.Helpers;
 using CFS.Model.Models;
+using component.helper;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static CFS.Model.Enums.Enumeration;
 
 namespace CFS.BusinessLogic.BusinessLogic
 {
@@ -16,13 +22,17 @@ namespace CFS.BusinessLogic.BusinessLogic
         #region Variables
 
         private readonly IAccountRepository _iAccountRepository;
+        private readonly IConfiguration _configuration;
+        private readonly IHostingEnvironment _hostingEnvironment;
 
         #endregion Variables
 
         #region Constructor
-        public AccountLogic(IAccountRepository iAccountRepository)
+        public AccountLogic(IAccountRepository iAccountRepository, IConfiguration configuration, IHostingEnvironment hostingEnvironment)
         {
             _iAccountRepository = iAccountRepository;
+            _configuration = configuration;
+            _hostingEnvironment = hostingEnvironment;
         }
 
         #endregion Constructor
@@ -184,6 +194,48 @@ namespace CFS.BusinessLogic.BusinessLogic
 
             IMapper mapper = config.CreateMapper();
             return mapper.Map<List<SelectListViewModel>>(await _iAccountRepository.GetMasterList(Entity));
+        }
+
+        /// <summary>
+        /// Upload Artificate Document
+        /// </summary>        
+        /// <returns></returns>
+        public async Task<ReturnResponseModel<Artefact>> UploadArtificateDocument(FileUploadModel request)
+        {
+            ReturnResponseModel<Artefact> result = new ReturnResponseModel<Artefact> { Status = false };
+            string uploadPath = _configuration["FilePath:BulkUploadPath"];
+            List<string> allowedExtensions = ((FileExtensions[])Enum.GetValues(typeof(FileExtensions))).Select(y => y.ToString().ToLower()).ToList();             
+            if (allowedExtensions.Contains(request.FileName.Substring(request.FileName.IndexOf(".") + 1).ToLower()))
+            {
+                Guid obj = Guid.NewGuid();
+                string extension = System.IO.Path.GetExtension(request.FileName);
+                string filepath = Path.Combine(_hostingEnvironment.WebRootPath, uploadPath, request.QuestionId.ToString());
+                request.FileName = request.FileName.Replace(" ", "");
+                string finalpath = FileHelper.GetFinalFilePath(filepath, obj.ToString() + "." + extension);                
+                if (FileHelper.FileSizeInMb(finalpath) <= 5)
+                {
+                    Byte[] fileDataByteArray = Convert.FromBase64String(request.File);
+                    System.IO.File.WriteAllBytes(finalpath, fileDataByteArray);
+                    var objArtifact = await _iAccountRepository.AddArtifactAsync(new Artefact {DisplayName=request.FileName,
+                        FileName=obj.ToString() + extension,
+                        FilePath= filepath,
+                        FileSize=request.FileLength,
+                        IsActive=1,
+                        LastModifiedOn=DateTime.UtcNow,
+                        ModifiedById=4
+                    });
+                    result.Status = true;
+                    result.ResponseObject = objArtifact;
+                    result.Message = string.Format(ApplicationMessage.ArtifactUploadedSuccessfully);
+                }
+                else
+                    result.Message = string.Format(ApplicationMessage.FileSizeValidation, "5");
+            }
+            else
+            {
+                result.Message = string.Format(ApplicationMessage.InvalidArtifact);
+            }
+            return result;
         }
         #endregion
     }

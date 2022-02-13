@@ -40,5 +40,6 @@ namespace CFS.Data.Context
 
         [NotMapped]
         public DbSet<SelectList> GetMasterList { get; set; }
+        public DbSet<Artefact> Artefacts { get; set; }
     }
 }

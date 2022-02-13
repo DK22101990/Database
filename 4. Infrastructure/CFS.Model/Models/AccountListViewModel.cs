@@ -160,4 +160,14 @@ namespace CFS.Model.Models
     //    public int ArtefactId { get; set; }
     //}
     //#endregion
+
+    #region
+    public class FileUploadModel
+    {
+        public int QuestionId { get; set; }
+        public string File { get; set; }
+        public string FileName { get; set; }
+        public string FileLength { get; set; }
+    }
+    #endregion
 }

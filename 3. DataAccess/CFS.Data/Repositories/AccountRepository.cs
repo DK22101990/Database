@@ -180,6 +180,17 @@ namespace CFS.Data.Repositories
             return await Context.GetMasterList.FromSqlRaw<SelectList>(commandText).ToListAsync();
         }
 
+      /// <summary>
+      /// Add Artifact
+      /// </summary>
+      /// <param name="artefact"></param>
+      /// <returns></returns>
+        public async Task<Artefact> AddArtifactAsync(Artefact artefact)
+        {
+            Context.Artefacts.Add(artefact);
+            await Context.SaveChangesAsync();
+            return artefact;
+        }
         #endregion
     }
 }

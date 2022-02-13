@@ -1,6 +1,8 @@
 ﻿using CFS.BusinessLogic.IBusinessLogic;
 using CFS.Model.Models;
+using CFS.Data.Domains;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -15,7 +17,7 @@ namespace CFS.WebAPI.Controllers
         #region Variables
 
         private readonly IAccountLogic _iAccountLogic;
-
+        private readonly IConfiguration _configuration;
         #endregion Variables
 
         #region Constructor
@@ -139,6 +141,18 @@ namespace CFS.WebAPI.Controllers
             return await _iAccountLogic.GetStageList(ProjectId, ComplianceTypeId);
         }
 
+        /// <summary>
+        /// Bulk upload Data
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        [HttpPost, DisableRequestSizeLimit]
+        [Route("UploadArtificateDocument")]
+        public async Task<ReturnResponseModel<Artefact>> UploadArtificateDocument([FromBody] FileUploadModel request)
+        {
+            return await _iAccountLogic.UploadArtificateDocument(request);
+          
+        }
         ///// <summary>
         ///// Insert Kick Start Response 
         ///// </summary>
@@ -175,17 +189,17 @@ namespace CFS.WebAPI.Controllers
             await _iAccountLogic.InsertSprintKickStartQuestion(SprintQuestion);
         }
 
-        ///// <summary>
-        ///// Get Master Select List
-        ///// </summary>
-        ///// <param name="Entity"></param>
-        ///// <returns></returns>
-        //[Route("SelectList")]
-        //[HttpGet]
-        //public async Task<List<SelectListViewModel>> GetMasterList(string Entity)
-        //{
-        //    return await _iAccountLogic.GetMasterList(Entity);
-        //}
+        /// <summary>
+        /// Get Master Select List
+        /// </summary>
+        /// <param name="Entity"></param>
+        /// <returns></returns>
+        [Route("SelectList")]
+        [HttpGet]
+        public async Task<List<SelectListViewModel>> GetMasterList(string Entity)
+        {
+            return await _iAccountLogic.GetMasterList(Entity);
+        }
 
         #endregion
     }
