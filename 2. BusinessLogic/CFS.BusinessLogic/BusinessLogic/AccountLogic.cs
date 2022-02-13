@@ -200,18 +200,18 @@ namespace CFS.BusinessLogic.BusinessLogic
         /// Upload Artificate Document
         /// </summary>        
         /// <returns></returns>
-        public async Task<ReturnResponseModel<Artefact>> UploadArtificateDocument(FileUploadModel request)
+        public async Task<ReturnResponseModel<ArtifactViewModel>> UploadArtificateDocument(FileUploadModel request)
         {
-            ReturnResponseModel<Artefact> result = new ReturnResponseModel<Artefact> { Status = false };
-            string uploadPath = _configuration["FilePath:BulkUploadPath"];
+            ReturnResponseModel<ArtifactViewModel> result = new ReturnResponseModel<ArtifactViewModel> { Status = false };
+            string uploadPath = _configuration["FilePath:DocUploadPath"];
             List<string> allowedExtensions = ((FileExtensions[])Enum.GetValues(typeof(FileExtensions))).Select(y => y.ToString().ToLower()).ToList();             
             if (allowedExtensions.Contains(request.FileName.Substring(request.FileName.IndexOf(".") + 1).ToLower()))
             {
                 Guid obj = Guid.NewGuid();
                 string extension = System.IO.Path.GetExtension(request.FileName);
-                string filepath = Path.Combine(_hostingEnvironment.WebRootPath, uploadPath, request.QuestionId.ToString());
+                string filepath = Path.Combine(_hostingEnvironment.ContentRootPath, uploadPath, request.QuestionId.ToString());
                 request.FileName = request.FileName.Replace(" ", "");
-                string finalpath = FileHelper.GetFinalFilePath(filepath, obj.ToString() + "." + extension);                
+                string finalpath = FileHelper.GetFinalFilePath(filepath, obj.ToString()  + extension);                
                 if (FileHelper.FileSizeInMb(finalpath) <= 5)
                 {
                     Byte[] fileDataByteArray = Convert.FromBase64String(request.File);
@@ -222,11 +222,16 @@ namespace CFS.BusinessLogic.BusinessLogic
                         FileSize=request.FileLength,
                         IsActive=1,
                         LastModifiedOn=DateTime.UtcNow,
-                        ModifiedById=4
+                        ModifiedById=402,
+                        QuestionId=request.QuestionId
                     });
-                    result.Status = true;
-                    result.ResponseObject = objArtifact;
+                    result.Status = true;                    
                     result.Message = string.Format(ApplicationMessage.ArtifactUploadedSuccessfully);
+                    var config = new MapperConfiguration(cfg => {
+                        cfg.CreateMap<SOW, SOWViewModel>();
+                    });
+                    IMapper mapper = config.CreateMapper();
+                    result.ResponseObject = mapper.Map<ArtifactViewModel>(objArtifact);
                 }
                 else
                     result.Message = string.Format(ApplicationMessage.FileSizeValidation, "5");

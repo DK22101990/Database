@@ -1,5 +1,4 @@
 ﻿using CFS.Model.Models;
-using CFS.Data.Domains;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -93,6 +92,6 @@ namespace CFS.BusinessLogic.IBusinessLogic
         /// Upload Artificate Document
         /// </summary>        
         /// <returns></returns>
-        Task<ReturnResponseModel<Artefact>> UploadArtificateDocument(FileUploadModel fileUploadModel);
+        Task<ReturnResponseModel<ArtifactViewModel>> UploadArtificateDocument(FileUploadModel fileUploadModel);
     }
 }

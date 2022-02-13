@@ -161,13 +161,25 @@ namespace CFS.Model.Models
     //}
     //#endregion
 
-    #region
+    #region FileUpload
     public class FileUploadModel
     {
         public int QuestionId { get; set; }
         public string File { get; set; }
         public string FileName { get; set; }
         public string FileLength { get; set; }
+    }
+    public class ArtifactViewModel
+    {
+        public int ArtefactId { get; set; }
+        public string FileName { get; set; }
+        public int IsActive { get; set; }
+        public DateTime LastModifiedOn { get; set; }
+        public int ModifiedById { get; set; }
+        public int QuestionId { get; set; }
+        public string FilePath { get; set; }
+        public string FileSize { get; set; }
+        public string DisplayName { get; set; }
     }
     #endregion
 }

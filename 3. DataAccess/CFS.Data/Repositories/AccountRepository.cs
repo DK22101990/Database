@@ -187,8 +187,16 @@ namespace CFS.Data.Repositories
       /// <returns></returns>
         public async Task<Artefact> AddArtifactAsync(Artefact artefact)
         {
-            Context.Artefacts.Add(artefact);
-            await Context.SaveChangesAsync();
+            try
+            {
+                Context.Artefacts.Add(artefact);
+                await Context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
             return artefact;
         }
         #endregion
