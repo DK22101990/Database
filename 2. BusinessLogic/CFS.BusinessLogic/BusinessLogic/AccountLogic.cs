@@ -107,7 +107,7 @@ namespace CFS.BusinessLogic.BusinessLogic
         {
             var config = new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<AgileQuestion, ProjectKickStartQuestionViewModel>();
+                cfg.CreateMap<ProjectKickStartQuestions, ProjectKickStartQuestionViewModel>();
             });
 
             IMapper mapper = config.CreateMapper();
