@@ -147,7 +147,7 @@ namespace CFS.WebAPI.Controllers
         /// <returns></returns>
         [HttpPost, DisableRequestSizeLimit]
         [Route("UploadArtificateDocument")]
-        public async Task<ReturnResponseModel<ArtifactViewModel>> UploadArtificateDocument([FromBody] FileUploadModel request)
+        public async Task<ReturnResponseModel> UploadArtificateDocument([FromBody] FileUploadModel request)
         {
             return await _iAccountLogic.UploadArtificateDocument(request);
           

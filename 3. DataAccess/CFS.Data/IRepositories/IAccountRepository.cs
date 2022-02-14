@@ -1,4 +1,5 @@
 ﻿using CFS.Data.Domains;
+using CFS.Data.Models;
 using CFS.Model.Models;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace CFS.Data.IRepositories
         /// Get ComplianceType List
         /// </summary>
         /// <returns></returns>
-        Task<List<ComplianceType>> GetComplianceTypeList(int RoleId);
+        Task<List<Domains.ComplianceType>> GetComplianceTypeList(int RoleId);
 
         /// <summary>
         /// Get Agile Questions
@@ -63,7 +64,7 @@ namespace CFS.Data.IRepositories
         /// </summary>
         /// <param name="artefact"></param>
         /// <returns></returns>
-        Task<Artefact> AddArtifactAsync(Artefact artefact);
+        Task<Artefact> AddArtifactAsync(Models.Artefact artefact);
 
         /// <summary>
         /// Get Project KickStart Questions
@@ -100,6 +101,6 @@ namespace CFS.Data.IRepositories
         /// <param name="ProjectId"></param>
         /// <param name="ComplianceTypeId"></param>
         /// <returns></returns>
-        Task<List<Stage>> GetStageList(int ProjectId, int ComplianceTypeId);
+        Task<List<Domains.Stage>> GetStageList(int ProjectId, int ComplianceTypeId);
     }
 }

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using CFS.Model.Models;
+using CFS.Data.Models;
 
 namespace CFS.Data.Repositories
 {
@@ -38,10 +39,10 @@ namespace CFS.Data.Repositories
         /// Get ComplianceType List
         /// </summary>
         /// <returns></returns>
-        public async Task<List<ComplianceType>> GetComplianceTypeList(int RoleId)
+        public async Task<List<Domains.ComplianceType>> GetComplianceTypeList(int RoleId)
         {
             var commandText = string.Format(StoreProcedure.ComplianceTypeList, RoleId);
-            return await Context.GetComplianceTypeList.FromSqlRaw<ComplianceType>(commandText).ToListAsync();
+            return await Context.GetComplianceTypeList.FromSqlRaw<Domains.ComplianceType>(commandText).ToListAsync();
         }
 
         /// <summary>
@@ -102,10 +103,10 @@ namespace CFS.Data.Repositories
         /// </summary>
         /// <param name="RoleId"></param>
         /// <returns></returns>
-        public async Task<List<Stage>> GetStageList(int ProjectId,int ComplianceTypeId)
+        public async Task<List<Domains.Stage>> GetStageList(int ProjectId, int ComplianceTypeId)
         {
             var commandText = string.Format(StoreProcedure.StageList, ProjectId, ComplianceTypeId);
-            return await Context.GetStageList.FromSqlRaw<Stage>(commandText).ToListAsync();
+            return await Context.GetStageList.FromSqlRaw<Domains.Stage>(commandText).ToListAsync();
         }
 
         /// <summary>
@@ -180,23 +181,16 @@ namespace CFS.Data.Repositories
             return await Context.GetMasterList.FromSqlRaw<SelectList>(commandText).ToListAsync();
         }
 
-      /// <summary>
-      /// Add Artifact
-      /// </summary>
-      /// <param name="artefact"></param>
-      /// <returns></returns>
+        /// <summary>
+        /// Add Artifact
+        /// </summary>
+        /// <param name="artefact"></param>
+        /// <returns></returns>
         public async Task<Artefact> AddArtifactAsync(Artefact artefact)
         {
-            try
-            {
-                Context.Artefacts.Add(artefact);
-                await Context.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
 
-                throw;
-            }
+            Context.Artefacts.Add(artefact);
+            await Context.SaveChangesAsync();
             return artefact;
         }
         #endregion

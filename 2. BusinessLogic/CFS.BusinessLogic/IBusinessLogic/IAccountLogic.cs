@@ -92,6 +92,6 @@ namespace CFS.BusinessLogic.IBusinessLogic
         /// Upload Artificate Document
         /// </summary>        
         /// <returns></returns>
-        Task<ReturnResponseModel<ArtifactViewModel>> UploadArtificateDocument(FileUploadModel fileUploadModel);
+        Task<ReturnResponseModel> UploadArtificateDocument(FileUploadModel fileUploadModel);
     }
 }

@@ -2,6 +2,7 @@
 using CFS.BusinessLogic.IBusinessLogic;
 using CFS.Data.Domains;
 using CFS.Data.IRepositories;
+using CFS.Data.Models;
 using CFS.Model.Helpers;
 using CFS.Model.Models;
 using component.helper;
@@ -45,7 +46,8 @@ namespace CFS.BusinessLogic.BusinessLogic
         /// <returns></returns>
         public async Task<List<AccountListViewModel>> GetAccountList()
         {
-            var config = new MapperConfiguration(cfg => {
+            var config = new MapperConfiguration(cfg =>
+            {
                 cfg.CreateMap<AccountList, AccountListViewModel>();
             });
 
@@ -59,8 +61,9 @@ namespace CFS.BusinessLogic.BusinessLogic
         /// <returns></returns>
         public async Task<List<ComplianceTypeViewModel>> GetComplianceTypeList(int RoleId)
         {
-            var config = new MapperConfiguration(cfg => {
-                cfg.CreateMap<ComplianceType, ComplianceTypeViewModel>();
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Data.Domains.ComplianceType, ComplianceTypeViewModel>();
             });
 
             IMapper mapper = config.CreateMapper();
@@ -78,7 +81,8 @@ namespace CFS.BusinessLogic.BusinessLogic
             int StageId,
             int SprintId)
         {
-            var config = new MapperConfiguration(cfg => {
+            var config = new MapperConfiguration(cfg =>
+            {
                 cfg.CreateMap<AgileQuestion, AgileQuestionViewModel>();
             });
 
@@ -101,7 +105,8 @@ namespace CFS.BusinessLogic.BusinessLogic
             int SowId,
             int StageId)
         {
-            var config = new MapperConfiguration(cfg => {
+            var config = new MapperConfiguration(cfg =>
+            {
                 cfg.CreateMap<AgileQuestion, ProjectKickStartQuestionViewModel>();
             });
 
@@ -119,7 +124,8 @@ namespace CFS.BusinessLogic.BusinessLogic
         /// <returns></returns>
         public async Task<List<ProjectViewModel>> GetProjectList(int AccountId)
         {
-            var config = new MapperConfiguration(cfg => {
+            var config = new MapperConfiguration(cfg =>
+            {
                 cfg.CreateMap<Projects, ProjectViewModel>();
             });
 
@@ -133,7 +139,8 @@ namespace CFS.BusinessLogic.BusinessLogic
         /// <returns></returns>
         public async Task<List<SOWViewModel>> GetSOWList(int ProjectId)
         {
-            var config = new MapperConfiguration(cfg => {
+            var config = new MapperConfiguration(cfg =>
+            {
                 cfg.CreateMap<SOW, SOWViewModel>();
             });
 
@@ -147,8 +154,9 @@ namespace CFS.BusinessLogic.BusinessLogic
         /// <returns></returns>
         public async Task<List<StageViewModel>> GetStageList(int ProjectId, int ComplianceTypeId)
         {
-            var config = new MapperConfiguration(cfg => {
-                cfg.CreateMap<Stage, StageViewModel>();
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Data.Domains.Stage, StageViewModel>();
             });
 
             IMapper mapper = config.CreateMapper();
@@ -188,7 +196,8 @@ namespace CFS.BusinessLogic.BusinessLogic
         /// <returns></returns>
         public async Task<List<SelectListViewModel>> GetMasterList(string Entity)
         {
-            var config = new MapperConfiguration(cfg => {
+            var config = new MapperConfiguration(cfg =>
+            {
                 cfg.CreateMap<SelectList, SelectListViewModel>();
             });
 
@@ -200,47 +209,45 @@ namespace CFS.BusinessLogic.BusinessLogic
         /// Upload Artificate Document
         /// </summary>        
         /// <returns></returns>
-        public async Task<ReturnResponseModel<ArtifactViewModel>> UploadArtificateDocument(FileUploadModel request)
+        public async Task<ReturnResponseModel> UploadArtificateDocument(FileUploadModel request)
         {
-            ReturnResponseModel<ArtifactViewModel> result = new ReturnResponseModel<ArtifactViewModel> { Status = false };
             string uploadPath = _configuration["FilePath:DocUploadPath"];
-            List<string> allowedExtensions = ((FileExtensions[])Enum.GetValues(typeof(FileExtensions))).Select(y => y.ToString().ToLower()).ToList();             
+            List<string> allowedExtensions = ((FileExtensions[])Enum.GetValues(typeof(FileExtensions))).Select(y => y.ToString().ToLower()).ToList();
             if (allowedExtensions.Contains(request.FileName.Substring(request.FileName.IndexOf(".") + 1).ToLower()))
             {
                 Guid obj = Guid.NewGuid();
                 string extension = System.IO.Path.GetExtension(request.FileName);
                 string filepath = Path.Combine(_hostingEnvironment.ContentRootPath, uploadPath, request.QuestionId.ToString());
-                request.FileName = request.FileName.Replace(" ", "");
-                string finalpath = FileHelper.GetFinalFilePath(filepath, obj.ToString()  + extension);                
-                if (FileHelper.FileSizeInMb(finalpath) <= 5)
+                //request.FileName = request.FileName.Replace(" ", "");
+                string finalpath = FileHelper.GetFinalFilePath(filepath, obj.ToString() + extension);
+
+                Byte[] fileDataByteArray = Convert.FromBase64String(request.File);
+                if (FileHelper.FileSizeInMb(fileDataByteArray) <= 5)
                 {
-                    Byte[] fileDataByteArray = Convert.FromBase64String(request.File);
                     System.IO.File.WriteAllBytes(finalpath, fileDataByteArray);
-                    var objArtifact = await _iAccountRepository.AddArtifactAsync(new Artefact {DisplayName=request.FileName,
-                        FileName=obj.ToString() + extension,
-                        FilePath= filepath,
-                        FileSize=request.FileLength,
-                        IsActive=1,
-                        LastModifiedOn=DateTime.UtcNow,
-                        ModifiedById=402,
-                        QuestionId=request.QuestionId
+                    var objArtifact = await _iAccountRepository.AddArtifactAsync(new Artefact
+                    {
+                        DisplayName = request.FileName,
+                        FileName = obj.ToString() + extension,
+                        FilePath = filepath,
+                        FileSize = request.FileLength,
+                        IsActive = 1,
+                        LastModifiedOn = DateTime.UtcNow,
+                        ModifiedById = 402,
+                        QuestionId = request.QuestionId
                     });
-                    result.Status = true;                    
-                    result.Message = string.Format(ApplicationMessage.ArtifactUploadedSuccessfully);
-                    var config = new MapperConfiguration(cfg => {
-                        cfg.CreateMap<SOW, SOWViewModel>();
-                    });
-                    IMapper mapper = config.CreateMapper();
-                    result.ResponseObject = mapper.Map<ArtifactViewModel>(objArtifact);
+
+                    return new ReturnResponseModel
+                    {
+                        Status = true,
+                        Message = string.Format(ApplicationMessage.ArtifactUploadedSuccessfully)
+                    };
                 }
                 else
-                    result.Message = string.Format(ApplicationMessage.FileSizeValidation, "5");
+                    return new ReturnResponseModel { Message = string.Format(ApplicationMessage.FileSizeValidation, "5") };
             }
             else
-            {
-                result.Message = string.Format(ApplicationMessage.InvalidArtifact);
-            }
-            return result;
+                return new ReturnResponseModel { Message = string.Format(ApplicationMessage.InvalidArtifact) };
         }
         #endregion
     }

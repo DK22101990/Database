@@ -1,33 +1,29 @@
-﻿using CFS.Data.Domains;
-using CFS.Data.Models;
+﻿using System;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace CFS.Data.Context
+#nullable disable
+
+namespace CFS.Data.Models
 {
-   public class CFSContext : DbContext
+    public partial class ComplianceProjectFinalContext : DbContext
     {
-        public CFSContext()
+        public ComplianceProjectFinalContext()
         {
         }
 
-        public CFSContext(DbContextOptions<CFSContext> options)
+        public ComplianceProjectFinalContext(DbContextOptions<ComplianceProjectFinalContext> options)
             : base(options)
         {
         }
 
         public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<AgileDatum> AgileData { get; set; }
-        public virtual DbSet<Models.Artefact> Artefacts { get; set; }
+        public virtual DbSet<Artefact> Artefacts { get; set; }
         public virtual DbSet<CommentType> CommentTypes { get; set; }
         public virtual DbSet<ComplianceProject> ComplianceProjects { get; set; }
         public virtual DbSet<ComplianceStatus> ComplianceStatuses { get; set; }
-        public virtual DbSet<Models.ComplianceType> ComplianceTypes { get; set; }
+        public virtual DbSet<ComplianceType> ComplianceTypes { get; set; }
         public virtual DbSet<Currency> Currencies { get; set; }
         public virtual DbSet<Department> Departments { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
@@ -50,31 +46,10 @@ namespace CFS.Data.Context
         public virtual DbSet<SprintDetail> SprintDetails { get; set; }
         public virtual DbSet<SprintQuestionResponse> SprintQuestionResponses { get; set; }
         public virtual DbSet<SprintScore> SprintScores { get; set; }
-        public virtual DbSet<Models.Stage> Stages { get; set; }
+        public virtual DbSet<Stage> Stages { get; set; }
         public virtual DbSet<StageComplianceType> StageComplianceTypes { get; set; }
         public virtual DbSet<StageDatum> StageData { get; set; }
         public virtual DbSet<Variance> Variances { get; set; }
-
-        [NotMapped]
-        public DbSet<AccountList> GetAccountList { get; set; }
-        [NotMapped]
-        public DbSet<Domains.ComplianceType> GetComplianceTypeList { get; set; }
-        [NotMapped]
-        public DbSet<AgileQuestion> GetAgileQuestionList { get; set; }
-        [NotMapped]
-        public DbSet<ProjectKickStartQuestions> GetProjectKickStartQuestionList { get; set; }
-
-        [NotMapped]
-        public DbSet<Projects> GetProjectList { get; set; }
-
-        [NotMapped]
-        public DbSet<SOW> GetSowList { get; set; }
-
-        [NotMapped]
-        public DbSet<Domains.Stage> GetStageList { get; set; }
-
-        [NotMapped]
-        public DbSet<SelectList> GetMasterList { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -271,7 +246,7 @@ namespace CFS.Data.Context
                     .HasConstraintName("Fk_ComplianceStatusModified");
             });
 
-            modelBuilder.Entity<Models.ComplianceType>(entity =>
+            modelBuilder.Entity<ComplianceType>(entity =>
             {
                 entity.Property(e => e.ComplianceTypeName)
                     .HasMaxLength(100)
@@ -915,7 +890,7 @@ namespace CFS.Data.Context
                     .HasConstraintName("FK__SprintSco__Varia__2FCF1A8A");
             });
 
-            modelBuilder.Entity<Models.Stage>(entity =>
+            modelBuilder.Entity<Stage>(entity =>
             {
                 entity.Property(e => e.Description)
                     .HasMaxLength(100)
@@ -1002,9 +977,9 @@ namespace CFS.Data.Context
                     .HasConstraintName("Fk_VariancesModified");
             });
 
-          //  OnModelCreatingPartial(modelBuilder);
+            OnModelCreatingPartial(modelBuilder);
         }
 
-       // partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }
