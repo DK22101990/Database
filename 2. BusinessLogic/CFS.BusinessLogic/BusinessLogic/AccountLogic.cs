@@ -55,6 +55,25 @@ namespace CFS.BusinessLogic.BusinessLogic
             return mapper.Map<List<AccountListViewModel>>(await _iAccountRepository.GetAccountList());
         }
 
+
+        /// <summary>
+        /// Get All Sprints
+        /// </summary>
+        /// <param name="ProjectId"></param>
+        /// <param name="SowId"></param>
+        /// <returns></returns>
+        public async Task<List<SprintViewModel>> GetSprintList(int ProjectId, int SowId)
+        {
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<SprintList, SprintViewModel>();
+            });
+
+            IMapper mapper = config.CreateMapper();
+            return mapper.Map<List<SprintViewModel>>(await _iAccountRepository.GetSprintList(ProjectId, SowId));
+        }
+
+
         /// <summary>
         /// Get ComplianceType List
         /// </summary>

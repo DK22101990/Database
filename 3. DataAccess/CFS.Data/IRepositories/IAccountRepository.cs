@@ -24,6 +24,14 @@ namespace CFS.Data.IRepositories
         Task<List<Domains.ComplianceType>> GetComplianceTypeList(int RoleId);
 
         /// <summary>
+        /// Get All Sprints
+        /// </summary>
+        /// <param name="ProjectId"></param>
+        /// <param name="SowId"></param>
+        /// <returns></returns>
+        Task<List<SprintList>> GetSprintList(int ProjectId, int SowId);
+
+        /// <summary>
         /// Get Agile Questions
         /// </summary>
         /// <param name="RoleId"></param>

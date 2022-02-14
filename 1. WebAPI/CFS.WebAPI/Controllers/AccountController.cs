@@ -39,7 +39,16 @@ namespace CFS.WebAPI.Controllers
         {
             return await _iAccountLogic.GetAccountList();
         }
-
+        /// <summary>
+        /// Get All Accounts
+        /// </summary>
+        /// <returns></returns>
+        [Route("GetAllSprints")]
+        [HttpGet]
+        public async Task<List<SprintViewModel>> GetSprintList(int ProjectId, int SowId)
+        {
+            return await _iAccountLogic.GetSprintList(ProjectId,SowId);
+        }
         /// <summary>
         /// Get All Complience Types
         /// </summary>
