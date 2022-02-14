@@ -22,6 +22,14 @@ namespace CFS.BusinessLogic.IBusinessLogic
         Task<List<ComplianceTypeViewModel>> GetComplianceTypeList(int RoleId);
 
         /// <summary>
+        /// Get All Sprints
+        /// </summary>
+        /// <param name="ProjectId"></param>
+        /// <param name="SowId"></param>
+        /// <returns></returns>
+        Task<List<SprintViewModel>> GetSprintList(int ProjectId, int SowId);
+        
+        /// <summary>
         ///  Get Agile Questions
         /// </summary>
         /// <returns></returns>

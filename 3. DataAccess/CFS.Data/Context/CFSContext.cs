@@ -58,6 +58,9 @@ namespace CFS.Data.Context
         [NotMapped]
         public DbSet<AccountList> GetAccountList { get; set; }
         [NotMapped]
+        public DbSet<SprintList> GetSprintList { get; set; }
+
+        [NotMapped]
         public DbSet<Domains.ComplianceType> GetComplianceTypeList { get; set; }
         [NotMapped]
         public DbSet<AgileQuestion> GetAgileQuestionList { get; set; }

@@ -10,6 +10,7 @@ namespace CFS.Data.Domains
     public class AccountList
     {
         [Key]
+        public int AccountId { get; set; }
         public string AccountName { get; set; }
         public string Domain { get; set; }
         public string City { get; set; }
@@ -17,7 +18,16 @@ namespace CFS.Data.Domains
         public string Country { get; set; }
         public string PhoneNumber { get; set; }
     }
-
+    public class SprintList
+    {
+        [Key]
+        public int SprintId { get; set; }
+        public string SprintName { get; set; }
+        public string ProjectName { get; set; }
+        public string SowName { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+    }
     public class ComplianceType
     {
         [Key]

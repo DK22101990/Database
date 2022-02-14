@@ -8,12 +8,22 @@ namespace CFS.Model.Models
 {
     public class AccountListViewModel
     {
+        public int AccountId { get; set; }
         public string AccountName { get; set; }
         public string Domain { get; set; }
         public string City { get; set; }
         public string State { get; set; }
         public string Country { get; set; }
         public string PhoneNumber { get; set; }
+    }
+    public class SprintViewModel
+    {
+        public int SprintId { get; set; }
+        public string SprintName { get; set; }
+        public string ProjectName { get; set; }
+        public string SowName { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
     }
 
     public class ComplianceTypeViewModel

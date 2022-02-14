@@ -36,6 +36,18 @@ namespace CFS.Data.Repositories
         }
 
         /// <summary>
+        /// Get All Sprints
+        /// </summary>
+        /// <param name="ProjectId"></param>
+        /// <param name="SowId"></param>
+        /// <returns></returns>
+        public async Task<List<SprintList>> GetSprintList(int ProjectId, int SowId)
+        {
+            var commandText = string.Format(StoreProcedure.SprintList,ProjectId,SowId);
+            return await Context.GetSprintList.FromSqlRaw<SprintList>(commandText).ToListAsync();
+        }
+
+        /// <summary>
         /// Get ComplianceType List
         /// </summary>
         /// <returns></returns>
