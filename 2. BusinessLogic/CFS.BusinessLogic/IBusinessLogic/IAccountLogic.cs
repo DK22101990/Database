@@ -19,7 +19,7 @@ namespace CFS.BusinessLogic.IBusinessLogic
         /// Get ComplianceType List
         /// </summary>
         /// <returns></returns>
-        Task<List<ComplianceTypeViewModel>> GetComplianceTypeList(int RoleId);
+        Task<List<ComplianceTypeViewModel>> GetComplianceTypeList(int StageId);
 
         /// <summary>
         /// Get All Sprints
@@ -27,7 +27,7 @@ namespace CFS.BusinessLogic.IBusinessLogic
         /// <param name="ProjectId"></param>
         /// <param name="SowId"></param>
         /// <returns></returns>
-        Task<List<SprintViewModel>> GetSprintList(int ProjectId, int SowId);
+        Task<List<SprintViewModel>> GetSprintList(int SowId);
         
         /// <summary>
         ///  Get Agile Questions
@@ -56,11 +56,9 @@ namespace CFS.BusinessLogic.IBusinessLogic
 
         /// <summary>
         /// Get Stage
-        /// </summary>
-        /// <param name="ProjectId"></param>
-        /// <param name="ComplianceTypeId"></param>
+        /// </summary>        
         /// <returns></returns>
-        Task<List<StageViewModel>> GetStageList(int ProjectId, int ComplianceTypeId);
+        Task<List<StageViewModel>> GetStageList();
 
         /// <summary>
         ///  Get Projct Kick Start Questions
@@ -101,5 +99,13 @@ namespace CFS.BusinessLogic.IBusinessLogic
         /// </summary>        
         /// <returns></returns>
         Task<ReturnResponseModel> UploadArtificateDocument(FileUploadModel fileUploadModel);
+
+        /// <summary>
+        /// Get Question List
+        /// </summary>
+        /// <param name="StageId"></param>
+        /// <param name="ComplianceTypeId"></param>
+        /// <returns></returns>
+        Task<List<QuestionListViewModel>> GetQuestionList(int StageId, int ComplianceTypeId);
     }
 }

@@ -62,7 +62,7 @@ namespace CFS.BusinessLogic.BusinessLogic
         /// <param name="ProjectId"></param>
         /// <param name="SowId"></param>
         /// <returns></returns>
-        public async Task<List<SprintViewModel>> GetSprintList(int ProjectId, int SowId)
+        public async Task<List<SprintViewModel>> GetSprintList(int SowId)
         {
             var config = new MapperConfiguration(cfg =>
             {
@@ -70,7 +70,7 @@ namespace CFS.BusinessLogic.BusinessLogic
             });
 
             IMapper mapper = config.CreateMapper();
-            return mapper.Map<List<SprintViewModel>>(await _iAccountRepository.GetSprintList(ProjectId, SowId));
+            return mapper.Map<List<SprintViewModel>>(await _iAccountRepository.GetSprintList(SowId));
         }
 
 
@@ -78,7 +78,7 @@ namespace CFS.BusinessLogic.BusinessLogic
         /// Get ComplianceType List
         /// </summary>
         /// <returns></returns>
-        public async Task<List<ComplianceTypeViewModel>> GetComplianceTypeList(int RoleId)
+        public async Task<List<ComplianceTypeViewModel>> GetComplianceTypeList(int StageId)
         {
             var config = new MapperConfiguration(cfg =>
             {
@@ -86,7 +86,7 @@ namespace CFS.BusinessLogic.BusinessLogic
             });
 
             IMapper mapper = config.CreateMapper();
-            return mapper.Map<List<ComplianceTypeViewModel>>(await _iAccountRepository.GetComplianceTypeList(RoleId));
+            return mapper.Map<List<ComplianceTypeViewModel>>(await _iAccountRepository.GetComplianceTypeList(StageId));
         }
 
         /// <summary>
@@ -171,7 +171,7 @@ namespace CFS.BusinessLogic.BusinessLogic
         /// Get Stage List
         /// </summary>
         /// <returns></returns>
-        public async Task<List<StageViewModel>> GetStageList(int ProjectId, int ComplianceTypeId)
+        public async Task<List<StageViewModel>> GetStageList()
         {
             var config = new MapperConfiguration(cfg =>
             {
@@ -179,7 +179,24 @@ namespace CFS.BusinessLogic.BusinessLogic
             });
 
             IMapper mapper = config.CreateMapper();
-            return mapper.Map<List<StageViewModel>>(await _iAccountRepository.GetStageList(ProjectId, ComplianceTypeId));
+            return mapper.Map<List<StageViewModel>>(await _iAccountRepository.GetStageList());
+        }
+
+        /// <summary>
+        /// Get Question List
+        /// </summary>
+        /// <param name="StageId"></param>
+        /// <param name="ComplianceTypeId"></param>
+        /// <returns></returns>
+        public async Task<List<QuestionListViewModel>> GetQuestionList(int StageId, int ComplianceTypeId)
+        {
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Data.Domains.QuestionList, QuestionListViewModel>();
+            });
+
+            IMapper mapper = config.CreateMapper();
+            return mapper.Map<List<QuestionListViewModel>>(await _iAccountRepository.GetQuestionList(StageId, ComplianceTypeId));
         }
 
         /// <summary>

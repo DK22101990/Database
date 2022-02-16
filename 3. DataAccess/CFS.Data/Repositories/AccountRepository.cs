@@ -41,9 +41,9 @@ namespace CFS.Data.Repositories
         /// <param name="ProjectId"></param>
         /// <param name="SowId"></param>
         /// <returns></returns>
-        public async Task<List<SprintList>> GetSprintList(int ProjectId, int SowId)
+        public async Task<List<SprintList>> GetSprintList(int SowId)
         {
-            var commandText = string.Format(StoreProcedure.SprintList,ProjectId,SowId);
+            var commandText = string.Format(StoreProcedure.SprintList,SowId);
             return await Context.GetSprintList.FromSqlRaw<SprintList>(commandText).ToListAsync();
         }
 
@@ -51,9 +51,9 @@ namespace CFS.Data.Repositories
         /// Get ComplianceType List
         /// </summary>
         /// <returns></returns>
-        public async Task<List<Domains.ComplianceType>> GetComplianceTypeList(int RoleId)
+        public async Task<List<Domains.ComplianceType>> GetComplianceTypeList(int StageId)
         {
-            var commandText = string.Format(StoreProcedure.ComplianceTypeList, RoleId);
+            var commandText = string.Format(StoreProcedure.ComplianceTypeList, StageId);
             return await Context.GetComplianceTypeList.FromSqlRaw<Domains.ComplianceType>(commandText).ToListAsync();
         }
 
@@ -115,11 +115,24 @@ namespace CFS.Data.Repositories
         /// </summary>
         /// <param name="RoleId"></param>
         /// <returns></returns>
-        public async Task<List<Domains.Stage>> GetStageList(int ProjectId, int ComplianceTypeId)
+        public async Task<List<Domains.Stage>> GetStageList()
         {
-            var commandText = string.Format(StoreProcedure.StageList, ProjectId, ComplianceTypeId);
+            var commandText = string.Format(StoreProcedure.StageList);
             return await Context.GetStageList.FromSqlRaw<Domains.Stage>(commandText).ToListAsync();
         }
+
+        /// <summary>
+        /// Get Question List
+        /// </summary>
+        /// <param name="StageId"></param>
+        /// <param name="ComplianceTypeId"></param>
+        /// <returns></returns>
+        public async Task<List<Domains.QuestionList>> GetQuestionList(int StageId, int ComplianceTypeId)
+        {
+            var commandText = string.Format(StoreProcedure.QuestionList,StageId,ComplianceTypeId);
+            return await Context.GetQuestionList.FromSqlRaw<Domains.QuestionList>(commandText).ToListAsync();
+        }
+
 
         /// <summary>
         /// Insert Kick Start Question
