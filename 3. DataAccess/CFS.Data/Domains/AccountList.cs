@@ -11,31 +11,23 @@ namespace CFS.Data.Domains
     {
         [Key]
         public int AccountId { get; set; }
-        public string AccountName { get; set; }
-        public string Domain { get; set; }
-        public string City { get; set; }
-        public string State { get; set; }
-        public string Country { get; set; }
-        public string PhoneNumber { get; set; }
+        public string AccountName { get; set; }       
     }
     public class SprintList
     {
         [Key]
         public int SprintId { get; set; }
-        public string SprintName { get; set; }
-        public string ProjectName { get; set; }
-        public string SowName { get; set; }
-        public DateTime? StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
+        public int? SowId { get; set; }
+        public string Sprints { get; set; }        
+        public string SowName { get; set; }        
     }
     public class ComplianceType
     {
         [Key]
         public int ComplianceTypeId { get; set; }
-        public string RoleName { get; set; }
-        public string Description { get; set; }
-        public string ComplianceTypeName { get; set; }
-        public string TypeDescription { get; set; }
+        public int? StageId { get; set; }
+        public string StageName { get; set; }
+        public string ComplianceTypeName { get; set; }        
     }
 
     public class SelectList
@@ -99,6 +91,7 @@ namespace CFS.Data.Domains
         public string ProjectType { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
+        public int? AccountId { get; set; }
         public string AccountName { get; set; }
     }
     public class SOW
@@ -109,15 +102,25 @@ namespace CFS.Data.Domains
         public DateTime? EndDate { get; set; }
         public string SowName { get; set; }
         public string EngagementWeeks { get; set; }
-        public string SowAmount { get; set; }       
+        public string SowAmount { get; set; }
+        public int? ProjectId { get; set; }
+        public string ProjectName { get; set; }
     }
     public class Stage
     {
         [Key]
-        public int StageId { get; set; }
-        public string ProjectName { get; set; }
+        public int StageId { get; set; }        
         public string StageName { get; set; }
-        public string ComplianceTypeName { get; set; }        
+        
     }
-
+    public class QuestionList
+    {
+        [Key]
+        public int QuestionId { get; set; }
+        public string Questions { get; set; }
+        public int? ComplianceTypeId { get; set; }
+        public string ComplianceTypeName { get; set; }
+        public int? StageId { get; set; }
+        public string StageName { get; set; }
+    }
 }

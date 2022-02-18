@@ -58,6 +58,8 @@ namespace CFS.Data.Context
         [NotMapped]
         public DbSet<AccountList> GetAccountList { get; set; }
         [NotMapped]
+        public DbSet<QuestionList> GetQuestionList { get; set; }
+        [NotMapped]
         public DbSet<SprintList> GetSprintList { get; set; }
 
         [NotMapped]
