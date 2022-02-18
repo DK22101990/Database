@@ -93,12 +93,7 @@ namespace CFS.BusinessLogic.IBusinessLogic
         /// </summary>
         /// <returns></returns>
         Task<List<SelectListViewModel>> GetMasterList(string Entity);
-
-        /// <summary>
-        /// Upload Artificate Document
-        /// </summary>        
-        /// <returns></returns>
-        Task<ReturnResponseModel> UploadArtificateDocument(FileUploadModel fileUploadModel);
+       
 
         /// <summary>
         /// Get Question List
@@ -107,5 +102,19 @@ namespace CFS.BusinessLogic.IBusinessLogic
         /// <param name="ComplianceTypeId"></param>
         /// <returns></returns>
         Task<List<QuestionListViewModel>> GetQuestionList(int StageId, int ComplianceTypeId);
+
+        /// <summary>
+        /// SaveSowQuestionResponse
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        Task<ReturnResponseModel> SaveSowQuestionResponse(SaveSowQuestionResponse request);
+
+        /// <summary>
+        /// SaveAgileQuestionResponse
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        Task<ReturnResponseModel> SaveAgileQuestionResponse(SaveAgileQuestionResponse request);
     }
 }

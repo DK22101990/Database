@@ -25,5 +25,7 @@ namespace CFS.Model.Constants
         public const string InsertSOWKickStartQuestion = "sp_insSOWKickstartQuestionResponse  {0},{1},{2},{3},{4},{5},{6},'{7}',{8},{9}";
         public const string InsertSprintKickStartQuestion = "sp_insSprintKickStartQuestionResponse  {0},{1},{2},{3},{4},{5},{6},'{7}',{8},{9},{10}";
         public const string MasterList = "sp_getMasterList '{0}'";
+        public const string SaveSowQuestionResponse = "sp_SaveSowQuestionResponse  {0},{1},{2},{3},{4},{5},{6},'{7}',{8},'{9}','{10}','{11}','{12}',{13},{14}";
+        public const string SaveAgileQuestionResponse = "sp_SaveAgileQuestionResponse  {0},{1},{2},{3},{4},{5},{6},{7},'{8}',{9},'{10}','{11}','{12}','{13}',{14},{15}";
     }
 }

@@ -177,12 +177,24 @@ namespace CFS.Model.Models
     //#endregion
 
     #region FileUpload
-    public class FileUploadModel
+    public class SaveSowQuestionResponse
     {
+        public int AccountId { get; set; }
+        public int ProjectId { get; set; }
+        public int SowId { get; set; }
+        public int StageId { get; set; }
+        public int ComplianceTypeId { get; set; }
         public int QuestionId { get; set; }
+        public int ComplianceStatusId { get; set; }
+        public string Comments { get; set; }
+        public int CommentsTypeId { get; set; }
         public string File { get; set; }
         public string FileName { get; set; }
-        public string FileLength { get; set; }
+        public string FilePath { get; set; }
+        public string FileSize { get; set; }
+        public string DisplayName { get; set; }
+        public bool IsUploaded { get; set; }
+        public int? ArtefactId { get; set; }
     }
     public class ArtifactViewModel
     {
@@ -195,6 +207,29 @@ namespace CFS.Model.Models
         public string FilePath { get; set; }
         public string FileSize { get; set; }
         public string DisplayName { get; set; }
+    }
+    #endregion
+
+    #region SaveAgileQuestionResponse
+    public class SaveAgileQuestionResponse
+    {
+        public int AccountId { get; set; }
+        public int ProjectId { get; set; }
+        public int SowId { get; set; }
+        public int StageId { get; set; }
+        public int ComplianceTypeId { get; set; }
+        public int SprintId { get; set; }
+        public int QuestionId { get; set; }
+        public int ComplianceStatusId { get; set; }
+        public string Comments { get; set; }
+        public int CommentsTypeId { get; set; }
+        public string File { get; set; }
+        public string FileName { get; set; }
+        public string FilePath { get; set; }
+        public string FileSize { get; set; }
+        public string DisplayName { get; set; }
+        public bool IsUploaded { get; set; }
+        public int? ArtefactId { get; set; }
     }
     #endregion
 }

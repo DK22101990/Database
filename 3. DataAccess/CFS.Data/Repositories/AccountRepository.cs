@@ -218,6 +218,51 @@ namespace CFS.Data.Repositories
             await Context.SaveChangesAsync();
             return artefact;
         }
+
+       
+        public async Task SaveSowQuestionResponse(SaveSowQuestionResponse request)
+        {
+            var commandText = string.Format(StoreProcedure.SaveSowQuestionResponse,
+                request.AccountId,
+                request.ProjectId,
+                request.SowId,
+                request.StageId,
+                request.ComplianceTypeId,
+                request.QuestionId,
+                request.ComplianceStatusId,
+                request.Comments,
+                request.CommentsTypeId,
+                request.FileName,
+                request.FilePath,
+                request.FileSize,
+                request.DisplayName,
+                request.IsUploaded,
+                request.ArtefactId);
+            await Context.Database.ExecuteSqlRawAsync(commandText);
+        }
+
+
+        public async Task SaveAgileQuestionResponse(SaveAgileQuestionResponse request)
+        {
+            var commandText = string.Format(StoreProcedure.SaveAgileQuestionResponse,
+                request.AccountId,
+                request.ProjectId,
+                request.SowId,
+                request.StageId,
+                request.ComplianceTypeId,
+                request.SprintId,
+                request.QuestionId,
+                request.ComplianceStatusId,
+                request.Comments,
+                request.CommentsTypeId,
+                request.FileName,
+                request.FilePath,
+                request.FileSize,
+                request.DisplayName,
+                request.IsUploaded,
+                request.ArtefactId);
+            await Context.Database.ExecuteSqlRawAsync(commandText);
+        }
         #endregion
     }
 }

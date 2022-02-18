@@ -240,20 +240,30 @@ namespace CFS.BusinessLogic.BusinessLogic
             IMapper mapper = config.CreateMapper();
             return mapper.Map<List<SelectListViewModel>>(await _iAccountRepository.GetMasterList(Entity));
         }
-
+                
         /// <summary>
         /// Upload Artificate Document
         /// </summary>        
         /// <returns></returns>
-        public async Task<ReturnResponseModel> UploadArtificateDocument(FileUploadModel request)
+        public async Task<ReturnResponseModel> SaveSowQuestionResponse(SaveSowQuestionResponse request)
         {
+            if (!request.IsUploaded)
+            {
+                await _iAccountRepository.SaveSowQuestionResponse(request);
+                return new ReturnResponseModel
+                {
+                    Status = true,
+                    Message = string.Format(ApplicationMessage.ArtifactUploadedSuccessfully)
+                };
+            }
+
             string uploadPath = _configuration["FilePath:DocUploadPath"];
             List<string> allowedExtensions = ((FileExtensions[])Enum.GetValues(typeof(FileExtensions))).Select(y => y.ToString().ToLower()).ToList();
             if (allowedExtensions.Contains(request.FileName.Substring(request.FileName.IndexOf(".") + 1).ToLower()))
             {
                 Guid obj = Guid.NewGuid();
                 string extension = System.IO.Path.GetExtension(request.FileName);
-                string filepath = Path.Combine(_hostingEnvironment.ContentRootPath, uploadPath, request.QuestionId.ToString());
+                string filepath = Path.Combine(_hostingEnvironment.WebRootPath, uploadPath, request.QuestionId.ToString());
                 //request.FileName = request.FileName.Replace(" ", "");
                 string finalpath = FileHelper.GetFinalFilePath(filepath, obj.ToString() + extension);
 
@@ -261,17 +271,58 @@ namespace CFS.BusinessLogic.BusinessLogic
                 if (FileHelper.FileSizeInMb(fileDataByteArray) <= 5)
                 {
                     System.IO.File.WriteAllBytes(finalpath, fileDataByteArray);
-                    var objArtifact = await _iAccountRepository.AddArtifactAsync(new Artefact
+
+                    request.FilePath = finalpath;
+                    request.FileSize = fileDataByteArray.Length.ToString();
+                    request.FileName = obj.ToString() + extension;
+
+                    await _iAccountRepository.SaveSowQuestionResponse(request);
+
+                    return new ReturnResponseModel
                     {
-                        DisplayName = request.FileName,
-                        FileName = obj.ToString() + extension,
-                        FilePath = filepath,
-                        FileSize = request.FileLength,
-                        IsActive = 1,
-                        LastModifiedOn = DateTime.UtcNow,
-                        ModifiedById = 402,
-                        QuestionId = request.QuestionId
-                    });
+                        Status = true,
+                        Message = string.Format(ApplicationMessage.ArtifactUploadedSuccessfully)
+                    };
+                }
+                else
+                    return new ReturnResponseModel { Message = string.Format(ApplicationMessage.FileSizeValidation, "5") };
+            }
+            else
+                return new ReturnResponseModel { Message = string.Format(ApplicationMessage.InvalidArtifact) };
+        }
+
+        public async Task<ReturnResponseModel> SaveAgileQuestionResponse(SaveAgileQuestionResponse request)
+        {
+            if (!request.IsUploaded)
+            {
+                await _iAccountRepository.SaveAgileQuestionResponse(request);
+                return new ReturnResponseModel
+                {
+                    Status = true,
+                    Message = string.Format(ApplicationMessage.ArtifactUploadedSuccessfully)
+                };
+            }
+
+            string uploadPath = _configuration["FilePath:DocUploadPath"];
+            List<string> allowedExtensions = ((FileExtensions[])Enum.GetValues(typeof(FileExtensions))).Select(y => y.ToString().ToLower()).ToList();
+            if (allowedExtensions.Contains(request.FileName.Substring(request.FileName.IndexOf(".") + 1).ToLower()))
+            {
+                Guid obj = Guid.NewGuid();
+                string extension = System.IO.Path.GetExtension(request.FileName);
+                string filepath = Path.Combine(_hostingEnvironment.WebRootPath, uploadPath, request.QuestionId.ToString());
+                //request.FileName = request.FileName.Replace(" ", "");
+                string finalpath = FileHelper.GetFinalFilePath(filepath, obj.ToString() + extension);
+
+                Byte[] fileDataByteArray = Convert.FromBase64String(request.File);
+                if (FileHelper.FileSizeInMb(fileDataByteArray) <= 5)
+                {
+                    System.IO.File.WriteAllBytes(finalpath, fileDataByteArray);
+
+                    request.FilePath = finalpath;
+                    request.FileSize = fileDataByteArray.Length.ToString();
+                    request.FileName = obj.ToString() + extension;
+
+                    await _iAccountRepository.SaveAgileQuestionResponse(request);
 
                     return new ReturnResponseModel
                     {
@@ -286,5 +337,7 @@ namespace CFS.BusinessLogic.BusinessLogic
                 return new ReturnResponseModel { Message = string.Format(ApplicationMessage.InvalidArtifact) };
         }
         #endregion
+
+
     }
 }

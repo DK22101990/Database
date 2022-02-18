@@ -116,5 +116,9 @@ namespace CFS.Data.IRepositories
         /// <param name="ComplianceTypeId"></param>
         /// <returns></returns>
         Task<List<Domains.QuestionList>> GetQuestionList(int StageId,int ComplianceTypeId);
+        
+        Task SaveSowQuestionResponse(SaveSowQuestionResponse request);
+
+        Task SaveAgileQuestionResponse(SaveAgileQuestionResponse request);
     }
 }

@@ -160,20 +160,8 @@ namespace CFS.WebAPI.Controllers
         public async Task<List<QuestionListViewModel>> GetQuestionList(int StageId, int ComplianceTypeId)
         {
             return await _iAccountLogic.GetQuestionList(StageId, ComplianceTypeId);
-        }
-
-        /// <summary>
-        /// Bulk upload Data
-        /// </summary>
-        /// <param name="request"></param>
-        /// <returns></returns>
-        [HttpPost, DisableRequestSizeLimit]
-        [Route("UploadArtificateDocument")]
-        public async Task<ReturnResponseModel> UploadArtificateDocument([FromBody] FileUploadModel request)
-        {
-            return await _iAccountLogic.UploadArtificateDocument(request);
-          
-        }
+        }       
+        
         ///// <summary>
         ///// Insert Kick Start Response 
         ///// </summary>
@@ -222,6 +210,31 @@ namespace CFS.WebAPI.Controllers
             return await _iAccountLogic.GetMasterList(Entity);
         }
 
+        /// <summary>
+        /// SaveSowQuestionResponse
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        [HttpPost, DisableRequestSizeLimit]
+        [Route("SaveSowQuestionResponse")]
+        public async Task<ReturnResponseModel> SaveSowQuestionResponse([FromBody] SaveSowQuestionResponse request)
+        {
+            return await _iAccountLogic.SaveSowQuestionResponse(request);
+
+        }
+
+        /// <summary>
+        /// SaveAgileQuestionResponse
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        [HttpPost, DisableRequestSizeLimit]
+        [Route("SaveAgileQuestionResponse")]
+        public async Task<ReturnResponseModel> SaveAgileQuestionResponse([FromBody] SaveAgileQuestionResponse request)
+        {
+            return await _iAccountLogic.SaveAgileQuestionResponse(request);
+
+        }
         #endregion
     }
 }
