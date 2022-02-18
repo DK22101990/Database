@@ -41,9 +41,9 @@ namespace CFS.Data.Repositories
         /// <param name="ProjectId"></param>
         /// <param name="SowId"></param>
         /// <returns></returns>
-        public async Task<List<SprintList>> GetSprintList(int SowId)
+        public async Task<List<SprintList>> GetSprintList(int ProjectId, int SowId)
         {
-            var commandText = string.Format(StoreProcedure.SprintList,SowId);
+            var commandText = string.Format(StoreProcedure.SprintList,ProjectId,SowId);
             return await Context.GetSprintList.FromSqlRaw<SprintList>(commandText).ToListAsync();
         }
 
@@ -51,9 +51,9 @@ namespace CFS.Data.Repositories
         /// Get ComplianceType List
         /// </summary>
         /// <returns></returns>
-        public async Task<List<Domains.ComplianceType>> GetComplianceTypeList(int StageId)
+        public async Task<List<Domains.ComplianceType>> GetComplianceTypeList(int RoleId)
         {
-            var commandText = string.Format(StoreProcedure.ComplianceTypeList, StageId);
+            var commandText = string.Format(StoreProcedure.ComplianceTypeList, RoleId);
             return await Context.GetComplianceTypeList.FromSqlRaw<Domains.ComplianceType>(commandText).ToListAsync();
         }
 
@@ -115,24 +115,11 @@ namespace CFS.Data.Repositories
         /// </summary>
         /// <param name="RoleId"></param>
         /// <returns></returns>
-        public async Task<List<Domains.Stage>> GetStageList()
+        public async Task<List<Domains.Stage>> GetStageList(int ProjectId, int ComplianceTypeId)
         {
-            var commandText = string.Format(StoreProcedure.StageList);
+            var commandText = string.Format(StoreProcedure.StageList, ProjectId, ComplianceTypeId);
             return await Context.GetStageList.FromSqlRaw<Domains.Stage>(commandText).ToListAsync();
         }
-
-        /// <summary>
-        /// Get Question List
-        /// </summary>
-        /// <param name="StageId"></param>
-        /// <param name="ComplianceTypeId"></param>
-        /// <returns></returns>
-        public async Task<List<Domains.QuestionList>> GetQuestionList(int StageId, int ComplianceTypeId)
-        {
-            var commandText = string.Format(StoreProcedure.QuestionList,StageId,ComplianceTypeId);
-            return await Context.GetQuestionList.FromSqlRaw<Domains.QuestionList>(commandText).ToListAsync();
-        }
-
 
         /// <summary>
         /// Insert Kick Start Question
@@ -211,12 +198,48 @@ namespace CFS.Data.Repositories
         /// </summary>
         /// <param name="artefact"></param>
         /// <returns></returns>
-        public async Task<Artefact> AddArtifactAsync(Artefact artefact)
+        public async Task SaveSowQuestionResponse(SaveSowQuestionResponse request)
         {
+            var commandText = string.Format(StoreProcedure.SaveSowQuestionResponse,
+                request.AccountId,
+                request.ProjectId,
+                request.SowId,
+                request.StageId,
+                request.ComplianceTypeId,
+                request.QuestionId,
+                request.ComplianceStatusId,
+                request.Comments,
+                request.CommentsTypeId,
+                request.FileName,
+                request.FilePath,
+                request.FileSize,
+                request.DisplayName,
+                request.IsUploaded,
+                request.ArtefactId);
+            await Context.Database.ExecuteSqlRawAsync(commandText);
+        }
 
-            Context.Artefacts.Add(artefact);
-            await Context.SaveChangesAsync();
-            return artefact;
+       
+        public async Task SaveAgileQuestionResponse(SaveAgileQuestionResponse request)
+        {
+            var commandText = string.Format(StoreProcedure.SaveAgileQuestionResponse,
+                request.AccountId,
+                request.ProjectId,
+                request.SowId,
+                request.StageId,
+                request.ComplianceTypeId,
+                request.SprintId,
+                request.QuestionId,
+                request.ComplianceStatusId,
+                request.Comments,
+                request.CommentsTypeId,
+                request.FileName,
+                request.FilePath,
+                request.FileSize,
+                request.DisplayName,
+                request.IsUploaded,
+                request.ArtefactId);
+            await Context.Database.ExecuteSqlRawAsync(commandText);
         }
         #endregion
     }

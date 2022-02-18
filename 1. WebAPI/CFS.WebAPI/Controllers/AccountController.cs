@@ -45,9 +45,9 @@ namespace CFS.WebAPI.Controllers
         /// <returns></returns>
         [Route("GetAllSprints")]
         [HttpGet]
-        public async Task<List<SprintViewModel>> GetSprintList(int SowId)
+        public async Task<List<SprintViewModel>> GetSprintList(int ProjectId, int SowId)
         {
-            return await _iAccountLogic.GetSprintList(SowId);
+            return await _iAccountLogic.GetSprintList(ProjectId,SowId);
         }
         /// <summary>
         /// Get All Complience Types
@@ -56,9 +56,9 @@ namespace CFS.WebAPI.Controllers
         /// <returns></returns>
         [Route("GetAllComplianceTypes")]
         [HttpGet]
-        public async Task<List<ComplianceTypeViewModel>> GetComplianceTypeList(int StageId)
+        public async Task<List<ComplianceTypeViewModel>> GetComplianceTypeList(int RoleId)
         {
-            return await _iAccountLogic.GetComplianceTypeList(StageId);
+            return await _iAccountLogic.GetComplianceTypeList(RoleId);
         }
 
         /// <summary>
@@ -144,22 +144,9 @@ namespace CFS.WebAPI.Controllers
         /// <returns></returns>
         [Route("GetAllStageList")]
         [HttpGet]
-        public async Task<List<StageViewModel>> GetStageList()
+        public async Task<List<StageViewModel>> GetStageList(int ProjectId, int ComplianceTypeId)
         {
-            return await _iAccountLogic.GetStageList();
-        }
-
-        /// <summary>
-        /// Get All Questions
-        /// </summary>
-        /// <param name="StageId"></param>
-        /// <param name="ComplianceTypeId"></param>
-        /// <returns></returns>
-        [Route("GetAllQuestionList")]
-        [HttpGet]
-        public async Task<List<QuestionListViewModel>> GetQuestionList(int StageId, int ComplianceTypeId)
-        {
-            return await _iAccountLogic.GetQuestionList(StageId, ComplianceTypeId);
+            return await _iAccountLogic.GetStageList(ProjectId, ComplianceTypeId);
         }
 
         /// <summary>
@@ -168,11 +155,24 @@ namespace CFS.WebAPI.Controllers
         /// <param name="request"></param>
         /// <returns></returns>
         [HttpPost, DisableRequestSizeLimit]
-        [Route("UploadArtificateDocument")]
-        public async Task<ReturnResponseModel> UploadArtificateDocument([FromBody] FileUploadModel request)
+        [Route("SaveSowQuestionResponse")]
+        public async Task<ReturnResponseModel> SaveSowQuestionResponse([FromBody] SaveSowQuestionResponse request)
         {
-            return await _iAccountLogic.UploadArtificateDocument(request);
+            return await _iAccountLogic.SaveSowQuestionResponse(request);
           
+        }
+
+        /// <summary>
+        /// Bulk upload Data
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        [HttpPost, DisableRequestSizeLimit]
+        [Route("SaveAgileQuestionResponse")]
+        public async Task<ReturnResponseModel> SaveAgileQuestionResponse([FromBody] SaveAgileQuestionResponse request)
+        {
+            return await _iAccountLogic.SaveAgileQuestionResponse(request);
+
         }
         ///// <summary>
         ///// Insert Kick Start Response 

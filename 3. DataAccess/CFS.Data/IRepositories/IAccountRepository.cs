@@ -21,7 +21,7 @@ namespace CFS.Data.IRepositories
         /// Get ComplianceType List
         /// </summary>
         /// <returns></returns>
-        Task<List<Domains.ComplianceType>> GetComplianceTypeList(int StageId);
+        Task<List<Domains.ComplianceType>> GetComplianceTypeList(int RoleId);
 
         /// <summary>
         /// Get All Sprints
@@ -29,7 +29,7 @@ namespace CFS.Data.IRepositories
         /// <param name="ProjectId"></param>
         /// <param name="SowId"></param>
         /// <returns></returns>
-        Task<List<SprintList>> GetSprintList(int SowId);
+        Task<List<SprintList>> GetSprintList(int ProjectId, int SowId);
 
         /// <summary>
         /// Get Agile Questions
@@ -72,7 +72,9 @@ namespace CFS.Data.IRepositories
         /// </summary>
         /// <param name="artefact"></param>
         /// <returns></returns>
-        Task<Artefact> AddArtifactAsync(Models.Artefact artefact);
+        Task SaveSowQuestionResponse(SaveSowQuestionResponse request);
+
+        Task SaveAgileQuestionResponse(SaveAgileQuestionResponse request);
 
         /// <summary>
         /// Get Project KickStart Questions
@@ -105,16 +107,10 @@ namespace CFS.Data.IRepositories
 
         /// <summary>
         /// Get Stage
-        /// </summary>        
-        /// <returns></returns>
-        Task<List<Domains.Stage>> GetStageList();
-
-        /// <summary>
-        /// Get Question List
         /// </summary>
-        /// <param name="StageId"></param>
+        /// <param name="ProjectId"></param>
         /// <param name="ComplianceTypeId"></param>
         /// <returns></returns>
-        Task<List<Domains.QuestionList>> GetQuestionList(int StageId,int ComplianceTypeId);
+        Task<List<Domains.Stage>> GetStageList(int ProjectId, int ComplianceTypeId);
     }
 }
