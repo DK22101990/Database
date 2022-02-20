@@ -240,7 +240,7 @@ namespace CFS.BusinessLogic.BusinessLogic
             IMapper mapper = config.CreateMapper();
             return mapper.Map<List<SelectListViewModel>>(await _iAccountRepository.GetMasterList(Entity));
         }
-                
+
         /// <summary>
         /// Upload Artificate Document
         /// </summary>        
@@ -335,6 +335,78 @@ namespace CFS.BusinessLogic.BusinessLogic
             }
             else
                 return new ReturnResponseModel { Message = string.Format(ApplicationMessage.InvalidArtifact) };
+        }
+
+
+        /// <summary>
+        /// Delete carrier document
+        /// </summary>
+        /// <param name="ArtefactId"></param>
+        /// <returns>Response Model</returns>
+        public async Task<ReturnResponseModel> DeleteSowQuestionResponse(int ArtefactId)
+        {
+            ReturnResponseModel result = new ReturnResponseModel();
+            var objArtefact = await _iAccountRepository.GetArtefactById(ArtefactId);
+            if (objArtefact != null)
+            {
+                if (Directory.Exists(objArtefact.FilePath) && File.Exists(Path.Combine(objArtefact.FilePath, objArtefact.FileName)))
+                    File.Delete(Path.Combine(objArtefact.FilePath, objArtefact.FileName));
+                await _iAccountRepository.DeleteSowQuestionResponse(ArtefactId);
+                return new ReturnResponseModel { Status = true };
+            }
+            return new ReturnResponseModel { Status = false, Message = ApplicationMessage.ArtefactNotFound };
+        }
+
+        /// <summary>
+        /// Delete carrier document
+        /// </summary>
+        /// <param name="ArtefactId"></param>
+        /// <returns>Response Model</returns>
+        public async Task<ReturnResponseModel> DeleteSprintQuestionResponse(int ArtefactId)
+        {
+            ReturnResponseModel result = new ReturnResponseModel();
+            var objArtefact = await _iAccountRepository.GetArtefactById(ArtefactId);
+            if (objArtefact != null)
+            {
+                if (Directory.Exists(objArtefact.FilePath) && File.Exists(Path.Combine(objArtefact.FilePath, objArtefact.FileName)))
+                    File.Delete(Path.Combine(objArtefact.FilePath, objArtefact.FileName));
+                await _iAccountRepository.DeleteSprintQuestionResponse(ArtefactId);
+                return new ReturnResponseModel { Status = true };
+            }
+            return new ReturnResponseModel { Status = false, Message = ApplicationMessage.ArtefactNotFound };
+        }
+
+        /// <summary>
+        /// Download Artefact document
+        /// </summary>
+        /// <param name="ArtefactId"></param>
+        /// <returns>Response Model</returns>
+        public async Task<ArtefactDownload> DownloadArtefact(int ArtefactId)
+        {
+            var objArtefact = await _iAccountRepository.GetArtefactById(ArtefactId);
+            if (objArtefact == null)
+            {
+                return new ArtefactDownload
+                {
+                    returnResponseModel = new ReturnResponseModel { Status = false, Message = ApplicationMessage.ArtefactNotFound }
+                };
+            }
+            else
+            {
+                if (Directory.Exists(objArtefact.FilePath) && File.Exists(Path.Combine(objArtefact.FilePath, objArtefact.FileName)))
+                {
+                    return new ArtefactDownload
+                    {
+                        returnResponseModel = new ReturnResponseModel { Status = true },
+                        FilePath = Path.Combine(objArtefact.FilePath, objArtefact.FileName),
+                        DisplayName = objArtefact.DisplayName
+                    };
+                }
+                return new ArtefactDownload
+                {
+                    returnResponseModel = new ReturnResponseModel { Status = false, Message = ApplicationMessage.ArtefactNotFound }
+                };
+            }
         }
         #endregion
 

@@ -115,6 +115,27 @@ namespace CFS.BusinessLogic.IBusinessLogic
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
-        Task<ReturnResponseModel> SaveAgileQuestionResponse(SaveAgileQuestionResponse request);
+        Task<ReturnResponseModel> SaveAgileQuestionResponse(SaveAgileQuestionResponse request);        
+
+        /// <summary>
+        /// Delete SOW Question Response
+        /// </summary>
+        /// <param name="ArtefactId"></param>
+        /// <returns></returns>
+        Task<ReturnResponseModel> DeleteSowQuestionResponse(int ArtefactId);
+
+        /// <summary>
+        /// Delete Sprint Question Response
+        /// </summary>
+        /// <param name="ArtefactId"></param>
+        /// <returns></returns>
+        Task<ReturnResponseModel> DeleteSprintQuestionResponse(int ArtefactId);
+
+        /// <summary>
+        /// Download Artefact document
+        /// </summary>
+        /// <param name="ArtefactId"></param>
+        /// <returns>Response Model</returns>
+        Task<ArtefactDownload> DownloadArtefact(int ArtefactId);
     }
 }

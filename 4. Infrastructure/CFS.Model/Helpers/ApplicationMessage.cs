@@ -13,5 +13,6 @@ namespace CFS.Model.Helpers
         public const string FileSizeValidation = "File with max {0} MB size allowed.";
         public const string JobPostCreated = "A new job post <a href='{0}'>{1}</a> is assigned to you.";
         public const string JobPostUpdated = "Job post <a href='{0}'>{1}</a> is updated.";
+        public const string ArtefactNotFound = "Artefact not found.";
     }
 }
