@@ -120,5 +120,26 @@ namespace CFS.Data.IRepositories
         Task SaveSowQuestionResponse(SaveSowQuestionResponse request);
 
         Task SaveAgileQuestionResponse(SaveAgileQuestionResponse request);
+
+        /// <summary>
+        /// Get Artefact by artefact id
+        /// </summary>
+        /// <param name="ArtefactId"></param>
+        /// <returns></returns>
+        Task<ArtefactList> GetArtefactById(int ArtefactId);
+
+        /// <summary>
+        /// Delete SOW Question Response
+        /// </summary>
+        /// <param name="ArtefactId"></param>
+        /// <returns></returns>
+        Task DeleteSowQuestionResponse(int ArtefactId);
+
+        /// <summary>
+        /// Delete Sprint Question Response
+        /// </summary>
+        /// <param name="ArtefactId"></param>
+        /// <returns></returns>
+        Task DeleteSprintQuestionResponse(int ArtefactId);
     }
 }

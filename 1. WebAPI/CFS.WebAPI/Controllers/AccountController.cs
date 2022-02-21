@@ -215,7 +215,7 @@ namespace CFS.WebAPI.Controllers
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
-        [HttpPost, DisableRequestSizeLimit]
+        [HttpPost,DisableRequestSizeLimit]
         [Route("SaveSowQuestionResponse")]
         public async Task<ReturnResponseModel> SaveSowQuestionResponse([FromBody] SaveSowQuestionResponse request)
         {
@@ -234,6 +234,61 @@ namespace CFS.WebAPI.Controllers
         {
             return await _iAccountLogic.SaveAgileQuestionResponse(request);
 
+        }
+
+        /// <summary>
+        /// Delete Sow Question Response
+        /// </summary>
+        /// <param name="ArtefactId">document id</param>
+        /// <returns></returns>
+        [Route("DeleteSowQuestionResponse")]
+        [HttpDelete]
+        public async Task<IActionResult> DeleteSowQuestionResponse(int ArtefactId)
+        {
+            ReturnResponseModel result = new ReturnResponseModel();
+            result = await _iAccountLogic.DeleteSowQuestionResponse(ArtefactId);
+            if (result.Status)
+            {
+                return NoContent();
+            }
+            return BadRequest(result);
+        }
+
+        /// <summary>
+        /// Delete Sprint Question Response
+        /// </summary>
+        /// <param name="ArtefactId">document id</param>
+        /// <returns></returns>
+        [Route("DeleteSprintQuestionResponse")]
+        [HttpDelete]
+        public async Task<IActionResult> DeleteSprintQuestionResponse(int ArtefactId)
+        {
+            ReturnResponseModel result = new ReturnResponseModel();
+            result = await _iAccountLogic.DeleteSprintQuestionResponse(ArtefactId);
+            if (result.Status)
+            {
+                return NoContent();
+            }
+            return BadRequest(result);
+        }
+
+        /// <summary>
+        /// Download Artefact
+        /// </summary>
+        /// <param name="ArtefactId"></param>
+        /// <returns></returns>
+        [Route("DownloadArtefact")]
+        [HttpGet]
+        public async Task<IActionResult> DownloadArtefact(int ArtefactId)
+        {
+            ArtefactDownload result = new ArtefactDownload();
+            result = await _iAccountLogic.DownloadArtefact(ArtefactId);
+            if (result.returnResponseModel.Status)
+            {
+                result.File = Convert.ToBase64String(System.IO.File.ReadAllBytes(result.FilePath));
+                return Ok(result);
+            }
+            return BadRequest(result.returnResponseModel);
         }
         #endregion
     }

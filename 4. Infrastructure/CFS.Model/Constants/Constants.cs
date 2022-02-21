@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CFS.Model.Constants
 {
-    public static class Constants
+    public static class AppConstants
     {
     }
 
@@ -27,5 +27,8 @@ namespace CFS.Model.Constants
         public const string MasterList = "sp_getMasterList '{0}'";
         public const string SaveSowQuestionResponse = "sp_SaveSowQuestionResponse  {0},{1},{2},{3},{4},{5},{6},'{7}',{8},'{9}','{10}','{11}','{12}',{13},{14}";
         public const string SaveAgileQuestionResponse = "sp_SaveAgileQuestionResponse  {0},{1},{2},{3},{4},{5},{6},{7},'{8}',{9},'{10}','{11}','{12}','{13}',{14},{15}";
+        public const string ArtefactsList = "sp_getArtefacts {0}";
+        public const string DeleteSowQuestionResponse = "sp_deleteSowQuestionResponse {0}";
+        public const string DeleteSprintQuestionResponse = "sp_deleteSprintQuestionResponse {0}";
     }
 }

@@ -263,6 +263,41 @@ namespace CFS.Data.Repositories
                 request.ArtefactId);
             await Context.Database.ExecuteSqlRawAsync(commandText);
         }
+
+        /// <summary>
+        /// Get Artefact by artefact id
+        /// </summary>
+        /// <param name="ArtefactId"></param>
+        /// <returns></returns>
+        public async Task<ArtefactList> GetArtefactById(int ArtefactId)
+        {
+            var commandText = string.Format(StoreProcedure.ArtefactsList, ArtefactId);
+            var objData = await Context.GetArtefact.FromSqlRaw<ArtefactList>(commandText).ToListAsync();
+            return objData.FirstOrDefault();
+        }
+
+        /// <summary>
+        /// Delete SOW Question Response
+        /// </summary>
+        /// <param name="ArtefactId"></param>
+        /// <returns></returns>
+        public async Task DeleteSowQuestionResponse(int ArtefactId)
+        {
+            var commandText = string.Format(StoreProcedure.DeleteSowQuestionResponse,ArtefactId);
+            await Context.Database.ExecuteSqlRawAsync(commandText);
+        }
+
+        /// <summary>
+        /// Delete Sprint Question Response
+        /// </summary>
+        /// <param name="ArtefactId"></param>
+        /// <returns></returns>
+        public async Task DeleteSprintQuestionResponse(int ArtefactId)
+        {
+            var commandText = string.Format(StoreProcedure.DeleteSprintQuestionResponse, ArtefactId);
+            await Context.Database.ExecuteSqlRawAsync(commandText);
+        }
+
         #endregion
     }
 }

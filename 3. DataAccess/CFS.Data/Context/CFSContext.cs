@@ -61,6 +61,8 @@ namespace CFS.Data.Context
         public DbSet<QuestionList> GetQuestionList { get; set; }
         [NotMapped]
         public DbSet<SprintList> GetSprintList { get; set; }
+        [NotMapped]
+        public DbSet<ArtefactList> GetArtefact { get; set; }
 
         [NotMapped]
         public DbSet<Domains.ComplianceType> GetComplianceTypeList { get; set; }

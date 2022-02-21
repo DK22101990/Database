@@ -53,6 +53,10 @@ namespace CFS.Model.Models
         public int? IsActive { get; set; }
         public DateTime? LastModifiedOn { get; set; }
         public int? ModifiedByID { get; set; }
+        public string FileName { get; set; }
+        public string FilePath { get; set; }
+        public string FileSize { get; set; }
+        public string DisplayName { get; set; }
     }
 
     public class ProjectKickStartQuestionViewModel
@@ -74,6 +78,10 @@ namespace CFS.Model.Models
         public int? IsActive { get; set; }
         public DateTime? LastModifiedOn { get; set; }
         public int? ModifiedByID { get; set; }
+        public string FileName { get; set; }
+        public string FilePath { get; set; }
+        public string FileSize { get; set; }
+        public string DisplayName { get; set; }
     }
     #region QuestionList
     public class QuestionListViewModel
@@ -144,37 +152,14 @@ namespace CFS.Model.Models
     }
     #endregion
 
-    //#region SOWKickStartQuestion
-    //public class SOWKickStartQuestion
-    //{
-    //    public int AccountId { get; set; }
-    //    public int ProjectId { get; set; }
-    //    public int SowId { get; set; }
-    //    public int StageId { get; set; }
-    //    public int ComplianceTypeId { get; set; }
-    //    public int QuestionId { get; set; }
-    //    public int ComplianceStatusId { get; set; }
-    //    public string Comments { get; set; }
-    //    public int CommentsTypeId { get; set; }
-    //    public int ArtefactId { get; set; }        
-    //}
-    //#endregion
-
-    //#region SprintKickStartQuestion
-    //public class SprintKickStartQuestion
-    //{
-    //    public int AccountId { get; set; }
-    //    public int ProjectId { get; set; }
-    //    public int SowId { get; set; }
-    //    public int StageId { get; set; }
-    //    public int ComplianceTypeId { get; set; }
-    //    public int QuestionId { get; set; }
-    //    public int ComplianceStatusId { get; set; }
-    //    public string Comments { get; set; }
-    //    public int CommentsTypeId { get; set; }
-    //    public int ArtefactId { get; set; }
-    //}
-    //#endregion
+    
+    public class ArtefactDownload
+    {
+        public string DisplayName { get; set; }
+        public string FilePath { get; set; }
+        public string File { get; set; }
+        public ReturnResponseModel returnResponseModel { get; set; }
+    }
 
     #region FileUpload
     public class SaveSowQuestionResponse
