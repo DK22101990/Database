@@ -30,5 +30,10 @@ namespace CFS.Model.Constants
         public const string ArtefactsList = "sp_getArtefacts {0}";
         public const string DeleteSowQuestionResponse = "sp_deleteSowQuestionResponse {0}";
         public const string DeleteSprintQuestionResponse = "sp_deleteSprintQuestionResponse {0}";
+        public const string InsertSprintDetails = "sp_insSprintDetails {0},{1},'{2}','{3}','{4}',{5},{6},{7},{8},{9},{10}";
+        public const string UpdateSprintDetails = "sp_UpdateSprintDetails {0},{1},{2},'{3}','{4}','{5}',{6},{7},{8},{9},{10},{11}";
+        public const string SprintDetails = "sp_getSprintDetails {0}";
+        public const string SprintInformationList = "sp_getSprintInformation {0},{1}";
+        public const string DeleteSprintInformation = "sp_DeleteSprintDetails {0}";
     }
 }

@@ -14,5 +14,9 @@ namespace CFS.Model.Helpers
         public const string JobPostCreated = "A new job post <a href='{0}'>{1}</a> is assigned to you.";
         public const string JobPostUpdated = "Job post <a href='{0}'>{1}</a> is updated.";
         public const string ArtefactNotFound = "Artefact not found.";
+        public const string SaveSuccessfully = "{0} saved successfully";
+        public const string UpdateSuccessfully = "{0} updated successfully";
+        public const string BadRequst = "Please provide valid information";
+        public const string DeleteSuccessfully = "{0} deleted successfully";
     }
 }

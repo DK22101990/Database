@@ -62,9 +62,13 @@ namespace CFS.WebAPI
             app.UseCors("_myAllowSpecificOrigins");
             app.UseDeveloperExceptionPage();
             app.UseSwagger();
-            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CFS.WebAPI v1"));
+            //app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CFS.WebAPI v1"));
 
-
+            app.UseSwaggerUI(c =>
+            {
+                string swaggerJsonBasePath = string.IsNullOrWhiteSpace(c.RoutePrefix) ? "." : "..";
+                c.SwaggerEndpoint(swaggerJsonBasePath + "/swagger/v1/swagger.json", "CFS.WebAPI v1");
+            });
             app.UseHttpsRedirection();
 
             app.UseRouting();

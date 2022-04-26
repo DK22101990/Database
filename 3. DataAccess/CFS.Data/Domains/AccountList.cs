@@ -145,4 +145,46 @@ namespace CFS.Data.Domains
         public string FileSize { get; set; }
         public string DisplayName { get; set; }
     }
+
+    public class SprintDetailList
+    {
+        [Key]
+        public int? SprintId { get; set; }
+        public string SprintName { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public int? ProjectId { get; set; }
+        public string ProjectName { get; set; }
+        public int? SowId { get; set; }
+        public string SowName { get; set; }
+        public int? AccountId { get; set; }
+        public string AccountName { get; set; }
+        public int? US_PlannedAtStart { get; set; }
+        public int? US_PlannedAtCompletion { get; set; }
+        public int? TaskPlannedAtStart { get; set; }
+        public int? TaskPlannedAtCompletion { get; set; }
+        public int? TotalEstimationSizeAtStart { get; set; }
+        public int? TotalEstimationSizeAtCompletion { get; set; }
+        public int IsActive { get; set; }
+        public DateTime? LastModifiedOn { get; set; }
+        public int? ModifiedById { get; set; }
+    }
+
+    public class SprintInformation
+    {
+        [Key]
+        public int? SprintId { get; set; }
+        public string SprintName { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }     
+        public int? US_PlannedAtStart { get; set; }
+        public int? US_PlannedAtCompletion { get; set; }
+        public int? TaskPlannedAtStart { get; set; }
+        public int? TaskPlannedAtCompletion { get; set; }
+        public int? TotalEstimationSizeAtStart { get; set; }
+        public int? TotalEstimationSizeAtCompletion { get; set; }
+        public int IsActive { get; set; }
+        public DateTime? LastModifiedOn { get; set; }
+        public int? ModifiedById { get; set; }
+    }
 }

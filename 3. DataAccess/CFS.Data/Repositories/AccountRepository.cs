@@ -43,7 +43,7 @@ namespace CFS.Data.Repositories
         /// <returns></returns>
         public async Task<List<SprintList>> GetSprintList(int SowId)
         {
-            var commandText = string.Format(StoreProcedure.SprintList,SowId);
+            var commandText = string.Format(StoreProcedure.SprintList, SowId);
             return await Context.GetSprintList.FromSqlRaw<SprintList>(commandText).ToListAsync();
         }
 
@@ -129,7 +129,7 @@ namespace CFS.Data.Repositories
         /// <returns></returns>
         public async Task<List<Domains.QuestionList>> GetQuestionList(int StageId, int ComplianceTypeId)
         {
-            var commandText = string.Format(StoreProcedure.QuestionList,StageId,ComplianceTypeId);
+            var commandText = string.Format(StoreProcedure.QuestionList, StageId, ComplianceTypeId);
             return await Context.GetQuestionList.FromSqlRaw<Domains.QuestionList>(commandText).ToListAsync();
         }
 
@@ -219,7 +219,7 @@ namespace CFS.Data.Repositories
             return artefact;
         }
 
-       
+
         public async Task SaveSowQuestionResponse(SaveSowQuestionResponse request)
         {
             var commandText = string.Format(StoreProcedure.SaveSowQuestionResponse,
@@ -283,7 +283,7 @@ namespace CFS.Data.Repositories
         /// <returns></returns>
         public async Task DeleteSowQuestionResponse(int ArtefactId)
         {
-            var commandText = string.Format(StoreProcedure.DeleteSowQuestionResponse,ArtefactId);
+            var commandText = string.Format(StoreProcedure.DeleteSowQuestionResponse, ArtefactId);
             await Context.Database.ExecuteSqlRawAsync(commandText);
         }
 
@@ -298,6 +298,114 @@ namespace CFS.Data.Repositories
             await Context.Database.ExecuteSqlRawAsync(commandText);
         }
 
+        #endregion
+
+        #region Sprint Details
+        /// <summary>
+        /// Insert Sprint Details  
+        /// </summary>
+        /// <param name="objsprintModel"></param>
+        /// <returns></returns>
+        public async Task<ReturnResponseModel> InsertSprintDetails(SprintModel objsprintModel)
+        {
+            try
+            {
+                var commandText = string.Format(StoreProcedure.InsertSprintDetails,
+              objsprintModel.ProjectId,
+              objsprintModel.SowId,
+                 objsprintModel.SprintName,
+              objsprintModel.StartDate,
+              objsprintModel.EndDate,
+              objsprintModel.US_PlannedAtStart,
+              objsprintModel.US_PlannedAtCompletion,
+              objsprintModel.TaskPlannedAtStart,
+              objsprintModel.TaskPlannedAtCompletion,
+              objsprintModel.TotalEstimationSizeAtStart,
+              objsprintModel.TotalEstimationSizeAtCompletion);
+                await Context.Database.ExecuteSqlRawAsync(commandText);
+                return new ReturnResponseModel { Status = true };
+            }
+            catch (Exception)
+            {
+
+                return new ReturnResponseModel { Status = false };
+            }
+        }
+
+        /// <summary>
+        /// Update Sprint Details  
+        /// </summary>
+        /// <param name="objsprintModel"></param>
+        /// <returns></returns>
+        public async Task<ReturnResponseModel> UpdateSprintDetails(SprintModel objsprintModel)
+        {
+            try
+            {
+                var commandText = string.Format(StoreProcedure.UpdateSprintDetails,
+              objsprintModel.SprintId,
+              objsprintModel.ProjectId,
+              objsprintModel.SowId,
+              objsprintModel.SprintName,
+              objsprintModel.StartDate,
+              objsprintModel.EndDate,
+              objsprintModel.US_PlannedAtStart,
+              objsprintModel.US_PlannedAtCompletion,
+              objsprintModel.TaskPlannedAtStart,
+              objsprintModel.TaskPlannedAtCompletion,
+              objsprintModel.TotalEstimationSizeAtStart,
+              objsprintModel.TotalEstimationSizeAtCompletion);
+                await Context.Database.ExecuteSqlRawAsync(commandText);
+                return new ReturnResponseModel { Status = true };
+            }
+            catch (Exception)
+            {
+
+                return new ReturnResponseModel { Status = false };
+            }
+        }
+        /// <summary>
+        /// Get Sprint By Id
+        /// </summary>
+        /// <param name="sprintId"></param>
+        /// <returns></returns>
+        public async  Task<SprintInformation> GetSprintById(int sprintId)
+        {
+            var commandText = string.Format(StoreProcedure.SprintDetails, sprintId);
+            var objData = await Context.GetSprintDetail.FromSqlRaw<SprintInformation>(commandText).ToListAsync();
+            return objData.FirstOrDefault();
+        }
+
+        /// <summary>
+        /// Get Sprint Informations
+        /// </summary>
+        /// <param name="sowId"></param>
+        /// <param name="projectId"></param>
+        /// <returns></returns>
+        public async Task<List<SprintDetailList>> GetSprintInformationAsync(int sowId, int projectId)
+        {
+            var commandText = string.Format(StoreProcedure.SprintInformationList, sowId, projectId);
+            return await Context.GetSprintInformationList.FromSqlRaw<SprintDetailList>(commandText).ToListAsync();
+        }
+
+        /// <summary>
+        /// Delete Sprint information
+        /// </summary>
+        /// <param name="sprintId"></param>
+        /// <returns></returns>
+        public async Task<ReturnResponseModel> DeleteSprintAsync(int sprintId)
+        {
+            try
+            {
+                var commandText = string.Format(StoreProcedure.DeleteSprintInformation, sprintId);
+                await Context.Database.ExecuteSqlRawAsync(commandText);
+                return new ReturnResponseModel { Status = true };
+            }
+            catch (Exception ex)
+            {
+
+                return new ReturnResponseModel { Status = false,Message=ex.Message };
+            }
+        }
         #endregion
     }
 }

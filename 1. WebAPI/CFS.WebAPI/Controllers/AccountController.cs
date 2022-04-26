@@ -160,8 +160,8 @@ namespace CFS.WebAPI.Controllers
         public async Task<List<QuestionListViewModel>> GetQuestionList(int StageId, int ComplianceTypeId)
         {
             return await _iAccountLogic.GetQuestionList(StageId, ComplianceTypeId);
-        }       
-        
+        }
+
         ///// <summary>
         ///// Insert Kick Start Response 
         ///// </summary>
@@ -215,7 +215,7 @@ namespace CFS.WebAPI.Controllers
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
-        [HttpPost,DisableRequestSizeLimit]
+        [HttpPost, DisableRequestSizeLimit]
         [Route("SaveSowQuestionResponse")]
         public async Task<ReturnResponseModel> SaveSowQuestionResponse([FromBody] SaveSowQuestionResponse request)
         {
@@ -289,6 +289,86 @@ namespace CFS.WebAPI.Controllers
                 return Ok(result);
             }
             return BadRequest(result.returnResponseModel);
+        }
+        #endregion
+
+        #region Sprint
+
+        /// <summary>
+        /// Insert Sprint Details  
+        /// </summary>
+        /// <param name="objsprintModel"></param>
+        /// <returns></returns>
+        [Route("InsertSprintDetails")]
+        [HttpPost]
+        public async Task<IActionResult> InsertSprintDetails([FromBody] SprintModel objsprintModel)
+        {
+            ReturnResponseModel result = new ReturnResponseModel();
+            result = await _iAccountLogic.InsertSprintDetails(objsprintModel);
+            if (result.Status)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        /// <summary>
+        /// Insert Sprint Details  
+        /// </summary>
+        /// <param name="objsprintModel"></param>
+        /// <returns></returns>
+        [Route("UpdateSprintDetails")]
+        [HttpPost]
+        public async Task<IActionResult> UpdateSprintDetails([FromBody] SprintModel objsprintModel)
+        {
+            ReturnResponseModel result = new ReturnResponseModel();
+            result = await _iAccountLogic.UpdateSprintDetails(objsprintModel);
+            if (result.Status)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        /// <summary>
+        /// Get Sprint By Id
+        /// </summary>
+        /// <param name="sprintId"></param>
+        /// <returns></returns>
+        [Route("GetSprintById")]
+        [HttpGet]
+        public async Task<IActionResult> GetSprintById(int sprintId)
+        {
+            return Ok(await _iAccountLogic.GetSprintById(sprintId));
+        }
+
+        /// <summary>
+        /// Get Sprint Informations
+        /// </summary>
+        /// <param name="sowId"></param>
+        /// <param name="projectId"></param>
+        /// <returns></returns>
+        [Route("GetSprintInformation")]
+        [HttpGet]
+        public async Task<IActionResult> GetSprintInformationAsync(int sowId, int projectId)
+        {
+            return Ok(await _iAccountLogic.GetSprintInformationAsync(sowId, projectId));
+        }
+
+        /// <summary>
+        /// Get Sprint Informations
+        /// </summary>
+        /// <param name="sprintId"></param>
+        /// <returns></returns>
+        [Route("DeleteSprintInformation")]
+        [HttpDelete]
+        public async Task<IActionResult> DeleteSprintInformationAsync(int sprintId)
+        {
+            ReturnResponseModel result = new ReturnResponseModel();
+            result = await _iAccountLogic.DeleteSprintAsync(sprintId);
+            if (result.Status)
+                return Ok(result);
+            return BadRequest(result);
         }
         #endregion
     }

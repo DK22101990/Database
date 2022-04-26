@@ -137,5 +137,44 @@ namespace CFS.BusinessLogic.IBusinessLogic
         /// <param name="ArtefactId"></param>
         /// <returns>Response Model</returns>
         Task<ArtefactDownload> DownloadArtefact(int ArtefactId);
+
+        #region Sprint Details
+        /// <summary>
+        /// Insert Sprint Details  
+        /// </summary>
+        /// <param name="objsprintModel"></param>
+        /// <returns></returns>
+        Task<ReturnResponseModel> InsertSprintDetails(SprintModel objsprintModel);
+
+        /// <summary>
+        /// Update Sprint Details  
+        /// </summary>
+        /// <param name="objsprintModel"></param>
+        /// <returns></returns>
+        Task<ReturnResponseModel> UpdateSprintDetails(SprintModel objsprintModel);
+
+        /// <summary>
+        /// Get Sprint By Id
+        /// </summary>
+        /// <param name="sprintId"></param>
+        /// <returns></returns>
+        Task<SprintModel> GetSprintById(int sprintId);
+
+        /// <summary>
+        /// Get Sprint Informations
+        /// </summary>
+        /// <param name="sowId"></param>
+        /// <param name="projectId"></param>
+        /// <returns></returns>
+        Task<List<SprintModel>> GetSprintInformationAsync(int sowId, int projectId);
+
+        /// <summary>
+        /// Delete Sprint information
+        /// </summary>
+        /// <param name="sprintId"></param>
+        /// <returns></returns>
+        Task<ReturnResponseModel> DeleteSprintAsync(int sprintId);
+        #endregion
+
     }
 }

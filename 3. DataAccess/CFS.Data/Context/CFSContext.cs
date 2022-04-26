@@ -65,6 +65,12 @@ namespace CFS.Data.Context
         public DbSet<ArtefactList> GetArtefact { get; set; }
 
         [NotMapped]
+        public DbSet<SprintInformation> GetSprintDetail { get; set; }
+
+        [NotMapped]
+        public DbSet<SprintDetailList> GetSprintInformationList { get; set; }
+
+        [NotMapped]
         public DbSet<Domains.ComplianceType> GetComplianceTypeList { get; set; }
         [NotMapped]
         public DbSet<AgileQuestion> GetAgileQuestionList { get; set; }

@@ -253,7 +253,7 @@ namespace CFS.BusinessLogic.BusinessLogic
                 return new ReturnResponseModel
                 {
                     Status = true,
-                    Message = string.Format(ApplicationMessage.ArtifactUploadedSuccessfully)
+                    Message = string.Format(ApplicationMessage.SaveSuccessfully, "Sow Question")
                 };
             }
 
@@ -263,7 +263,7 @@ namespace CFS.BusinessLogic.BusinessLogic
             {
                 Guid obj = Guid.NewGuid();
                 string extension = System.IO.Path.GetExtension(request.FileName);
-                string filepath = Path.Combine(_hostingEnvironment.WebRootPath, uploadPath, request.QuestionId.ToString());
+                string filepath = Path.Combine("C:\\Projects", uploadPath, request.QuestionId.ToString());
                 //request.FileName = request.FileName.Replace(" ", "");
                 string finalpath = FileHelper.GetFinalFilePath(filepath, obj.ToString() + extension);
 
@@ -272,7 +272,7 @@ namespace CFS.BusinessLogic.BusinessLogic
                 {
                     System.IO.File.WriteAllBytes(finalpath, fileDataByteArray);
 
-                    request.FilePath = finalpath;
+                    request.FilePath = filepath;
                     request.FileSize = fileDataByteArray.Length.ToString();
                     request.FileName = obj.ToString() + extension;
 
@@ -281,7 +281,7 @@ namespace CFS.BusinessLogic.BusinessLogic
                     return new ReturnResponseModel
                     {
                         Status = true,
-                        Message = string.Format(ApplicationMessage.ArtifactUploadedSuccessfully)
+                        Message = string.Format(ApplicationMessage.SaveSuccessfully, "Sow Question")
                     };
                 }
                 else
@@ -299,7 +299,7 @@ namespace CFS.BusinessLogic.BusinessLogic
                 return new ReturnResponseModel
                 {
                     Status = true,
-                    Message = string.Format(ApplicationMessage.ArtifactUploadedSuccessfully)
+                    Message = string.Format(ApplicationMessage.SaveSuccessfully, "Agile Question")
                 };
             }
 
@@ -319,7 +319,7 @@ namespace CFS.BusinessLogic.BusinessLogic
                 {
                     System.IO.File.WriteAllBytes(finalpath, fileDataByteArray);
 
-                    request.FilePath = finalpath;
+                    request.FilePath = filepath;
                     request.FileSize = fileDataByteArray.Length.ToString();
                     request.FileName = obj.ToString() + extension;
 
@@ -328,7 +328,7 @@ namespace CFS.BusinessLogic.BusinessLogic
                     return new ReturnResponseModel
                     {
                         Status = true,
-                        Message = string.Format(ApplicationMessage.ArtifactUploadedSuccessfully)
+                        Message = string.Format(ApplicationMessage.SaveSuccessfully, "Agile Question")
                     };
                 }
                 else
@@ -411,6 +411,109 @@ namespace CFS.BusinessLogic.BusinessLogic
         }
         #endregion
 
+        #region Sprint Detils
+        /// <summary>
+        /// Insert Sprint Details  
+        /// </summary>
+        /// <param name="objsprintModel"></param>
+        /// <returns></returns>
+        public async Task<ReturnResponseModel> InsertSprintDetails(SprintModel objsprintModel)
+        {
+            var objResult = await _iAccountRepository.InsertSprintDetails(objsprintModel);
+            if (objResult.Status)
+            {
+                return new ReturnResponseModel
+                {
+                    Status = true,
+                    Message = string.Format(ApplicationMessage.SaveSuccessfully, "Sprint Details")
+                };
+            }
+            return new ReturnResponseModel
+            {
+                Status = false,
+                Message = string.Format(ApplicationMessage.BadRequst)
+            };
+        }
 
+        /// <summary>
+        /// Update Sprint Details  
+        /// </summary>
+        /// <param name="objsprintModel"></param>
+        /// <returns></returns>
+        public async Task<ReturnResponseModel> UpdateSprintDetails(SprintModel objsprintModel)
+        {
+            var objResult = await _iAccountRepository.UpdateSprintDetails(objsprintModel);
+            if (objResult.Status)
+            {
+                return new ReturnResponseModel
+                {
+                    Status = true,
+                    Message = string.Format(ApplicationMessage.UpdateSuccessfully, "Sprint Details")
+                };
+            }
+            return new ReturnResponseModel
+            {
+                Status = false,
+                Message = string.Format(ApplicationMessage.BadRequst)
+            };
+        }
+        /// <summary>
+        /// Get Sprint By Id
+        /// </summary>
+        /// <param name="sprintId"></param>
+        /// <returns></returns>
+        public async Task<SprintModel> GetSprintById(int sprintId)
+        {
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<SprintInformation, SprintModel>();
+            });
+
+            IMapper mapper = config.CreateMapper();
+            return mapper.Map<SprintModel>(await _iAccountRepository.GetSprintById(sprintId));
+        }
+
+
+        /// <summary>
+        /// Get Sprint Informations
+        /// </summary>
+        /// <param name="sowId"></param>
+        /// <param name="projectId"></param>
+        /// <returns></returns>
+        public async Task<List<SprintModel>> GetSprintInformationAsync(int sowId, int projectId)
+        {
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<SprintDetailList, SprintModel>();
+            });
+
+            IMapper mapper = config.CreateMapper();
+            return mapper.Map<List<SprintModel>>(await _iAccountRepository.GetSprintInformationAsync(sowId, projectId));
+        }
+
+        /// <summary>
+        /// Delete Sprint information
+        /// </summary>
+        /// <param name="sprintId"></param>
+        /// <returns></returns>
+        public async Task<ReturnResponseModel> DeleteSprintAsync(int sprintId)
+        {
+            var objResult = await _iAccountRepository.DeleteSprintAsync(sprintId);
+            if (objResult.Status)
+            {
+                return new ReturnResponseModel
+                {
+                    Status = true,
+                    Message = string.Format(ApplicationMessage.DeleteSuccessfully, "Sprint Details")
+                };
+            }
+            return new ReturnResponseModel
+            {
+                Status = false,
+                Message = string.Format(ApplicationMessage.BadRequst)
+            };
+        }
+        
+        #endregion
     }
 }
