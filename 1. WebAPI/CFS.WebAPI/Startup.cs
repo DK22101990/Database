@@ -64,6 +64,9 @@ namespace CFS.WebAPI
 
             services.AddTransient<IAccountLogic, AccountLogic>();
             services.AddTransient<IAccountRepository, AccountRepository>();
+
+            services.AddTransient<IProjectAllocationLogic, ProjectAllocationLogic>();
+            services.AddTransient<IProjectAllocationRepository, ProjectAllocationRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
