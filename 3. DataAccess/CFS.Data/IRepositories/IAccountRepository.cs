@@ -21,7 +21,7 @@ namespace CFS.Data.IRepositories
         /// Get ComplianceType List
         /// </summary>
         /// <returns></returns>
-        Task<List<Domains.ComplianceType>> GetComplianceTypeList(int RoleId);
+        Task<List<Domains.ComplianceType>> GetComplianceTypeList(int StageId);
 
         /// <summary>
         /// Get All Sprints
@@ -29,7 +29,7 @@ namespace CFS.Data.IRepositories
         /// <param name="ProjectId"></param>
         /// <param name="SowId"></param>
         /// <returns></returns>
-        Task<List<SprintList>> GetSprintList(int ProjectId, int SowId);
+        Task<List<SprintList>> GetSprintList(int SowId);
 
         /// <summary>
         /// Get Agile Questions
@@ -105,10 +105,79 @@ namespace CFS.Data.IRepositories
 
         /// <summary>
         /// Get Stage
+        /// </summary>        
+        /// <returns></returns>
+        Task<List<Domains.Stage>> GetStageList();
+
+        /// <summary>
+        /// Get Question List
         /// </summary>
-        /// <param name="ProjectId"></param>
+        /// <param name="StageId"></param>
         /// <param name="ComplianceTypeId"></param>
         /// <returns></returns>
-        Task<List<Domains.Stage>> GetStageList(int ProjectId, int ComplianceTypeId);
+        Task<List<Domains.QuestionList>> GetQuestionList(int StageId,int ComplianceTypeId);
+        
+        Task SaveSowQuestionResponse(SaveSowQuestionResponse request);
+
+        Task SaveAgileQuestionResponse(SaveAgileQuestionResponse request);
+
+        /// <summary>
+        /// Get Artefact by artefact id
+        /// </summary>
+        /// <param name="ArtefactId"></param>
+        /// <returns></returns>
+        Task<ArtefactList> GetArtefactById(int ArtefactId);
+
+        /// <summary>
+        /// Delete SOW Question Response
+        /// </summary>
+        /// <param name="ArtefactId"></param>
+        /// <returns></returns>
+        Task DeleteSowQuestionResponse(int ArtefactId);
+
+        /// <summary>
+        /// Delete Sprint Question Response
+        /// </summary>
+        /// <param name="ArtefactId"></param>
+        /// <returns></returns>
+        Task DeleteSprintQuestionResponse(int ArtefactId);
+
+        #region Sprint Details
+        /// <summary>
+        /// Insert Sprint Details  
+        /// </summary>
+        /// <param name="objsprintModel"></param>
+        /// <returns></returns>
+        Task<ReturnResponseModel> InsertSprintDetails(SprintModel objsprintModel);
+
+        /// <summary>
+        /// Update Sprint Details  
+        /// </summary>
+        /// <param name="objsprintModel"></param>
+        /// <returns></returns>
+        Task<ReturnResponseModel> UpdateSprintDetails(SprintModel objsprintModel);
+
+        /// <summary>
+        /// Get Sprint By Id
+        /// </summary>
+        /// <param name="sprintId"></param>
+        /// <returns></returns>
+        Task<SprintInformation> GetSprintById(int sprintId);
+
+        /// <summary>
+        /// Get Sprint Informations
+        /// </summary>
+        /// <param name="sowId"></param>
+        /// <param name="projectId"></param>
+        /// <returns></returns>
+        Task<List<SprintDetailList>> GetSprintInformationAsync(int sowId, int projectId);
+
+        /// <summary>
+        /// Delete Sprint information
+        /// </summary>
+        /// <param name="sprintId"></param>
+        /// <returns></returns>
+        Task<ReturnResponseModel> DeleteSprintAsync(int sprintId);
+        #endregion
     }
 }

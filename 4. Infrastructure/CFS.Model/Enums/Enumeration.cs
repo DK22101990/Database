@@ -30,6 +30,8 @@ namespace CFS.Model.Enums
         public enum EntityDescription
         {
             [Description("Artifact")] Artifact,
+            [Description("Agile Question")] AgileQuestion,
+            [Description("Sow Question")] SowQuestion,
         }
     }
 }

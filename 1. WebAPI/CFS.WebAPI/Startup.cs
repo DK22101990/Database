@@ -32,6 +32,14 @@ namespace CFS.WebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("_myAllowSpecificOrigins", builder =>
+                                   {
+                                       builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                                   });
+            });
+
             services.AddDbContext<CFSContext>(options =>
                options.UseSqlServer(Configuration.GetConnectionString("SqlConnection")));
             services.AddControllers();
@@ -49,20 +57,28 @@ namespace CFS.WebAPI
         {
             //if (env.IsDevelopment())
             //{
-                
+
             //}
+            app.UseCors("_myAllowSpecificOrigins");
             app.UseDeveloperExceptionPage();
             app.UseSwagger();
-            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CFS.WebAPI v1"));
-            
+            //app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CFS.WebAPI v1"));
 
+            app.UseSwaggerUI(c =>
+            {
+                string swaggerJsonBasePath = string.IsNullOrWhiteSpace(c.RoutePrefix) ? "." : "..";
+                c.SwaggerEndpoint(swaggerJsonBasePath + "/swagger/v1/swagger.json", "CFS.WebAPI v1");
+            });
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints => { endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}"); });
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
     }
 }

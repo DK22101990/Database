@@ -9,30 +9,22 @@ namespace CFS.Model.Models
     public class AccountListViewModel
     {
         public int AccountId { get; set; }
-        public string AccountName { get; set; }
-        public string Domain { get; set; }
-        public string City { get; set; }
-        public string State { get; set; }
-        public string Country { get; set; }
-        public string PhoneNumber { get; set; }
+        public string AccountName { get; set; }       
     }
     public class SprintViewModel
     {
         public int SprintId { get; set; }
-        public string SprintName { get; set; }
-        public string ProjectName { get; set; }
+        public int? SowId { get; set; }
+        public string Sprints { get; set; }
         public string SowName { get; set; }
-        public DateTime? StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
     }
 
     public class ComplianceTypeViewModel
     {
-        public string RoleName { get; set; }
-        public string Description { get; set; }
+        public int? StageId { get; set; }
+        public string StageName { get; set; }
         public int ComplianceTypeId { get; set; }
         public string ComplianceTypeName { get; set; }
-        public string TypeDescription { get; set; }
     }
 
     public class SelectListViewModel
@@ -61,6 +53,10 @@ namespace CFS.Model.Models
         public int? IsActive { get; set; }
         public DateTime? LastModifiedOn { get; set; }
         public int? ModifiedByID { get; set; }
+        public string FileName { get; set; }
+        public string FilePath { get; set; }
+        public string FileSize { get; set; }
+        public string DisplayName { get; set; }
     }
 
     public class ProjectKickStartQuestionViewModel
@@ -82,7 +78,23 @@ namespace CFS.Model.Models
         public int? IsActive { get; set; }
         public DateTime? LastModifiedOn { get; set; }
         public int? ModifiedByID { get; set; }
+        public string FileName { get; set; }
+        public string FilePath { get; set; }
+        public string FileSize { get; set; }
+        public string DisplayName { get; set; }
     }
+    #region QuestionList
+    public class QuestionListViewModel
+    {
+        
+        public int QuestionId { get; set; }
+        public string Questions { get; set; }
+        public int? ComplianceTypeId { get; set; }
+        public string ComplianceTypeName { get; set; }
+        public int? StageId { get; set; }
+        public string StageName { get; set; }
+    }
+    #endregion
 
     #region KickStart
 
@@ -113,6 +125,7 @@ namespace CFS.Model.Models
         public string ProjectType { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
+        public int? AccountId { get; set; }
         public string AccountName { get; set; }
     }
     #endregion
@@ -125,59 +138,48 @@ namespace CFS.Model.Models
         public DateTime? EndDate { get; set; }
         public string SowName { get; set; }
         public string EngagementWeeks { get; set; }
-        public string SowAmount { get; set; }       
+        public string SowAmount { get; set; }
+        public int? ProjectId { get; set; }
+        public string ProjectName { get; set; }
     }
     #endregion
 
     #region Stage
     public class StageViewModel
     {
-        public int StageId { get; set; }
-        public string ProjectName { get; set; }
-        public string StageName { get; set; }
-        public string ComplianceTypeName { get; set; }
+        public int StageId { get; set; }        
+        public string StageName { get; set; }        
     }
     #endregion
 
-    //#region SOWKickStartQuestion
-    //public class SOWKickStartQuestion
-    //{
-    //    public int AccountId { get; set; }
-    //    public int ProjectId { get; set; }
-    //    public int SowId { get; set; }
-    //    public int StageId { get; set; }
-    //    public int ComplianceTypeId { get; set; }
-    //    public int QuestionId { get; set; }
-    //    public int ComplianceStatusId { get; set; }
-    //    public string Comments { get; set; }
-    //    public int CommentsTypeId { get; set; }
-    //    public int ArtefactId { get; set; }        
-    //}
-    //#endregion
-
-    //#region SprintKickStartQuestion
-    //public class SprintKickStartQuestion
-    //{
-    //    public int AccountId { get; set; }
-    //    public int ProjectId { get; set; }
-    //    public int SowId { get; set; }
-    //    public int StageId { get; set; }
-    //    public int ComplianceTypeId { get; set; }
-    //    public int QuestionId { get; set; }
-    //    public int ComplianceStatusId { get; set; }
-    //    public string Comments { get; set; }
-    //    public int CommentsTypeId { get; set; }
-    //    public int ArtefactId { get; set; }
-    //}
-    //#endregion
+    
+    public class ArtefactDownload
+    {
+        public string DisplayName { get; set; }
+        public string FilePath { get; set; }
+        public string File { get; set; }
+        public ReturnResponseModel returnResponseModel { get; set; }
+    }
 
     #region FileUpload
-    public class FileUploadModel
+    public class SaveSowQuestionResponse
     {
+        public int AccountId { get; set; }
+        public int ProjectId { get; set; }
+        public int SowId { get; set; }
+        public int StageId { get; set; }
+        public int ComplianceTypeId { get; set; }
         public int QuestionId { get; set; }
+        public int ComplianceStatusId { get; set; }
+        public string Comments { get; set; }
+        public int CommentsTypeId { get; set; }
         public string File { get; set; }
         public string FileName { get; set; }
-        public string FileLength { get; set; }
+        public string FilePath { get; set; }
+        public string FileSize { get; set; }
+        public string DisplayName { get; set; }
+        public bool IsUploaded { get; set; }
+        public int? ArtefactId { get; set; }
     }
     public class ArtifactViewModel
     {
@@ -191,5 +193,54 @@ namespace CFS.Model.Models
         public string FileSize { get; set; }
         public string DisplayName { get; set; }
     }
+    #endregion
+
+    #region SaveAgileQuestionResponse
+    public class SaveAgileQuestionResponse
+    {
+        public int AccountId { get; set; }
+        public int ProjectId { get; set; }
+        public int SowId { get; set; }
+        public int StageId { get; set; }
+        public int ComplianceTypeId { get; set; }
+        public int SprintId { get; set; }
+        public int QuestionId { get; set; }
+        public int ComplianceStatusId { get; set; }
+        public string Comments { get; set; }
+        public int CommentsTypeId { get; set; }
+        public string File { get; set; }
+        public string FileName { get; set; }
+        public string FilePath { get; set; }
+        public string FileSize { get; set; }
+        public string DisplayName { get; set; }
+        public bool IsUploaded { get; set; }
+        public int? ArtefactId { get; set; }
+    }
+    #endregion
+
+    #region Sprint Planning
+    public class SprintModel
+    {
+        public int? SprintId { get; set; }
+        public int? ProjectId { get; set; }
+        public string ProjectName { get; set; }
+        public int? SowId { get; set; }
+        public string SowName { get; set; }
+        public int? AccountId { get; set; }
+        public string AccountName { get; set; }
+        public string SprintName { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public int? US_PlannedAtStart { get; set; }
+        public int? US_PlannedAtCompletion { get; set; }
+        public int? TaskPlannedAtStart { get; set; }
+        public int? TaskPlannedAtCompletion { get; set; }
+        public int? TotalEstimationSizeAtStart { get; set; }
+        public int? TotalEstimationSizeAtCompletion { get; set; }
+        public int IsActive { get; set; }
+        public DateTime? LastModifiedOn { get; set; }
+        public int? ModifiedById { get; set; }
+    }
+
     #endregion
 }
