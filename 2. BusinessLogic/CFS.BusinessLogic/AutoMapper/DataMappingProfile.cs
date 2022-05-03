@@ -14,6 +14,16 @@ namespace CFS.BusinessLogic.AutoMapper
         public DataMappingProfile()
         {
             CreateMap<AccountList, AccountListViewModel>();
+            CreateMap<SprintList, SprintViewModel>();
+            CreateMap<Data.Domains.ComplianceType, ComplianceTypeViewModel>();
+            CreateMap<AgileQuestion, AgileQuestionViewModel>();
+            CreateMap<ProjectKickStartQuestions, ProjectKickStartQuestionViewModel>();
+            CreateMap<Projects, ProjectViewModel>();
+            CreateMap<SOW, SOWViewModel>();
+            CreateMap<Data.Domains.Stage, StageViewModel>();
+            CreateMap<SelectList, SelectListViewModel>();
+            CreateMap<SprintInformation, SprintModel>();
+            CreateMap<SprintDetailList, SprintModel>();
         }
     }
 }

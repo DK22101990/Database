@@ -25,15 +25,18 @@ namespace CFS.BusinessLogic.BusinessLogic
         private readonly IAccountRepository _iAccountRepository;
         private readonly IConfiguration _configuration;
         private readonly IHostingEnvironment _hostingEnvironment;
+        private readonly IMapper _mapper;
 
         #endregion Variables
 
         #region Constructor
-        public AccountLogic(IAccountRepository iAccountRepository, IConfiguration configuration, IHostingEnvironment hostingEnvironment)
+        public AccountLogic(IAccountRepository iAccountRepository, IConfiguration configuration, IHostingEnvironment hostingEnvironment,
+            IMapper mapper)
         {
             _iAccountRepository = iAccountRepository;
             _configuration = configuration;
             _hostingEnvironment = hostingEnvironment;
+            _mapper = mapper;
         }
 
         #endregion Constructor
@@ -46,13 +49,7 @@ namespace CFS.BusinessLogic.BusinessLogic
         /// <returns></returns>
         public async Task<List<AccountListViewModel>> GetAccountList()
         {
-            var config = new MapperConfiguration(cfg =>
-            {
-                cfg.CreateMap<AccountList, AccountListViewModel>();
-            });
-
-            IMapper mapper = config.CreateMapper();
-            return mapper.Map<List<AccountListViewModel>>(await _iAccountRepository.GetAccountList());
+            return _mapper.Map<List<AccountListViewModel>>(await _iAccountRepository.GetAccountList());
         }
 
 
@@ -64,13 +61,7 @@ namespace CFS.BusinessLogic.BusinessLogic
         /// <returns></returns>
         public async Task<List<SprintViewModel>> GetSprintList(int SowId)
         {
-            var config = new MapperConfiguration(cfg =>
-            {
-                cfg.CreateMap<SprintList, SprintViewModel>();
-            });
-
-            IMapper mapper = config.CreateMapper();
-            return mapper.Map<List<SprintViewModel>>(await _iAccountRepository.GetSprintList(SowId));
+            return _mapper.Map<List<SprintViewModel>>(await _iAccountRepository.GetSprintList(SowId));
         }
 
 
@@ -80,13 +71,7 @@ namespace CFS.BusinessLogic.BusinessLogic
         /// <returns></returns>
         public async Task<List<ComplianceTypeViewModel>> GetComplianceTypeList(int StageId)
         {
-            var config = new MapperConfiguration(cfg =>
-            {
-                cfg.CreateMap<Data.Domains.ComplianceType, ComplianceTypeViewModel>();
-            });
-
-            IMapper mapper = config.CreateMapper();
-            return mapper.Map<List<ComplianceTypeViewModel>>(await _iAccountRepository.GetComplianceTypeList(StageId));
+            return _mapper.Map<List<ComplianceTypeViewModel>>(await _iAccountRepository.GetComplianceTypeList(StageId));
         }
 
         /// <summary>
@@ -100,13 +85,7 @@ namespace CFS.BusinessLogic.BusinessLogic
             int StageId,
             int SprintId)
         {
-            var config = new MapperConfiguration(cfg =>
-            {
-                cfg.CreateMap<AgileQuestion, AgileQuestionViewModel>();
-            });
-
-            IMapper mapper = config.CreateMapper();
-            return mapper.Map<List<AgileQuestionViewModel>>(await _iAccountRepository.GetAgileQuestionList(ComplianceTypeId,
+            return _mapper.Map<List<AgileQuestionViewModel>>(await _iAccountRepository.GetAgileQuestionList(ComplianceTypeId,
                 ProjectId,
                 AccountId,
                 SowId,
@@ -124,13 +103,7 @@ namespace CFS.BusinessLogic.BusinessLogic
             int SowId,
             int StageId)
         {
-            var config = new MapperConfiguration(cfg =>
-            {
-                cfg.CreateMap<ProjectKickStartQuestions, ProjectKickStartQuestionViewModel>();
-            });
-
-            IMapper mapper = config.CreateMapper();
-            return mapper.Map<List<ProjectKickStartQuestionViewModel>>(await _iAccountRepository.GetProjectKickStartQuestionList(ComplianceTypeId,
+            return _mapper.Map<List<ProjectKickStartQuestionViewModel>>(await _iAccountRepository.GetProjectKickStartQuestionList(ComplianceTypeId,
                 ProjectId,
                 AccountId,
                 SowId,
@@ -143,13 +116,7 @@ namespace CFS.BusinessLogic.BusinessLogic
         /// <returns></returns>
         public async Task<List<ProjectViewModel>> GetProjectList(int AccountId)
         {
-            var config = new MapperConfiguration(cfg =>
-            {
-                cfg.CreateMap<Projects, ProjectViewModel>();
-            });
-
-            IMapper mapper = config.CreateMapper();
-            return mapper.Map<List<ProjectViewModel>>(await _iAccountRepository.GetProjectList(AccountId));
+            return _mapper.Map<List<ProjectViewModel>>(await _iAccountRepository.GetProjectList(AccountId));
         }
 
         /// <summary>
@@ -158,13 +125,7 @@ namespace CFS.BusinessLogic.BusinessLogic
         /// <returns></returns>
         public async Task<List<SOWViewModel>> GetSOWList(int ProjectId)
         {
-            var config = new MapperConfiguration(cfg =>
-            {
-                cfg.CreateMap<SOW, SOWViewModel>();
-            });
-
-            IMapper mapper = config.CreateMapper();
-            return mapper.Map<List<SOWViewModel>>(await _iAccountRepository.GetSOWList(ProjectId));
+            return _mapper.Map<List<SOWViewModel>>(await _iAccountRepository.GetSOWList(ProjectId));
         }
 
         /// <summary>
@@ -173,13 +134,7 @@ namespace CFS.BusinessLogic.BusinessLogic
         /// <returns></returns>
         public async Task<List<StageViewModel>> GetStageList()
         {
-            var config = new MapperConfiguration(cfg =>
-            {
-                cfg.CreateMap<Data.Domains.Stage, StageViewModel>();
-            });
-
-            IMapper mapper = config.CreateMapper();
-            return mapper.Map<List<StageViewModel>>(await _iAccountRepository.GetStageList());
+            return _mapper.Map<List<StageViewModel>>(await _iAccountRepository.GetStageList());
         }
 
         /// <summary>
@@ -190,13 +145,7 @@ namespace CFS.BusinessLogic.BusinessLogic
         /// <returns></returns>
         public async Task<List<QuestionListViewModel>> GetQuestionList(int StageId, int ComplianceTypeId)
         {
-            var config = new MapperConfiguration(cfg =>
-            {
-                cfg.CreateMap<Data.Domains.QuestionList, QuestionListViewModel>();
-            });
-
-            IMapper mapper = config.CreateMapper();
-            return mapper.Map<List<QuestionListViewModel>>(await _iAccountRepository.GetQuestionList(StageId, ComplianceTypeId));
+            return _mapper.Map<List<QuestionListViewModel>>(await _iAccountRepository.GetQuestionList(StageId, ComplianceTypeId));
         }
 
         /// <summary>
@@ -232,13 +181,7 @@ namespace CFS.BusinessLogic.BusinessLogic
         /// <returns></returns>
         public async Task<List<SelectListViewModel>> GetMasterList(string Entity)
         {
-            var config = new MapperConfiguration(cfg =>
-            {
-                cfg.CreateMap<SelectList, SelectListViewModel>();
-            });
-
-            IMapper mapper = config.CreateMapper();
-            return mapper.Map<List<SelectListViewModel>>(await _iAccountRepository.GetMasterList(Entity));
+            return _mapper.Map<List<SelectListViewModel>>(await _iAccountRepository.GetMasterList(Entity));
         }
 
         /// <summary>
@@ -464,13 +407,7 @@ namespace CFS.BusinessLogic.BusinessLogic
         /// <returns></returns>
         public async Task<SprintModel> GetSprintById(int sprintId)
         {
-            var config = new MapperConfiguration(cfg =>
-            {
-                cfg.CreateMap<SprintInformation, SprintModel>();
-            });
-
-            IMapper mapper = config.CreateMapper();
-            return mapper.Map<SprintModel>(await _iAccountRepository.GetSprintById(sprintId));
+            return _mapper.Map<SprintModel>(await _iAccountRepository.GetSprintById(sprintId));
         }
 
 
@@ -482,13 +419,7 @@ namespace CFS.BusinessLogic.BusinessLogic
         /// <returns></returns>
         public async Task<List<SprintModel>> GetSprintInformationAsync(int sowId, int projectId)
         {
-            var config = new MapperConfiguration(cfg =>
-            {
-                cfg.CreateMap<SprintDetailList, SprintModel>();
-            });
-
-            IMapper mapper = config.CreateMapper();
-            return mapper.Map<List<SprintModel>>(await _iAccountRepository.GetSprintInformationAsync(sowId, projectId));
+            return _mapper.Map<List<SprintModel>>(await _iAccountRepository.GetSprintInformationAsync(sowId, projectId));
         }
 
         /// <summary>
@@ -513,7 +444,7 @@ namespace CFS.BusinessLogic.BusinessLogic
                 Message = string.Format(ApplicationMessage.BadRequst)
             };
         }
-        
+
         #endregion
     }
 }

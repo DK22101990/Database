@@ -1,3 +1,5 @@
+using AutoMapper;
+using CFS.BusinessLogic.AutoMapper;
 using CFS.BusinessLogic.BusinessLogic;
 using CFS.BusinessLogic.IBusinessLogic;
 using CFS.Data.Context;
@@ -47,6 +49,18 @@ namespace CFS.WebAPI
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "CFS.WebAPI", Version = "v1" });
             });
+
+            #region Auto mapper Configuration
+
+            var mapperConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new DataMappingProfile());
+            });
+
+            IMapper mapper = mapperConfig.CreateMapper();
+            services.AddSingleton(mapper);
+
+            #endregion
 
             services.AddTransient<IAccountLogic, AccountLogic>();
             services.AddTransient<IAccountRepository, AccountRepository>();
