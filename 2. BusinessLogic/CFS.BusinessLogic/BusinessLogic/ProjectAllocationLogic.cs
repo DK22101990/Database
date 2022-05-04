@@ -108,6 +108,41 @@ namespace CFS.BusinessLogic.BusinessLogic
             };
         }
 
+        /// <summary>
+        /// Get Account Manager Map
+        /// </summary>
+        /// <param name="projectId"></param>
+        /// <param name="sowId"></param>
+        /// <param name="accountId"></param>
+        /// <returns></returns>
+        public async Task<List<AccountManagerMapModel>> GetAccountManagerMapAsync(int projectId, int sowId, int accountId)
+        {
+            return _mapper.Map<List<AccountManagerMapModel>>(await _iProjectAllocationRepository.GetAccountManagerMapAsync(projectId,sowId,accountId));
+        }
+
+        /// <summary>
+        /// Get Project Allocation
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <param name="projectId"></param>
+        /// <param name="sowId"></param>
+        /// <param name="accountId"></param>
+        /// <returns></returns>
+        public async Task<List<ProjectAllocationModel>> GetProjectAllocationAsync(int employeeId, int projectId, int sowId, int accountId)
+        {
+            return _mapper.Map<List<ProjectAllocationModel>>(await _iProjectAllocationRepository.GetProjectAllocationAsync(employeeId,projectId, sowId, accountId));
+        }
+
+        /// <summary>
+        /// Get Employee Billability
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <returns></returns>
+        public async Task<List<EmployeeBillabilityModel>> GetEmployeeBillabilityAsync(int employeeId)
+        {
+            return _mapper.Map<List<EmployeeBillabilityModel>>(await _iProjectAllocationRepository.GetEmployeeBillabilityAsync(employeeId));
+        }
+
         #endregion
     }
 }

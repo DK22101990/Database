@@ -44,6 +44,6 @@ namespace CFS.Model.Constants
         public const string DeleteAccountManagerMap = "sp_DeleteAccountManagerMap {0}";
         public const string GetAccountManagerMap = "sp_getAccountManagerMap {0},{1},{2}";
         public const string GetProjectAllocation = "sp_getProjectAllocation {0},{1},{2},{3}";
-        public const string GetEmployeeBillability = "Sp_GetEmployeeBillability";
+        public const string GetEmployeeBillability = "Sp_GetEmployeeBillability {0}";
     }
 }

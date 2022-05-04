@@ -71,6 +71,15 @@ namespace CFS.Data.Context
         public DbSet<SprintDetailList> GetSprintInformationList { get; set; }
 
         [NotMapped]
+        public DbSet<AccountManagerMapList> GetAccountManagerMapList { get; set; }
+
+        [NotMapped]
+        public DbSet<ProjectAllocationList> GetProjectAllocationList { get; set; }
+
+        [NotMapped]
+        public DbSet<EmployeeBillability> GetEmployeeBillability { get; set; }
+
+        [NotMapped]
         public DbSet<Domains.ComplianceType> GetComplianceTypeList { get; set; }
         [NotMapped]
         public DbSet<AgileQuestion> GetAgileQuestionList { get; set; }

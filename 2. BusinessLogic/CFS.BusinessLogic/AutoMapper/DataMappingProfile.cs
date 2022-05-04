@@ -24,6 +24,9 @@ namespace CFS.BusinessLogic.AutoMapper
             CreateMap<SelectList, SelectListViewModel>();
             CreateMap<SprintInformation, SprintModel>();
             CreateMap<SprintDetailList, SprintModel>();
+            CreateMap<AccountManagerMapList, AccountManagerMapModel>();
+            CreateMap<ProjectAllocationList, ProjectAllocationModel>();
+            CreateMap<EmployeeBillability, EmployeeBillabilityModel>();
         }
     }
 }

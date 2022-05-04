@@ -1,36 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CFS.Model.Models
+namespace CFS.Data.Domains
 {
-    #region Account Manager
-
-    public class InsertAccountManager
+    public class AccountManagerMapList
     {
-        public int AccountId { get; set; }
-        public int ProjectId { get; set; }
-        public int SowId { get; set; }
-        public int AccountManagerId { get; set; }
-        public DateTime? StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
-    }
-
-    public class InsertProjectAllocation
-    { 
-        public int AccountId { get; set; }
-        public int ProjectId { get; set; }
-        public int SowId { get; set; }
-        public int EmployeeId { get; set; }
-        public DateTime? StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
-        public decimal Billability { get; set; }
-    }
-
-    public class AccountManagerMapModel
-    {
+        [Key]
         public int SowId { get; set; }
         public string SowName { get; set; }
         public int? ProjectId { get; set; }
@@ -47,8 +26,9 @@ namespace CFS.Model.Models
         public int? ModifiedById { get; set; }
     }
 
-    public class ProjectAllocationModel
+    public class ProjectAllocationList
     {
+        [Key]
         public int EmployeeId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -64,10 +44,10 @@ namespace CFS.Model.Models
         public int? ModifiedById { get; set; }
     }
 
-    public class EmployeeBillabilityModel
+    public class EmployeeBillability
     {
+        [Key]
         public int EmployeeId { get; set; }
         public decimal BalanceBillability { get; set; }
     }
-    #endregion
 }

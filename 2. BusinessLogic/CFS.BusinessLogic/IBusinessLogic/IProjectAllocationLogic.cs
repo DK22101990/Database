@@ -50,5 +50,31 @@ namespace CFS.BusinessLogic.IBusinessLogic
         /// <param name="AccountId"></param>
         /// <returns></returns>
         Task<ReturnResponseModel> DeleteProjectAllocation(int AccountId);
+
+        /// <summary>
+        /// Get Account Manager Map
+        /// </summary>
+        /// <param name="projectId"></param>
+        /// <param name="sowId"></param>
+        /// <param name="accountId"></param>
+        /// <returns></returns>
+        Task<List<AccountManagerMapModel>> GetAccountManagerMapAsync(int projectId, int sowId, int accountId);
+
+        /// <summary>
+        /// Get Project Allocation
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <param name="projectId"></param>
+        /// <param name="sowId"></param>
+        /// <param name="accountId"></param>
+        /// <returns></returns>
+        Task<List<ProjectAllocationModel>> GetProjectAllocationAsync(int employeeId, int projectId, int sowId, int accountId);
+
+        /// <summary>
+        /// Get Employee Billability
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <returns></returns>
+        Task<List<EmployeeBillabilityModel>> GetEmployeeBillabilityAsync(int employeeId);
     }
 }

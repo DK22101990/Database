@@ -1,4 +1,5 @@
 ﻿using CFS.Data.Context;
+using CFS.Data.Domains;
 using CFS.Data.IRepositories;
 using CFS.Model.Constants;
 using CFS.Model.Models;
@@ -57,7 +58,7 @@ namespace CFS.Data.Repositories
                 projectAllocation.Billability);
             await Context.Database.ExecuteSqlRawAsync(commandText);
         }
-                        
+
         /// <summary>
         /// Update Account Manager Map
         /// </summary>
@@ -115,6 +116,43 @@ namespace CFS.Data.Repositories
             await Context.Database.ExecuteSqlRawAsync(commandText);
         }
 
+        /// <summary>
+        /// Get Account Manager Map
+        /// </summary>
+        /// <param name="projectId"></param>
+        /// <param name="sowId"></param>
+        /// <param name="accountId"></param>
+        /// <returns></returns>
+        public async Task<List<AccountManagerMapList>> GetAccountManagerMapAsync(int projectId, int sowId, int accountId)
+        {
+            var commandText = string.Format(StoreProcedure.GetAccountManagerMap, projectId, sowId, accountId);
+            return await Context.GetAccountManagerMapList.FromSqlRaw<AccountManagerMapList>(commandText).ToListAsync();
+        }
+
+        /// <summary>
+        /// Get Project Allocation
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <param name="projectId"></param>
+        /// <param name="sowId"></param>
+        /// <param name="accountId"></param>
+        /// <returns></returns>
+        public async Task<List<ProjectAllocationList>> GetProjectAllocationAsync(int employeeId, int projectId, int sowId, int accountId)
+        {
+            var commandText = string.Format(StoreProcedure.GetProjectAllocation, employeeId, projectId, sowId, accountId);
+            return await Context.GetProjectAllocationList.FromSqlRaw<ProjectAllocationList>(commandText).ToListAsync();
+        }
+
+        /// <summary>
+        /// Get Employee Billability
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <returns></returns>
+        public async Task<List<EmployeeBillability>> GetEmployeeBillabilityAsync(int employeeId)
+        {
+            var commandText = string.Format(StoreProcedure.GetEmployeeBillability, employeeId);
+            return await Context.GetEmployeeBillability.FromSqlRaw<EmployeeBillability>(commandText).ToListAsync();
+        }
         #endregion
     }
 }

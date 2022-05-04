@@ -114,6 +114,47 @@ namespace CFS.WebAPI.Controllers
             return BadRequest(result);
         }
 
+        /// <summary>
+        /// Get Account Manager Map
+        /// </summary>
+        /// <param name="projectId"></param>
+        /// <param name="sowId"></param>
+        /// <param name="accountId"></param>
+        /// <returns></returns>
+        [Route("GetAccountManagerMap")]
+        [HttpGet]
+        public async Task<IActionResult> GetAccountManagerMapAsync(int projectId, int sowId, int accountId)
+        {
+            return Ok(await _iProjectAllocationLogic.GetAccountManagerMapAsync(projectId, sowId, accountId));
+        }
+
+        /// <summary>
+        /// Get Project Allocation
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <param name="projectId"></param>
+        /// <param name="sowId"></param>
+        /// <param name="accountId"></param>
+        /// <returns></returns>
+        [Route("GetProjectAllocation")]
+        [HttpGet]
+        public async Task<IActionResult> GetProjectAllocationAsync(int employeeId, int projectId, int sowId, int accountId)
+        {
+            return Ok(await _iProjectAllocationLogic.GetProjectAllocationAsync(employeeId, projectId, sowId, accountId));
+        }
+
+        /// <summary>
+        /// Get Employee Billability
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <returns></returns>
+        [Route("GetEmployeeBillability")]
+        [HttpGet]
+        public async Task<IActionResult> GetEmployeeBillabilityAsync(int employeeId)
+        {
+            return Ok(await _iProjectAllocationLogic.GetEmployeeBillabilityAsync(employeeId));
+        }
+
         #endregion
     }
 }
