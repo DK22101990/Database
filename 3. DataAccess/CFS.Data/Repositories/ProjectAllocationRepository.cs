@@ -57,7 +57,7 @@ namespace CFS.Data.Repositories
                 projectAllocation.Billability);
             await Context.Database.ExecuteSqlRawAsync(commandText);
         }
-
+                        
         /// <summary>
         /// Update Account Manager Map
         /// </summary>
