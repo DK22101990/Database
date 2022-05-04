@@ -17,10 +17,12 @@ namespace CFS.WebAPI.Controllers
 
         private readonly IAccountLogic _iAccountLogic;
         private readonly IConfiguration _configuration;
+        private readonly ILogger _logger;
         #endregion Variables
 
         #region Constructor
-        public AccountController(IAccountLogic iAccountLogic, ILoggerFactory factory)
+        public AccountController(IAccountLogic iAccountLogic, ILoggerFactory factory,
+            ILogger<AccountController> logger)
         {
             factory.CreateLogger<AccountController>();
             _iAccountLogic = iAccountLogic;
@@ -37,6 +39,8 @@ namespace CFS.WebAPI.Controllers
         [HttpGet]
         public async Task<List<AccountListViewModel>> GetAccountList()
         {
+            string Message = $"GetAccountList at {DateTime.UtcNow.ToLongTimeString()}";
+            _logger.LogInformation(Message);
             return await _iAccountLogic.GetAccountList();
         }
         /// <summary>
