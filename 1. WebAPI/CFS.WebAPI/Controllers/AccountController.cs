@@ -26,6 +26,7 @@ namespace CFS.WebAPI.Controllers
         {
             factory.CreateLogger<AccountController>();
             _iAccountLogic = iAccountLogic;
+            _logger = logger;
         }
         #endregion
 
