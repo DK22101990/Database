@@ -27,6 +27,7 @@ namespace CFS.Model.Models
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public decimal Billability { get; set; }
+        public string AllocationType { get; set; }
     }
 
     public class AccountManagerMapModel
@@ -59,6 +60,7 @@ namespace CFS.Model.Models
         public int? AccountId { get; set; }
         public string AccountName { get; set; }
         public decimal Billability { get; set; }
+        public string AllocationType { get; set; }
         public int IsActive { get; set; }
         public DateTime? LastModifiedOn { get; set; }
         public int? ModifiedById { get; set; }

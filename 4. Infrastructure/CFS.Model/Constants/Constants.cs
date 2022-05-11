@@ -37,8 +37,8 @@ namespace CFS.Model.Constants
         public const string DeleteSprintInformation = "sp_DeleteSprintDetails {0}";
 
         public const string InsertAccountManagerMap = "sp_insAccountManagerMap {0},{1},{2},{3},'{4}','{5}'";
-        public const string InsertProjectAllocation = "sp_insProjectAllocation {0},{1},{2},{3},'{4}','{5}',{6}";
-        public const string UpdateProjectAllocation = "sp_UpdateProjectAllocation {0},{1},{2},{3},'{4}','{5}',{6}";
+        public const string InsertProjectAllocation = "sp_insProjectAllocation {0},{1},{2},{3},'{4}','{5}',{6},'{7}'";
+        public const string UpdateProjectAllocation = "sp_UpdateProjectAllocation {0},{1},{2},{3},'{4}','{5}',{6},'{7}'";
         public const string UpdateAccountManagerMap = "sp_UpdateAccountManagerMap {0},{1},{2},{3},'{4}','{5}'";
         public const string DeleteProjectAllocation = "sp_DeleteProjectAllocation {0}";
         public const string DeleteAccountManagerMap = "sp_DeleteAccountManagerMap {0}";

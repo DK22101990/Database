@@ -55,7 +55,8 @@ namespace CFS.Data.Repositories
                 projectAllocation.AccountId,
                 projectAllocation.StartDate,
                 projectAllocation.EndDate,
-                projectAllocation.Billability);
+                projectAllocation.Billability,
+                projectAllocation.AllocationType);
             await Context.Database.ExecuteSqlRawAsync(commandText);
         }
 
@@ -90,7 +91,8 @@ namespace CFS.Data.Repositories
                 projectAllocation.AccountId,
                 projectAllocation.StartDate,
                 projectAllocation.EndDate,
-                projectAllocation.Billability);
+                projectAllocation.Billability,
+                projectAllocation.AllocationType);
             await Context.Database.ExecuteSqlRawAsync(commandText);
         }
 

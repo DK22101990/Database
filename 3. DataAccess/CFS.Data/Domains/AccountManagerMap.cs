@@ -39,6 +39,7 @@ namespace CFS.Data.Domains
         public int? AccountId { get; set; }
         public string AccountName { get; set; }
         public decimal Billability { get; set; }
+        public string AllocationType { get; set; }
         public int IsActive { get; set; }
         public DateTime? LastModifiedOn { get; set; }
         public int? ModifiedById { get; set; }
