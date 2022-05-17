@@ -10,11 +10,11 @@ namespace CFS.Data.Domains
     public class AccountManagerMapList
     {
         [Key]
+        public int? AccountManagerId { get; set; }
         public int SowId { get; set; }
         public string SowName { get; set; }
         public int? ProjectId { get; set; }
-        public string ProjectName { get; set; }
-        public int? AccountManagerId { get; set; }
+        public string ProjectName { get; set; }       
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int? AccountId { get; set; }
