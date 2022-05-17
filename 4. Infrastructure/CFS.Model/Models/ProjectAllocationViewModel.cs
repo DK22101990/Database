@@ -14,6 +14,7 @@ namespace CFS.Model.Models
         public int ProjectId { get; set; }
         public int SowId { get; set; }
         public int AccountManagerId { get; set; }
+        public int CurrentAccountManagerID { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
     }

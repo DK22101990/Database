@@ -42,7 +42,7 @@ namespace CFS.BusinessLogic.IBusinessLogic
         /// </summary>
         /// <param name="AccountId"></param>
         /// <returns></returns>
-        Task<ReturnResponseModel> DeleteAccountManagerMap(int AccountManagerId);
+        Task<ReturnResponseModel> DeleteAccountManagerMap(int accountManagerId, int projectId, int accountId, int sowId);
 
         /// <summary>
         /// Delete Project Allocation

@@ -83,9 +83,9 @@ namespace CFS.BusinessLogic.BusinessLogic
         /// </summary>
         /// <param name="AccountId"></param>
         /// <returns></returns>
-        public async Task<ReturnResponseModel> DeleteAccountManagerMap(int AccountManagerId)
+        public async Task<ReturnResponseModel> DeleteAccountManagerMap(int accountManagerId, int projectId, int accountId, int sowId)
         {
-            await _iProjectAllocationRepository.DeleteAccountManagerMap(AccountManagerId);
+            await _iProjectAllocationRepository.DeleteAccountManagerMap(accountManagerId, projectId, accountId, sowId);
             return new ReturnResponseModel
             {
                 Status = true,

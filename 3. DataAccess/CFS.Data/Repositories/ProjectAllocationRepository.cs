@@ -69,6 +69,7 @@ namespace CFS.Data.Repositories
         {
             var commandText = string.Format(StoreProcedure.UpdateAccountManagerMap,
                 accountManager.AccountManagerId,
+                accountManager.CurrentAccountManagerID,
                 accountManager.ProjectId,
                 accountManager.SowId,
                 accountManager.AccountId,
@@ -101,9 +102,9 @@ namespace CFS.Data.Repositories
         /// </summary>
         /// <param name="AccountId"></param>
         /// <returns></returns>
-        public async Task DeleteAccountManagerMap(int AccountManagerId)
+        public async Task DeleteAccountManagerMap(int accountManagerId, int projectId, int accountId, int sowId)
         {
-            var commandText = string.Format(StoreProcedure.DeleteAccountManagerMap, AccountManagerId);
+            var commandText = string.Format(StoreProcedure.DeleteAccountManagerMap, accountManagerId, projectId, accountId, sowId);
             await Context.Database.ExecuteSqlRawAsync(commandText);
         }
 
