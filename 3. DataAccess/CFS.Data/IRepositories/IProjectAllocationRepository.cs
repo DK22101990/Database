@@ -43,7 +43,7 @@ namespace CFS.Data.IRepositories
         /// </summary>
         /// <param name="AccountId"></param>
         /// <returns></returns>
-        Task DeleteAccountManagerMap(int AccountId);
+        Task DeleteAccountManagerMap(int AccountManagerId);
 
         /// <summary>
         /// Delete Project Allocation

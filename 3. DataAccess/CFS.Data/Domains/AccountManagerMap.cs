@@ -43,6 +43,8 @@ namespace CFS.Data.Domains
         public int IsActive { get; set; }
         public DateTime? LastModifiedOn { get; set; }
         public int? ModifiedById { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
     }
 
     public class EmployeeBillability

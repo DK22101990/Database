@@ -101,9 +101,9 @@ namespace CFS.Data.Repositories
         /// </summary>
         /// <param name="AccountId"></param>
         /// <returns></returns>
-        public async Task DeleteAccountManagerMap(int AccountId)
+        public async Task DeleteAccountManagerMap(int AccountManagerId)
         {
-            var commandText = string.Format(StoreProcedure.DeleteAccountManagerMap, AccountId);
+            var commandText = string.Format(StoreProcedure.DeleteAccountManagerMap, AccountManagerId);
             await Context.Database.ExecuteSqlRawAsync(commandText);
         }
 
