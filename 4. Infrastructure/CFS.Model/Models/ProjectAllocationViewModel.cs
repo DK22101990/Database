@@ -14,7 +14,7 @@ namespace CFS.Model.Models
         public int ProjectId { get; set; }
         public int SowId { get; set; }
         public int AccountManagerId { get; set; }
-        public int CurrentAccountManagerID { get; set; }
+        public int AccountManagerMapId { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
     }
@@ -33,6 +33,7 @@ namespace CFS.Model.Models
 
     public class AccountManagerMapModel
     {
+        public int? AccountManagerMapId { get; set; }
         public int SowId { get; set; }
         public string SowName { get; set; }
         public int? ProjectId { get; set; }

@@ -84,10 +84,10 @@ namespace CFS.WebAPI.Controllers
         /// <returns></returns>
         [Route("DeleteAccountManagerMap")]
         [HttpDelete]
-        public async Task<IActionResult> DeleteAccountManagerMap(int accountManagerId, int projectId, int accountId, int sowId)
+        public async Task<IActionResult> DeleteAccountManagerMap(int accountManagerMapId)
         {
             ReturnResponseModel result = new ReturnResponseModel();
-            result = await _iProjectAllocationLogic.DeleteAccountManagerMap(accountManagerId, projectId, accountId, sowId);
+            result = await _iProjectAllocationLogic.DeleteAccountManagerMap(accountManagerMapId);
             if (result.Status)
             {
                 return NoContent();

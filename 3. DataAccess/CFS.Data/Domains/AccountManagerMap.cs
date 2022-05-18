@@ -10,6 +10,7 @@ namespace CFS.Data.Domains
     public class AccountManagerMapList
     {
         [Key]
+        public int? AccountManagerMapId { get; set; }
         public int? AccountManagerId { get; set; }
         public int SowId { get; set; }
         public string SowName { get; set; }
