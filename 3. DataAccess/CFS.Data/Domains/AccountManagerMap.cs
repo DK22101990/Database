@@ -54,4 +54,26 @@ namespace CFS.Data.Domains
         public int EmployeeId { get; set; }
         public decimal BalanceBillability { get; set; }
     }
+
+    public class EmployeeDetails
+    {
+        [Key]
+        public int EmployeeId { get; set; }
+        public string EmployeeName { get; set; }
+        public string Email { get; set; }
+        public string PhoneNumber { get; set; }
+        public int? DirectReportingManagerId { get; set; }
+        public string DirectReportingManagerName { get; set; }
+        public int? IndirectReportingManagerId { get; set; }
+        public string IndirectReportingManagerName { get; set; }
+        public int? AgreedDailyWorkingHours { get; set; }
+        public int?  EmployeeTypeId { get; set; }
+        public string EmployeeType { get; set; }
+        public string PrimarySkill { get; set; }
+        public string SecondarySkill { get; set; }
+        public int? DepartmentId { get; set; }
+        public string DepartmentName { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+    }
 }

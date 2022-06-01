@@ -80,6 +80,9 @@ namespace CFS.Data.Context
         public DbSet<EmployeeBillability> GetEmployeeBillability { get; set; }
 
         [NotMapped]
+        public DbSet<EmployeeDetails> GetEmployeeDetail { get; set; }
+
+        [NotMapped]
         public DbSet<Domains.ComplianceType> GetComplianceTypeList { get; set; }
         [NotMapped]
         public DbSet<AgileQuestion> GetAgileQuestionList { get; set; }

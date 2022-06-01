@@ -77,5 +77,19 @@ namespace CFS.Data.IRepositories
         /// <param name="employeeId"></param>
         /// <returns></returns>
         Task<List<EmployeeBillability>> GetEmployeeBillabilityAsync(int employeeId);
+
+        /// <summary>
+        /// Get Employee Details
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <returns></returns>
+        Task<List<EmployeeDetails>> GetEmployeeDetailAsync(int employeeId);
+
+        // <summary>
+        /// Insert Employee Details
+        /// </summary>
+        /// <param name="employee"></param>
+        /// <returns></returns>
+        Task InsertEmployeeDetailAsync(EmployeeDetailsModel employee);
     }
 }

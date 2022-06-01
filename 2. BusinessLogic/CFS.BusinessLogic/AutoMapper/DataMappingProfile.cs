@@ -27,6 +27,7 @@ namespace CFS.BusinessLogic.AutoMapper
             CreateMap<AccountManagerMapList, AccountManagerMapModel>();
             CreateMap<ProjectAllocationList, ProjectAllocationModel>();
             CreateMap<EmployeeBillability, EmployeeBillabilityModel>();
+            CreateMap<EmployeeDetails, EmployeeDetailsModel>();
         }
     }
 }

@@ -155,6 +155,32 @@ namespace CFS.WebAPI.Controllers
             return Ok(await _iProjectAllocationLogic.GetEmployeeBillabilityAsync(employeeId));
         }
 
+        #region Employee Module
+        /// <summary>
+        /// Get Employee Details
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <returns></returns>
+        [Route("GetEmployeeDetail/{employeeId}")]
+        [HttpGet]
+        public async Task<IActionResult> GetEmployeeDetailAsync(int employeeId)
+        {
+            return Ok(await _iProjectAllocationLogic.GetEmployeeDetailAsync(employeeId));
+        }
+
+        /// <summary>
+        /// Insert Employee Details
+        /// </summary>
+        /// <param name="accountManager"></param>
+        /// <returns></returns>
+        [Route("InsertEmployeeDetail")]
+        [HttpPost]
+        public async Task InsertEmployeeDetail([FromBody] EmployeeDetailsModel employee)
+        {
+            await _iProjectAllocationLogic.InsertEmployeeDetailAsync(employee);
+        }
+
+        #endregion
         #endregion
     }
 }

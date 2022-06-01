@@ -143,6 +143,25 @@ namespace CFS.BusinessLogic.BusinessLogic
             return _mapper.Map<List<EmployeeBillabilityModel>>(await _iProjectAllocationRepository.GetEmployeeBillabilityAsync(employeeId));
         }
 
+        /// <summary>
+        /// Get Employee Details
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <returns></returns>
+        public async Task<List<EmployeeDetailsModel>> GetEmployeeDetailAsync(int employeeId)
+        {            
+            return _mapper.Map<List<EmployeeDetailsModel>>(await _iProjectAllocationRepository.GetEmployeeDetailAsync(employeeId));
+        }
+
+        /// <summary>
+        /// Insert Employee Details
+        /// </summary>
+        /// <param name="employee"></param>
+        /// <returns></returns>
+        public async Task InsertEmployeeDetailAsync(EmployeeDetailsModel employee)
+        {
+            await _iProjectAllocationRepository.InsertEmployeeDetailAsync(employee);
+        }
         #endregion
     }
 }

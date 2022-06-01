@@ -153,6 +153,41 @@ namespace CFS.Data.Repositories
             var commandText = string.Format(StoreProcedure.GetEmployeeBillability, employeeId);
             return await Context.GetEmployeeBillability.FromSqlRaw<EmployeeBillability>(commandText).ToListAsync();
         }
+
+        /// <summary>
+        /// Get Employee Details
+        /// <param name="employeeId"></param>
+        /// <returns></returns>
+        public async Task<List<EmployeeDetails>> GetEmployeeDetailAsync(int employeeId)
+        {
+            var commandText = string.Format(StoreProcedure.GetEmployeeDetail, employeeId);
+            return await Context.GetEmployeeDetail.FromSqlRaw<EmployeeDetails>(commandText).ToListAsync();
+        }
+
+        // <summary>
+        /// Insert Employee Details
+        /// </summary>
+        /// <param name="employee"></param>
+        /// <returns></returns>
+        public async Task InsertEmployeeDetailAsync(EmployeeDetailsModel employee)
+        {
+            var commandText = string.Format(StoreProcedure.InsertEmployeeDetail,
+                employee.Firstname,
+                employee.Lastname,
+                employee.DirectReportingManagerId,
+                employee.IndirectReportingManagerId,
+                employee.AgreedDailyWorkingHours,
+                employee.EmployeeTypeId,
+                employee.DepartmentId,
+                employee.Email,
+                employee.PhoneNumber,
+                employee.HireDate,
+                employee.StartDate,
+                employee.EndDate,
+                employee.PrimarySkill,
+                employee.SecondarySkill);
+            await Context.Database.ExecuteSqlRawAsync(commandText);
+        }
         #endregion
     }
 }

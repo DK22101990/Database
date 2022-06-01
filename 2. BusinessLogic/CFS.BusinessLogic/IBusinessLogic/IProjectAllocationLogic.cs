@@ -76,5 +76,20 @@ namespace CFS.BusinessLogic.IBusinessLogic
         /// <param name="employeeId"></param>
         /// <returns></returns>
         Task<List<EmployeeBillabilityModel>> GetEmployeeBillabilityAsync(int employeeId);
+
+        /// <summary>
+        /// Get Employee Details
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <returns></returns>
+        Task<List<EmployeeDetailsModel>> GetEmployeeDetailAsync(int employeeId);
+
+        // <summary>
+        /// Insert Employee Details
+        /// </summary>
+        /// <param name="employee"></param>
+        /// <returns></returns>
+        Task InsertEmployeeDetailAsync(EmployeeDetailsModel employee);
+        
     }
 }
