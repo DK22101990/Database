@@ -188,6 +188,17 @@ namespace CFS.Data.Repositories
                 employee.SecondarySkill);
             await Context.Database.ExecuteSqlRawAsync(commandText);
         }
+
+        /// <summary>
+        /// Delete Project Allocation
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <returns></returns>
+        public async Task DeleteEmployeeDetail(int employeeId)
+        {
+            var commandText = string.Format(StoreProcedure.DeleteEmployeeDetail, employeeId);
+            await Context.Database.ExecuteSqlRawAsync(commandText);
+        }
         #endregion
     }
 }

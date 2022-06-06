@@ -180,6 +180,23 @@ namespace CFS.WebAPI.Controllers
             await _iProjectAllocationLogic.InsertEmployeeDetailAsync(employee);
         }
 
+        /// <summary>
+        /// Delete Employee Details
+        /// </summary>
+        /// <param name="employeeId">employeeId</param>
+        /// <returns></returns>
+        [Route("DeleteEmployeeDetail")]
+        [HttpDelete]
+        public async Task<IActionResult> DeleteEmployeeDetail(int employeeId)
+        {
+            ReturnResponseModel result = new ReturnResponseModel();
+            result = await _iProjectAllocationLogic.DeleteEmployeeDetail(employeeId);
+            if (result.Status)
+            {
+                return NoContent();
+            }
+            return BadRequest(result);
+        }
         #endregion
         #endregion
     }

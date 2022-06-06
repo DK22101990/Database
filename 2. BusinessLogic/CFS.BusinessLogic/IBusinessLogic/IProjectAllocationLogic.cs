@@ -90,6 +90,13 @@ namespace CFS.BusinessLogic.IBusinessLogic
         /// <param name="employee"></param>
         /// <returns></returns>
         Task InsertEmployeeDetailAsync(EmployeeDetailsModel employee);
-        
+
+        /// <summary>
+        /// Delete Project Allocation
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <returns></returns>
+        Task<ReturnResponseModel> DeleteEmployeeDetail(int employeeId);
+
     }
 }

@@ -162,6 +162,21 @@ namespace CFS.BusinessLogic.BusinessLogic
         {
             await _iProjectAllocationRepository.InsertEmployeeDetailAsync(employee);
         }
+
+        /// <summary>
+        /// Delete Project Allocation
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <returns></returns>
+        public async  Task<ReturnResponseModel> DeleteEmployeeDetail(int employeeId)
+        {
+            await _iProjectAllocationRepository.DeleteEmployeeDetail(employeeId);
+            return new ReturnResponseModel
+            {
+                Status = true,
+                Message = string.Format(ApplicationMessage.DeleteSuccessfully, "Employee Details")
+            };
+        }
         #endregion
     }
 }
