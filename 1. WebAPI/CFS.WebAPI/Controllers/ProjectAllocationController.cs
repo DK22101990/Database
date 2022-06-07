@@ -171,7 +171,7 @@ namespace CFS.WebAPI.Controllers
         /// <summary>
         /// Insert Employee Details
         /// </summary>
-        /// <param name="accountManager"></param>
+        /// <param name="employee"></param>
         /// <returns></returns>
         [Route("InsertEmployeeDetail")]
         [HttpPost]
@@ -180,6 +180,17 @@ namespace CFS.WebAPI.Controllers
             await _iProjectAllocationLogic.InsertEmployeeDetailAsync(employee);
         }
 
+        /// <summary>
+        /// Update employee details
+        /// </summary>
+        /// <param name="employee"></param>
+        /// <returns></returns>
+        [Route("UpdateEmployeeDetail")]
+        [HttpPost]
+        public async Task UpdateEmployeeDetail([FromBody] EmployeeDetailsModel employee)
+        {
+            await _iProjectAllocationLogic.UpdateEmployeeDetailAsync(employee);
+        }
         /// <summary>
         /// Delete Employee Details
         /// </summary>

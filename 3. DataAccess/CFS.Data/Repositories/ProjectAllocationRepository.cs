@@ -189,6 +189,31 @@ namespace CFS.Data.Repositories
             await Context.Database.ExecuteSqlRawAsync(commandText);
         }
 
+        // <summary>
+        /// Update Employee Details
+        /// </summary>
+        /// <param name="employee"></param>
+        /// <returns></returns>
+        public async Task UpdateEmployeeDetailAsync(EmployeeDetailsModel employee)
+        {
+            var commandText = string.Format(StoreProcedure.InsertEmployeeDetail,
+                employee.Firstname,
+                employee.Lastname,
+                employee.DirectReportingManagerId,
+                employee.IndirectReportingManagerId,
+                employee.AgreedDailyWorkingHours,
+                employee.EmployeeTypeId,
+                employee.DepartmentId,
+                employee.Email,
+                employee.PhoneNumber,
+                employee.HireDate,
+                employee.StartDate,
+                employee.EndDate,
+                employee.PrimarySkill,
+                employee.SecondarySkill);
+            await Context.Database.ExecuteSqlRawAsync(commandText);
+        }
+
         /// <summary>
         /// Delete Project Allocation
         /// </summary>

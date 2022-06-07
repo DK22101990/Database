@@ -92,6 +92,13 @@ namespace CFS.Data.IRepositories
         /// <returns></returns>
         Task InsertEmployeeDetailAsync(EmployeeDetailsModel employee);
 
+        // <summary>
+        /// Update Employee Details
+        /// </summary>
+        /// <param name="employee"></param>
+        /// <returns></returns>
+        Task UpdateEmployeeDetailAsync(EmployeeDetailsModel employee);
+
         /// <summary>
         /// Delete Project Allocation
         /// </summary>

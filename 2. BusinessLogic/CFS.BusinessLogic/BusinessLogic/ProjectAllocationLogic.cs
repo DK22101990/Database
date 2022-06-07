@@ -164,6 +164,16 @@ namespace CFS.BusinessLogic.BusinessLogic
         }
 
         /// <summary>
+        /// Update Employee Details
+        /// </summary>
+        /// <param name="employee"></param>
+        /// <returns></returns>
+        public async Task UpdateEmployeeDetailAsync(EmployeeDetailsModel employee)
+        {
+            await _iProjectAllocationRepository.UpdateEmployeeDetailAsync(employee);
+        }
+
+        /// <summary>
         /// Delete Project Allocation
         /// </summary>
         /// <param name="employeeId"></param>
