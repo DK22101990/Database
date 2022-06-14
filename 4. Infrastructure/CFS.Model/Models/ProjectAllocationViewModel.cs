@@ -95,6 +95,10 @@ namespace CFS.Model.Models
         public string EmployeeType { get; set; }
         public string PrimarySkill { get; set; }
         public string SecondarySkill { get; set; }
+        public string SkillName { get; set; }
+        public string SkillTypeName { get; set; }
+        public int? SkillId { get; set; }
+        public int? SkillTypeId { get; set; }
         public int? DepartmentId { get; set; }
         public string DepartmentName { get; set; }
         public DateTime? StartDate { get; set; }

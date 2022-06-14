@@ -196,7 +196,8 @@ namespace CFS.Data.Repositories
         /// <returns></returns>
         public async Task UpdateEmployeeDetailAsync(EmployeeDetailsModel employee)
         {
-            var commandText = string.Format(StoreProcedure.InsertEmployeeDetail,
+            var commandText = string.Format(StoreProcedure.UpdateEmployeeDetail,
+                employee.EmployeeId,
                 employee.Firstname,
                 employee.Lastname,
                 employee.DirectReportingManagerId,
