@@ -182,8 +182,7 @@ namespace CFS.Data.Repositories
                 employee.Email,
                 employee.PhoneNumber,
                 employee.HireDate,
-                employee.StartDate,
-                employee.EndDate,
+                employee.ExitDate,
                 employee.PrimarySkill,
                 employee.SecondarySkill);
             await Context.Database.ExecuteSqlRawAsync(commandText);
@@ -208,8 +207,7 @@ namespace CFS.Data.Repositories
                 employee.Email,
                 employee.PhoneNumber,
                 employee.HireDate,
-                employee.StartDate,
-                employee.EndDate,
+                employee.ExitDate,
                 employee.PrimarySkill,
                 employee.SecondarySkill);
             await Context.Database.ExecuteSqlRawAsync(commandText);

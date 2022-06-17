@@ -46,8 +46,8 @@ namespace CFS.Model.Constants
         public const string GetProjectAllocation = "sp_getProjectAllocation {0},{1},{2},{3}";
         public const string GetEmployeeBillability = "Sp_GetEmployeeBillability {0}";
         public const string GetEmployeeDetail = "sp_getEmployeeDetails {0}";
-        public const string InsertEmployeeDetail = "sp_insEmployeeDetails '{0}','{1}',{2},{3},{4},{5},{6},'{7}','{8}','{9}','{10}','{11}','{12}','{13}'";
-        public const string UpdateEmployeeDetail = "sp_UpdateEmployeeDetails {0},'{1}','{2}',{3},{4},{5},{6},{7},'{8}','{9}','{10}','{11}','{12}','{13}','{14}'";
+        public const string InsertEmployeeDetail = "sp_insEmployeeDetails '{0}','{1}',{2},{3},{4},{5},{6},'{7}','{8}','{9}','{10}','{11}','{12}'";
+        public const string UpdateEmployeeDetail = "sp_UpdateEmployeeDetails {0},'{1}','{2}',{3},{4},{5},{6},{7},'{8}','{9}','{10}','{11}','{12}','{13}'";
         public const string DeleteEmployeeDetail = "sp_DeleteEmployeeDetails {0}";
     }
 }

@@ -101,8 +101,7 @@ namespace CFS.Model.Models
         public int? SkillTypeId { get; set; }
         public int? DepartmentId { get; set; }
         public string DepartmentName { get; set; }
-        public DateTime? StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
+        public DateTime? ExitDate { get; set; }
         public DateTime? HireDate { get; set; }
     }
     #endregion
