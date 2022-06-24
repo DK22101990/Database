@@ -65,15 +65,21 @@ namespace CFS.Data.Domains
         public int? DirectReportingManagerId { get; set; }
         public string DirectReportingManagerName { get; set; }
         public int? IndirectReportingManagerId { get; set; }
+        public string Firstname { get; set; }
+        public string Lastname { get; set; }
         public string IndirectReportingManagerName { get; set; }
         public int? AgreedDailyWorkingHours { get; set; }
-        public int?  EmployeeTypeId { get; set; }
+        public int? EmployeeTypeId { get; set; }
         public string EmployeeType { get; set; }
         public string PrimarySkill { get; set; }
         public string SecondarySkill { get; set; }
+        public string SkillName { get; set; }
+        public string SkillTypeName { get; set; }
+        public int? SkillId { get; set; }
+        public int? SkillTypeId { get; set; }
         public int? DepartmentId { get; set; }
         public string DepartmentName { get; set; }
-        public DateTime? StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
+        public DateTime? ExitDate { get; set; }
+        public DateTime? HireDate { get; set; }
     }
 }
