@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "GmxOejpgLeN8nBFdl37vmQEHjJi+XOCjtznaYbm452w=",
+  "Source": "CFS.WebAPI",
+  "BasePath": "_content/CFS.WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

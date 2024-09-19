@@ -27,10 +27,23 @@ namespace CFS.Data.Models
         public string Geography { get; set; }
         public DateTime? LastModifiedOn { get; set; }
         public int? ModifiedById { get; set; }
+
         public int? IsActive { get; set; }
+
+        public int? EmployeeSize { get; set; }
+
+        public string? CeoName { get; set; }
+
+
+        public int? YearlyRevenue { get; set; }
+
+
+
 
         public virtual Employee ModifiedBy { get; set; }
         public virtual Employee RelationshipManager { get; set; }
+
+     
         public virtual ICollection<Project> Projects { get; set; }
         public virtual ICollection<SowkickstartQuestionResponse> SowkickstartQuestionResponses { get; set; }
         public virtual ICollection<SprintQuestionResponse> SprintQuestionResponses { get; set; }

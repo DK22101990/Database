@@ -1,5 +1,6 @@
 ﻿using CFS.Data.Domains;
 using CFS.Data.Models;
+using CFS.Model.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -22,20 +23,26 @@ namespace CFS.Data.Context
         }
 
         public virtual DbSet<Account> Accounts { get; set; }
+      
         public virtual DbSet<AgileDatum> AgileData { get; set; }
         public virtual DbSet<Models.Artefact> Artefacts { get; set; }
+        public virtual DbSet<BillabilityandUtilization> BilabilityandUtilizations { get; set; }
         public virtual DbSet<CommentType> CommentTypes { get; set; }
         public virtual DbSet<ComplianceProject> ComplianceProjects { get; set; }
         public virtual DbSet<ComplianceStatus> ComplianceStatuses { get; set; }
         public virtual DbSet<Models.ComplianceType> ComplianceTypes { get; set; }
+        public virtual DbSet<ContractType> ContractTypes { get; set; }   
         public virtual DbSet<Currency> Currencies { get; set; }
         public virtual DbSet<Department> Departments { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<EmployeesMonthlyHours> EmployeeMonthlyHours { get; set; }
         public virtual DbSet<EmployeeProjectAllocation> EmployeeProjectAllocations { get; set; }
         public virtual DbSet<EmployeeRoleAssignment> EmployeeRoleAssignments { get; set; }
         public virtual DbSet<EmployeeSkillAssignment> EmployeeSkillAssignments { get; set; }
+        public virtual DbSet<HolidayList> HolidayList { get; set; }
         public virtual DbSet<Opportunity> Opportunities { get; set; }
         public virtual DbSet<Project> Projects { get; set; }
+        public virtual DbSet<ProjectDomain> ProjectDomains { get; set; }
         public virtual DbSet<ProjectManagerMap> ProjectManagerMaps { get; set; }
         public virtual DbSet<Question> Questions { get; set; }
         public virtual DbSet<QuestionCategoryMap> QuestionCategoryMaps { get; set; }
@@ -53,14 +60,27 @@ namespace CFS.Data.Context
         public virtual DbSet<Models.Stage> Stages { get; set; }
         public virtual DbSet<StageComplianceType> StageComplianceTypes { get; set; }
         public virtual DbSet<StageDatum> StageData { get; set; }
+        public virtual DbSet<TimeSheetExport> TimeSheetExport { get; set; }
         public virtual DbSet<Variance> Variances { get; set; }
+        public virtual DbSet<Years> Years { get; set; }
+
+
 
         [NotMapped]
         public DbSet<AccountList> GetAccountList { get; set; }
         [NotMapped]
+        public DbSet<AccountResponseList> GetAccountResponseList { get; set; }
+
+        [NotMapped]
         public DbSet<QuestionList> GetQuestionList { get; set; }
         [NotMapped]
         public DbSet<SprintList> GetSprintList { get; set; }
+        [NotMapped]
+        public DbSet<EmpMonthlyHoursList> GetEmployeeMonthlyHours { get; set; }
+        [NotMapped]
+        public DbSet<GetYearsList> GetYears { get; set; }
+        [NotMapped]
+        public DbSet<GetMonthsList> GetMonths { get; set; }
         [NotMapped]
         public DbSet<ArtefactList> GetArtefact { get; set; }
 
@@ -71,7 +91,16 @@ namespace CFS.Data.Context
         public DbSet<SprintDetailList> GetSprintInformationList { get; set; }
 
         [NotMapped]
+        public DbSet<UpdateProjectResponse> updateProjectResponses { get; set; }
+
+        [NotMapped]
+        public DbSet<InsertProjectResponse> insertProjectResponses { get; set; }
+
+        [NotMapped]
         public DbSet<AccountManagerMapList> GetAccountManagerMapList { get; set; }
+
+
+        
 
         [NotMapped]
         public DbSet<ProjectAllocationList> GetProjectAllocationList { get; set; }
@@ -93,19 +122,42 @@ namespace CFS.Data.Context
         public DbSet<Projects> GetProjectList { get; set; }
 
         [NotMapped]
+        public DbSet<ProjectResponse> GetProjectResponse { get; set; }
+
+        [NotMapped]
+        public DbSet<ProjectDomain> GetProjectDomainList { get; set; }
+
+        [NotMapped]
         public DbSet<SOW> GetSowList { get; set; }
+
+        [NotMapped]
+        public DbSet<SowResponse> GetSowResponse { get; set; }
+
+        [NotMapped]
+        public DbSet<SowDataResponse> GetSowDataResponse { get; set; }
 
         [NotMapped]
         public DbSet<Domains.Stage> GetStageList { get; set; }
 
         [NotMapped]
+        public DbSet<Domains.ProjectAccountManagerList> GetAccountListOnProjectManager { get; set; }
+
+        [NotMapped]
         public DbSet<SelectList> GetMasterList { get; set; }
+
+
+        [NotMapped]
+        public DbSet<BilllabilityandUtilizationList> GetBillabilityandUtilization { get; set; }
+        [NotMapped]
+        public DbSet<InsertAccountResponse> InsertAccountResponse { get; set; }
+        [NotMapped]
+        public DbSet<UpdateAccountResponse> UpdateAccountResponse { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
                 optionsBuilder.UseSqlServer("Server=(LocalDB)\\MSSQLLocalDB;Database=ComplianceProjectFinal;Trusted_Connection=True;");
             }
         }
@@ -114,7 +166,9 @@ namespace CFS.Data.Context
         {
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
 
-            modelBuilder.Entity<Account>(entity =>
+       
+
+                modelBuilder.Entity<Account>(entity =>
             {
                 entity.Property(e => e.AccountDescription)
                     .HasMaxLength(100)
@@ -156,7 +210,7 @@ namespace CFS.Data.Context
                 entity.Property(e => e.State)
                     .HasMaxLength(50)
                     .IsUnicode(false);
-
+               
                 entity.HasOne(d => d.ModifiedBy)
                     .WithMany(p => p.AccountModifiedBies)
                     .HasForeignKey(d => d.ModifiedById)
@@ -166,6 +220,7 @@ namespace CFS.Data.Context
                     .WithMany(p => p.AccountRelationshipManagers)
                     .HasForeignKey(d => d.RelationshipManagerId)
                     .HasConstraintName("FK__Accounts__Relati__60A75C0F");
+               
             });
 
             modelBuilder.Entity<AgileDatum>(entity =>
@@ -229,6 +284,10 @@ namespace CFS.Data.Context
                     .HasForeignKey(d => d.QuestionId)
                     .HasConstraintName("Fk_ArtefactsModified1");
             });
+            modelBuilder.Entity<BillabilityandUtilization>().HasNoKey();
+
+       
+
 
             modelBuilder.Entity<CommentType>(entity =>
             {
@@ -359,7 +418,7 @@ namespace CFS.Data.Context
                     .HasMaxLength(100)
                     .IsUnicode(false);
 
-                entity.Property(e => e.HireDate).HasColumnType("date");
+                entity.Property(e => e.DateOfJoining).HasColumnType("date");
 
                 entity.Property(e => e.LastModifiedOn).HasColumnType("datetime");
 
@@ -502,9 +561,18 @@ namespace CFS.Data.Context
                     .HasMaxLength(100)
                     .IsUnicode(false);
 
-                entity.Property(e => e.ProjectType)
+                entity.Property(e => e.ProjectTypeId)
                     .HasMaxLength(100)
                     .IsUnicode(false);
+                entity.Property(e => e.ContactPersonName).IsRequired()
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+                entity.Property(e => e.Email).IsRequired()
+                 .HasMaxLength(100)
+                 .IsUnicode(false);
+                entity.Property(e => e.PhoneNumber).IsRequired()
+                 .HasMaxLength(100)
+                 .IsUnicode(false);
 
                 entity.Property(e => e.StartDate).HasColumnType("date");
 
@@ -517,6 +585,39 @@ namespace CFS.Data.Context
                     .WithMany(p => p.Projects)
                     .HasForeignKey(d => d.ModifiedById)
                     .HasConstraintName("Fk_ProjectsModified");
+
+            entity.HasOne(d => d.Projecttype)
+                .WithMany(p => p.Projects)
+                .HasForeignKey(d => d.ProjectTypeId)
+                .HasConstraintName("FK_ProjectTypeId");
+
+                entity.HasOne(d => d.ProjectDomain)
+            .WithMany(p => p.Projects)
+            .HasForeignKey(d => d.ProjectDomainId)
+            .HasConstraintName("FK_ProjectDomainId");
+
+                entity.HasOne(d => d.Account)
+                  .WithMany(p => p.Projects)
+                  .HasForeignKey(d => d.AccountId)
+                  .HasConstraintName("FK__Projects__Accoun__02FC7413");
+
+
+
+            });
+
+
+            modelBuilder.Entity<ProjectDomain>(entity =>
+            {
+                entity.Property(e => e.Projectdomain).IsRequired()
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+                entity.Property(e => e.LastModifiedOn).HasColumnType("datetime");
+                entity.Property(e => e.IsActive).HasColumnType("boolean");
+                entity.HasOne(d => d.ModifiedBy)
+                     .WithMany(p => p.ProjectDomains)
+                     .HasForeignKey(d => d.ModifiedById)
+                     .HasConstraintName("FK__ProjectDo__Modif__0757E033");
+
             });
 
             modelBuilder.Entity<ProjectManagerMap>(entity =>
@@ -556,6 +657,7 @@ namespace CFS.Data.Context
                     .WithMany(p => p.ProjectManagerMaps)
                     .HasForeignKey(d => d.SowId)
                     .HasConstraintName("FK__ProjectMa__SowId__01142BA1");
+               
             });
 
             modelBuilder.Entity<Question>(entity =>
@@ -1026,6 +1128,8 @@ namespace CFS.Data.Context
                     .HasForeignKey(d => d.ModifiedById)
                     .HasConstraintName("Fk_VariancesModified");
             });
+
+
 
           //  OnModelCreatingPartial(modelBuilder);
         }

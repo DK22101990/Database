@@ -1,4 +1,5 @@
-﻿using CFS.Model.Models;
+﻿using CFS.Data.Models;
+using CFS.Model.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace CFS.BusinessLogic.IBusinessLogic
         /// </summary>
         /// <param name="projectAllocation"></param>
         /// <returns></returns>
-        Task InsertProjectAllocation(InsertProjectAllocation projectAllocation);
+        Task<ReturnResponseModel> InsertProjectAllocation(InsertProjectAllocation projectAllocation);
 
         /// <summary>
         /// Update Account Manager Map
@@ -35,8 +36,7 @@ namespace CFS.BusinessLogic.IBusinessLogic
         /// </summary>
         /// <param name="projectAllocation"></param>
         /// <returns></returns>
-        Task UpdateProjectAllocation(InsertProjectAllocation projectAllocation);
-
+        Task<ReturnResponseModel> UpdateProjectAllocation(UpdateProjectAllocation projectAllocation);
         /// <summary>
         /// Delete Account Manager
         /// </summary>
@@ -47,9 +47,9 @@ namespace CFS.BusinessLogic.IBusinessLogic
         /// <summary>
         /// Delete Project Allocation
         /// </summary>
-        /// <param name="AccountId"></param>
+        /// <param name="ProjectAllocationsId"></param>
         /// <returns></returns>
-        Task<ReturnResponseModel> DeleteProjectAllocation(int AccountId);
+        Task<ReturnResponseModel> DeleteProjectAllocation(int ProjectAllocationsId);
 
         /// <summary>
         /// Get Account Manager Map
@@ -63,18 +63,25 @@ namespace CFS.BusinessLogic.IBusinessLogic
         /// <summary>
         /// Get Project Allocation
         /// </summary>
-        /// <param name="employeeId"></param>
+        /// <param name="managerId"></param>
         /// <param name="projectId"></param>
         /// <param name="sowId"></param>
         /// <param name="accountId"></param>
         /// <returns></returns>
-        Task<List<ProjectAllocationModel>> GetProjectAllocationAsync(int employeeId, int projectId, int sowId, int accountId);
+        Task<List<ProjectAllocationModel>> GetProjectAllocationAsync(int managerId, int projectId, int sowId, int accountId);
 
         /// <summary>
-        /// Get Employee Billability
+        /// Get billabilty and Utilization
         /// </summary>
         /// <param name="employeeId"></param>
-        /// <returns></returns>
+        /// <returns></returns>  
+        /// 
+        Task<List<BillabilityandUtilizationModel>> GetBillabilityandUtilizationAsync(BillabilityandUtilizationRequest utilizationRequest);
+        /// <summary>
+        /// Get Employee Details
+        /// </summary>
+        /// <param name=""></param>
+        /// <returns></returns>  
         Task<List<EmployeeBillabilityModel>> GetEmployeeBillabilityAsync(int employeeId);
 
         /// <summary>
@@ -89,14 +96,14 @@ namespace CFS.BusinessLogic.IBusinessLogic
         /// </summary>
         /// <param name="employee"></param>
         /// <returns></returns>
-        Task InsertEmployeeDetailAsync(EmployeeDetailsModel employee);
+        Task InsertEmployeeDetailAsync(InsertEmployeeDetailsModel employee);
 
         // <summary>
         /// Update Employee Details
         /// </summary>
         /// <param name="employee"></param>
         /// <returns></returns>
-        Task UpdateEmployeeDetailAsync(EmployeeDetailsModel employee);
+        Task UpdateEmployeeDetailAsync(UpdateEmployeeDetailsModel employee);
 
         /// <summary>
         /// Delete Project Allocation
@@ -105,5 +112,11 @@ namespace CFS.BusinessLogic.IBusinessLogic
         /// <returns></returns>
         Task<ReturnResponseModel> DeleteEmployeeDetail(int employeeId);
 
+        /// <summary>
+        /// Get Accounts Project Manager List
+        /// </summary>
+        /// <param name="managerId"></param>
+        /// <returns></returns>
+        Task<List<ProjectAccountManagerViewModel>> GetAccountListOnProjectManagerAsync(int managerId);
     }
 }

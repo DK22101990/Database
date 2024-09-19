@@ -36,6 +36,15 @@ namespace CFS.Data.Repositories
         }
 
         /// <summary>
+        /// Get Account Response
+        /// </summary>
+        /// <returns></returns>
+        public async Task<List<AccountResponseList>> GetAccountResponseList()
+        {
+            var commandText = string.Format(StoreProcedure.GetAccountResponseList);
+            return await Context.GetAccountResponseList.FromSqlRaw<AccountResponseList>(commandText).ToListAsync();
+        }
+        /// <summary>
         /// Get All Sprints
         /// </summary>
         /// <param name="ProjectId"></param>
@@ -102,11 +111,27 @@ namespace CFS.Data.Repositories
         /// <summary>
         /// Get SOW
         /// </summary>
-        /// <param name="ProjectId"></param>
+        //
         /// <returns></returns>
-        public async Task<List<SOW>> GetSOWList(int ProjectId)
+        /// 
+
+        public async Task<List<ProjectDomain>> GetProjectDomainList()
         {
-            var commandText = string.Format(StoreProcedure.SOWList, ProjectId);
+            var commandText = string.Format(StoreProcedure.ProjectDomainList);
+            return await Context.GetProjectDomainList.FromSqlRaw<ProjectDomain>(commandText).ToListAsync();
+        }
+
+
+
+        /// <summary>
+        /// Get SOW
+        /// </summary>
+        /// <param name="ProjectId"></param>
+        /// <param name="AccountId"></param>
+        /// <returns></returns>
+        public async Task<List<SOW>> GetSOWList(int ProjectId, int AccountId)
+        {
+            var commandText = string.Format(StoreProcedure.SOWList, ProjectId, AccountId);
             return await Context.GetSowList.FromSqlRaw<SOW>(commandText).ToListAsync();
         }
 
@@ -368,7 +393,7 @@ namespace CFS.Data.Repositories
         /// </summary>
         /// <param name="sprintId"></param>
         /// <returns></returns>
-        public async  Task<SprintInformation> GetSprintById(int sprintId)
+        public async Task<SprintInformation> GetSprintById(int sprintId)
         {
             var commandText = string.Format(StoreProcedure.SprintDetails, sprintId);
             var objData = await Context.GetSprintDetail.FromSqlRaw<SprintInformation>(commandText).ToListAsync();
@@ -403,9 +428,316 @@ namespace CFS.Data.Repositories
             catch (Exception ex)
             {
 
-                return new ReturnResponseModel { Status = false,Message=ex.Message };
+                return new ReturnResponseModel { Status = false, Message = ex.Message };
             }
         }
         #endregion
+
+        #region Projects
+        // <summary>
+        /// insert project response
+        /// </summary>
+        /// <param name="objprojectModel"></param>
+        /// <returns></returns>
+
+        public async Task<ReturnResponseModel> InsertProjectResponse(InsertProjectResponseModel objprojectModel)
+        {
+            try 
+            { 
+            var commandText = string.Format(StoreProcedure.InsertProjectResponse,
+                objprojectModel.ProjectName,
+                objprojectModel.ProjectDescription,
+                objprojectModel.StartDate,
+                objprojectModel.EndDate,
+                objprojectModel.AccountId,
+                objprojectModel.ClientContactPerson,
+                objprojectModel.ClientEmailId,
+                objprojectModel.ClientContactNumber,
+                objprojectModel.ProjectTypeId,
+                objprojectModel.ProjectDomainId,
+                objprojectModel.ProjectManagerId,
+                objprojectModel.ProjectAccountManagerId,
+                objprojectModel.SowId,
+                objprojectModel.IsActive,
+                objprojectModel.LastModifiedOn,
+                objprojectModel.ModifiedById);
+            await Context.Database.ExecuteSqlRawAsync(commandText);
+            return new ReturnResponseModel { Status = true };
+            }
+            catch (Exception)
+            {
+                return new ReturnResponseModel { Status = false };
+            }
+        }
+
+
+        // <summary>
+        /// Update project response
+        /// </summary>
+        /// <param name="objprojectModel"></param>
+        /// <returns></returns>
+        public async Task<ReturnResponseModel> UpdateProjectResponse(UpdateProjectResponseModel objprojectModel)
+        {
+            try
+            {
+                var commandText = string.Format(StoreProcedure.UpdateProjectResponse,
+                    objprojectModel.AccountId,
+                    objprojectModel.ProjectName,
+                    objprojectModel.ProjectDescription,
+                    objprojectModel.StartDate,
+                    objprojectModel.EndDate,
+                    objprojectModel.ClientContactPerson,
+                    objprojectModel.ClientEmailId,
+                    objprojectModel.ClientContactNumber,
+                    objprojectModel.ProjectTypeId,
+                    objprojectModel.ProjectDomainId,
+                    objprojectModel.ProjectManagerId,
+                    objprojectModel.ProjectAccountManagerId,
+                    objprojectModel.IsActive,
+                    objprojectModel.LastModifiedOn,
+                    objprojectModel.ModifiedById,
+                    objprojectModel.ProjectId,
+                    objprojectModel.SowId);
+                await Context.Database.ExecuteSqlRawAsync(commandText);
+
+                return new ReturnResponseModel { Status = true };
+            }
+            catch (Exception)
+            {
+                return new ReturnResponseModel { Status = false };
+            }
+        }
+
+        /// <summary>
+        /// Get All Project Response
+        /// </summary>
+        /// <param name="AccountId"></param>
+        /// <returns></returns>
+        public async Task<List<ProjectResponse>> GetAllProjectResponse(int AccountId)
+        {
+            var commandText = string.Format(StoreProcedure.GetProjectResponse, AccountId);
+            return await Context.GetProjectResponse.FromSqlRaw<ProjectResponse>(commandText).ToListAsync();
+        }
+
+        /// <summary>
+        /// Delete Project Response
+        /// </summary>
+        /// <param name="projectId"></param>
+        /// <returns>Response Model</returns>
+        public async Task DeleteProjectResponse(int projectId)
+        {
+            var commandText = string.Format(StoreProcedure.DeleteProjectResponse, projectId);
+            await Context.Database.ExecuteSqlRawAsync(commandText);
+        }
+
+        ///// <summary>
+        ///// Get Project by projectId
+        ///// </summary>
+        ///// <param name="projectId"></param>
+        ///// <returns></returns>
+        //public async Task<Projects> GetProjectResponsById(int projectId)
+        //{
+        //    var commandText = string.Format(StoreProcedure.ArtefactsList, projectId);
+        //    var objData = await Context.GetProjectResponse<Projects>(commandText).ToListAsync();
+        //    return objData.FirstOrDefault();
+        //}
+        #endregion
+
+        #region SowResponse
+
+        /// <summary>
+        /// Insert SowResponse
+        /// </summary>
+        /// <param name="SowResponse"></param>
+        /// <returns></returns>
+        public async Task<ReturnResponseModel> InsertSowResponseAsync(InsertUpdateSowResponseModel SowResponse)
+        {
+            try
+            {
+                var commandText = string.Format(StoreProcedure.InsertSowResponse,
+                    SowResponse.AccountId,
+                    SowResponse.ProjectId,
+                    SowResponse.SowStartDate,
+                    SowResponse.SowEndDate,
+                    SowResponse.SowName,
+                    SowResponse.EngagementWeeks,
+                    SowResponse.SowValue,
+                    SowResponse.OpportunityId,
+                    SowResponse.CurrencyId,
+                    SowResponse.ContractTypeId,
+                    SowResponse.SowPath,
+                    SowResponse.ProjectDuration);
+                await Context.Database.ExecuteSqlRawAsync(commandText);
+                return new ReturnResponseModel { Status = true };
+            }
+            catch (Exception)
+            {
+                return new ReturnResponseModel { Status = false };
+            }
+
+        }
+
+        /// <summary>
+        /// Update SowResponse
+        /// </summary>
+        /// <param name="SowResponse"></param>
+        /// <returns></returns>
+        public async Task<ReturnResponseModel> UpdateSowResponseAsync(InsertUpdateSowResponseModel SowResponse)
+        {
+            try
+            {
+                var commandText = string.Format(StoreProcedure.UpdateSowResponse,
+                    SowResponse.AccountId,
+                    SowResponse.ProjectId,
+                    SowResponse.SowId,
+                    SowResponse.SowStartDate,
+                    SowResponse.SowEndDate,
+                    SowResponse.SowName,
+                    SowResponse.EngagementWeeks,
+                    SowResponse.SowValue,
+                    SowResponse.OpportunityId,
+                    SowResponse.CurrencyId,
+                    SowResponse.ContractTypeId,
+                    SowResponse.SowPath,
+                    SowResponse.ProjectDuration,
+                    SowResponse.IsActive);
+                await Context.Database.ExecuteSqlRawAsync(commandText);
+                return new ReturnResponseModel { Status = true };
+            }
+            catch (Exception)
+            {
+                return new ReturnResponseModel { Status = false };
+            }
+
+        }
+
+        /// <summary>
+        /// Get All Sow Response
+        /// </summary>
+        /// <param name="AccountId"></param>
+        /// <param name="ProjectId"></param>
+        /// <returns></returns>
+        public async Task<List<SowResponse>> GetAllSowResponseAsync(int AccountId, int ProjectId)
+        {
+            var commandText = string.Format(StoreProcedure.GetSowResponse, AccountId,ProjectId);
+            return await Context.GetSowResponse.FromSqlRaw<SowResponse>(commandText).ToListAsync();
+        }
+
+        /// <summary>
+        /// Get Sow By Id
+        /// </summary>
+        /// <param name="SowId"></param>
+        /// <returns></returns>
+        public async Task<Sow> GetSowByIdAsync(int SowId)
+        {
+            return await Context.Sows.Where(x=>x.SowId == SowId).FirstOrDefaultAsync();
+        }
+
+        /// <summary>
+        /// Delete SOW Response
+        /// </summary>
+        /// <param name="sowId">sowId</param>
+        /// <returns></returns>
+        public async Task DeleteSowResponseAsync(int sowId)
+        {
+            var commandText = string.Format(StoreProcedure.DeleteSowResponse, sowId );
+            await Context.Database.ExecuteSqlRawAsync(commandText);
+        }
+
+        /// <summary>
+        /// Get Sow Response By Id
+        /// </summary>
+        /// <param name="sowId"></param>
+        /// <returns></returns>
+        public async Task<SowDataResponse> GetSowDataByIdAsync(int sowId)
+        {
+            var commandText = string.Format(StoreProcedure.GetSowDataResponse, sowId);
+            var objdata = await Context.GetSowDataResponse.FromSqlRaw<SowDataResponse>(commandText).ToListAsync();
+            return objdata.FirstOrDefault();
+        }
+
+        // <summary>
+        /// insert project response
+        /// </summary>
+        /// <param name="objprojectModel"></param>
+        /// <returns></returns>
+
+        public async Task<ReturnResponseModel> InsertAccountResponse(InsertAccountResponseModel objAccountModel)
+        {
+            try
+            {
+                var commandText = string.Format(StoreProcedure.InsertAccountResponse,
+                    objAccountModel.AccountName,
+                    objAccountModel.AccountDescription,
+                    objAccountModel.AccountManagerId,
+                    objAccountModel.HeadQuater,
+                    objAccountModel.State,
+                    objAccountModel.Country,
+                    objAccountModel.PhoneNumber,
+                    objAccountModel.MSA,
+                    objAccountModel.Geography,
+                    objAccountModel.CeoName,
+                    objAccountModel.LeadChannelTypeId,
+                    objAccountModel.EmployeeStrength,
+                    objAccountModel.YearlyRevenue,
+                    objAccountModel.ModifiedById);
+                await Context.Database.ExecuteSqlRawAsync(commandText);
+                return new ReturnResponseModel { Status = true };
+            }
+            catch (Exception)
+            {
+                return new ReturnResponseModel { Status = false };
+            }
+        }
+        // <summary>
+        /// Update project response
+        /// </summary>
+        /// <param name="objprojectModel"></param>
+        /// <returns></returns>
+        public async Task<ReturnResponseModel> UpdateAccountResponse(UpdateAccountResponseModel objAccountModel)
+        {
+            try
+            {
+                var commandText = string.Format(StoreProcedure.UpdateAccountResponse,
+
+                   objAccountModel.AccountId,
+                    objAccountModel.AccountName,
+                    objAccountModel.AccountDescription,
+                    objAccountModel.AccountManagerId,
+                    objAccountModel.HeadQuater,
+                    objAccountModel.State,
+                    objAccountModel.Country,
+                    objAccountModel.PhoneNumber,
+                    objAccountModel.MSA,
+                    objAccountModel.Geography,
+                    objAccountModel.CeoName,
+                    objAccountModel.LeadChannelTypeId,
+                    objAccountModel.EmployeeStrength,
+                    objAccountModel.YearlyRevenue,
+                    objAccountModel.ModifiedById,
+                    objAccountModel.IsActive);
+                await Context.Database.ExecuteSqlRawAsync(commandText);
+
+                return new ReturnResponseModel { Status = true };
+            }
+            catch (Exception)
+            {
+                return new ReturnResponseModel { Status = false };
+            }
+        }
+        /// <summary>
+        /// Delete Account Response
+        /// </summary>
+        /// <param name="AccountId"></param>
+        /// <returns>Response Model</returns>
+        public async Task DeleteAccountResponse(int AccountId)
+        {
+            var commandText = string.Format(StoreProcedure.DeleteAccountResponse, AccountId);
+            await Context.Database.ExecuteSqlRawAsync(commandText);
+        }
+
+        #endregion
+
     }
 }
+

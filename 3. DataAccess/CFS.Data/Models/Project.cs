@@ -26,14 +26,25 @@ namespace CFS.Data.Models
         public string ProjectDescription { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string ProjectType { get; set; }
-        public int? AccountId { get; set; }
+        public int ProjectTypeId { get; set; }
+        public int AccountId { get; set; }
         public int? IsActive { get; set; }
         public DateTime? LastModifiedOn { get; set; }
+
         public int? ModifiedById { get; set; }
+
+        public string ContactPersonName { get; set; }
+        public string Email { get; set; }
+        public string PhoneNumber { get; set; }
+        public int ProjectDomainId { get; set; }
+
+
 
         public virtual Account Account { get; set; }
         public virtual Employee ModifiedBy { get; set; }
+        public virtual ProjectType Projecttype { get; set; }
+        public virtual ProjectDomain ProjectDomain { get; set; }
+
         public virtual ICollection<AgileDatum> AgileData { get; set; }
         public virtual ICollection<ComplianceProject> ComplianceProjects { get; set; }
         public virtual ICollection<EmployeeProjectAllocation> EmployeeProjectAllocations { get; set; }
@@ -44,5 +55,7 @@ namespace CFS.Data.Models
         public virtual ICollection<SprintScore> SprintScores { get; set; }
         public virtual ICollection<Sprint> Sprints { get; set; }
         public virtual ICollection<StageDatum> StageData { get; set; }
+       public virtual ICollection<ProjectType> ProjectType { get; set; }
+        public virtual ICollection<ProjectDomain> ProjectDomains { get; set; }
     }
 }

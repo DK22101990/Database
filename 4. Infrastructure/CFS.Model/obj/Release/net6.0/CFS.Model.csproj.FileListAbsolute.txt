@@ -1,0 +1,12 @@
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\4. Infrastructure\CFS.Model\bin\Release\net6.0\CFS.Model.deps.json
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\4. Infrastructure\CFS.Model\bin\Release\net6.0\CFS.Model.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\4. Infrastructure\CFS.Model\bin\Release\net6.0\CFS.Model.pdb
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\4. Infrastructure\CFS.Model\obj\Release\net6.0\CFS.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\4. Infrastructure\CFS.Model\obj\Release\net6.0\CFS.Model.AssemblyInfoInputs.cache
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\4. Infrastructure\CFS.Model\obj\Release\net6.0\CFS.Model.AssemblyInfo.cs
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\4. Infrastructure\CFS.Model\obj\Release\net6.0\CFS.Model.csproj.CoreCompileInputs.cache
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\4. Infrastructure\CFS.Model\obj\Release\net6.0\CFS.Model.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\4. Infrastructure\CFS.Model\obj\Release\net6.0\refint\CFS.Model.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\4. Infrastructure\CFS.Model\obj\Release\net6.0\CFS.Model.pdb
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\4. Infrastructure\CFS.Model\obj\Release\net6.0\ref\CFS.Model.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\4. Infrastructure\CFS.Model\obj\Release\net6.0\CFS.Model.sourcelink.json

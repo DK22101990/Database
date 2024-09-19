@@ -1,4 +1,5 @@
 ﻿using CFS.Data.Domains;
+using CFS.Data.Models;
 using CFS.Model.Models;
 using System;
 using System.Collections.Generic;
@@ -22,7 +23,7 @@ namespace CFS.Data.IRepositories
         /// </summary>
         /// <param name="projectAllocation"></param>
         /// <returns></returns>
-        Task InsertProjectAllocation(InsertProjectAllocation projectAllocation);
+        Task<ReturnResponseModel> InsertProjectAllocation(InsertProjectAllocation projectAllocation);
 
         /// <summary>
         /// Update Account Manager Map
@@ -36,7 +37,7 @@ namespace CFS.Data.IRepositories
         /// </summary>
         /// <param name="projectAllocation"></param>
         /// <returns></returns>
-        Task UpdateProjectAllocation(InsertProjectAllocation projectAllocation);
+        Task<ReturnResponseModel> UpdateProjectAllocation(UpdateProjectAllocation projectAllocation);
 
         /// <summary>
         /// Delete Account Manager
@@ -48,9 +49,9 @@ namespace CFS.Data.IRepositories
         /// <summary>
         /// Delete Project Allocation
         /// </summary>
-        /// <param name="AccountId"></param>
+        /// <param name="ProjectAllocationsId"></param>
         /// <returns></returns>
-        Task DeleteProjectAllocation(int AccountId);
+        Task DeleteProjectAllocation(int ProjectAllocationsId);
 
         /// <summary>
         /// Get Account Manager Map
@@ -64,19 +65,29 @@ namespace CFS.Data.IRepositories
         /// <summary>
         /// Get Project Allocation
         /// </summary>
-        /// <param name="employeeId"></param>
+        /// <param name="managerId"></param>
         /// <param name="projectId"></param>
         /// <param name="sowId"></param>
         /// <param name="accountId"></param>
         /// <returns></returns>
-        Task<List<ProjectAllocationList>> GetProjectAllocationAsync(int employeeId, int projectId, int sowId, int accountId);
+        Task<List<ProjectAllocationList>> GetProjectAllocationAsync(int managerId, int projectId, int sowId, int accountId);
 
+       
         /// <summary>
         /// Get Employee Billability
         /// </summary>
         /// <param name="employeeId"></param>
         /// <returns></returns>
         Task<List<EmployeeBillability>> GetEmployeeBillabilityAsync(int employeeId);
+
+
+        /// <summary>
+        /// Get Billability and Utilization
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <returns></returns>
+        /// 
+        Task<List<BilllabilityandUtilizationList>> GetBillabilityandUtilizationAsync(BillabilityandUtilizationRequest utilizationRequest);
 
         /// <summary>
         /// Get Employee Details
@@ -90,14 +101,14 @@ namespace CFS.Data.IRepositories
         /// </summary>
         /// <param name="employee"></param>
         /// <returns></returns>
-        Task InsertEmployeeDetailAsync(EmployeeDetailsModel employee);
+        Task InsertEmployeeDetailAsync(InsertEmployeeDetailsModel employee);
 
         // <summary>
         /// Update Employee Details
         /// </summary>
         /// <param name="employee"></param>
         /// <returns></returns>
-        Task UpdateEmployeeDetailAsync(EmployeeDetailsModel employee);
+        Task UpdateEmployeeDetailAsync(UpdateEmployeeDetailsModel employee);
 
         /// <summary>
         /// Delete Project Allocation
@@ -105,5 +116,12 @@ namespace CFS.Data.IRepositories
         /// <param name="employeeId"></param>
         /// <returns></returns>
         Task DeleteEmployeeDetail(int employeeId);
+
+        /// <summary>
+        /// Get Accounts Project Manager List
+        /// </summary>
+        /// <param name="managerId"></param>
+        /// <returns></returns>
+        Task<List<ProjectAccountManagerList>> GetAccountListOnProjectManagerAsync(int managerId);
     }
 }

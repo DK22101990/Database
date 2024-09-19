@@ -31,6 +31,7 @@ namespace CFS.Data.Models
             ProjectManagerMapManagers = new HashSet<ProjectManagerMap>();
             ProjectManagerMapModifiedBies = new HashSet<ProjectManagerMap>();
             Projects = new HashSet<Project>();
+            ContractTypes = new HashSet<ContractType>();
             QuestionCategoryMaps = new HashSet<QuestionCategoryMap>();
             Questions = new HashSet<Question>();
             RoleComplianceTypes = new HashSet<RoleComplianceType>();
@@ -53,11 +54,21 @@ namespace CFS.Data.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PhoneNumber { get; set; }
-        public DateTime? HireDate { get; set; }
+        public DateTime? DateOfJoining { get; set; }
         public int? DepartmentId { get; set; }
         public int? IsActive { get; set; }
         public DateTime? LastModifiedOn { get; set; }
         public int? ModifiedById { get; set; }
+        public DateTime? ExitDate { get; set; }
+        public string PositionHiredFor { get;set; }
+        public string Tittle { get; set; }
+        public int? DirectReportingManagerId { get; set; }
+        public int? IndirectReportingManagerId { get; set; }
+
+
+        // public int ContractTypeId { get; set; }
+
+
 
         public virtual Department Department { get; set; }
         public virtual Employee ModifiedBy { get; set; }
@@ -69,6 +80,8 @@ namespace CFS.Data.Models
         public virtual ICollection<ComplianceProject> ComplianceProjects { get; set; }
         public virtual ICollection<ComplianceStatus> ComplianceStatuses { get; set; }
         public virtual ICollection<ComplianceType> ComplianceTypes { get; set; }
+
+        public virtual ICollection<ContractType> ContractTypes { get; set; }    
         public virtual ICollection<Currency> Currencies { get; set; }
         public virtual ICollection<Department> Departments { get; set; }
         public virtual ICollection<EmployeeProjectAllocation> EmployeeProjectAllocationEmployees { get; set; }
@@ -83,6 +96,7 @@ namespace CFS.Data.Models
         public virtual ICollection<ProjectManagerMap> ProjectManagerMapManagers { get; set; }
         public virtual ICollection<ProjectManagerMap> ProjectManagerMapModifiedBies { get; set; }
         public virtual ICollection<Project> Projects { get; set; }
+        public virtual ICollection<ProjectDomain> ProjectDomains { get; set; }
         public virtual ICollection<QuestionCategoryMap> QuestionCategoryMaps { get; set; }
         public virtual ICollection<Question> Questions { get; set; }
         public virtual ICollection<RoleComplianceType> RoleComplianceTypes { get; set; }

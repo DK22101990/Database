@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,7 +11,20 @@ namespace CFS.Model.Models
     public class AccountListViewModel
     {
         public int AccountId { get; set; }
-        public string AccountName { get; set; }       
+        public string AccountName { get; set; }
+
+        public int ModifiedById { get; set; }
+
+        public int? IsActive { get; set; }
+
+        public int? EmployeeSize { get; set; }
+
+        public string CeoName { get; set; }
+
+
+        public int? YearlyRevenue { get; set; }
+
+
     }
     public class SprintViewModel
     {
@@ -60,7 +75,7 @@ namespace CFS.Model.Models
     }
 
     public class ProjectKickStartQuestionViewModel
-    {       
+    {
         public string Questions { get; set; }
         public string StageName { get; set; }
         public string ComplianceTypeName { get; set; }
@@ -69,7 +84,7 @@ namespace CFS.Model.Models
         public int? ProjectId { get; set; }
         public int? SowId { get; set; }
         public int? StageId { get; set; }
-        public int? ComplianceTypeID { get; set; }        
+        public int? ComplianceTypeID { get; set; }
         public int? QuestionId { get; set; }
         public int? ComplianceStatusId { get; set; }
         public string Comments { get; set; }
@@ -86,7 +101,7 @@ namespace CFS.Model.Models
     #region QuestionList
     public class QuestionListViewModel
     {
-        
+
         public int QuestionId { get; set; }
         public string Questions { get; set; }
         public int? ComplianceTypeId { get; set; }
@@ -122,37 +137,104 @@ namespace CFS.Model.Models
         public int ProjectId { get; set; }
         public string ProjectName { get; set; }
         public string ProjectDescription { get; set; }
+        public int ProjectTypeId { get; set; }
         public string ProjectType { get; set; }
+        public string ContactPersonName { get; set; }
+        public int ProjectDomainId { get; set; }
+        public string ProjectDomain { get; set; }
+        public string Email { get; set; }
+        public string PhoneNumber { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public int? AccountId { get; set; }
-        public string AccountName { get; set; }
+        public int? ManagerId { get; set; }
+        public string ManagerName { get; set; }
+        public int? ModifiedById { get; set; }
+
+        public string ClientContactPerson { get; set; }
+        public string ClientEmailId { get; set; }
+        public string ClientContactNumber { get; set; }
+        public int ProjectManagerId { get; set; }
+        public int ProjectAccountManagerId { get; set; }
+        public int SowId { get; set; }
+        public int IsActive { get; set; }
+        public DateTime? LastModifiedOn { get; set; }
     }
     #endregion
 
-    #region SOW
-    public class SOWViewModel
+
+
+    #region ProjectDomain
+
+    public class ProjectDomainViewModel
     {
-        public int SowId { get; set; }
-        public DateTime? StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
-        public string SowName { get; set; }
-        public string EngagementWeeks { get; set; }
-        public string SowAmount { get; set; }
-        public int? ProjectId { get; set; }
-        public string ProjectName { get; set; }
+        public int ProjectDomainId { get; set; }
+        public string Projectdomain { get; set; }
+        public int IsActive { get; set; }
+        public DateTime LastModifiedOn { get; set; }
+
+        public int ModifiedById { get; set; }
     }
     #endregion
+    #region
+    public class UpdateProjectResponseModel
+    {
+        public int AccountId { get; set; }
+        public string ProjectName { get; set; }
+        public string ProjectDescription { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string ClientContactPerson { get; set; }
+        public string ClientEmailId { get; set; }
+        public string ClientContactNumber { get; set; }
+        public int ProjectTypeId { get; set; }
+        public int ProjectDomainId { get; set; }
+        public int ProjectManagerId { get; set; }
+        public int ProjectAccountManagerId { get; set; }
+
+        public int IsActive { get; set; }
+        public DateTime? LastModifiedOn { get; set; }
+        public int? ModifiedById { get; set; }
+
+        public int ProjectId { get; set; }
+
+        public int SowId { get; set; }
+
+    }
+    public class InsertProjectResponseModel
+    {
+        public int ProjectId { get; set; }
+        public string ProjectName { get; set; }
+        public string ProjectDescription { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public int AccountId { get; set; }
+        public string ClientContactPerson { get; set; }
+        public string ClientEmailId { get; set; }
+        public string ClientContactNumber { get; set; }
+        public int ProjectTypeId { get; set; }
+        public int ProjectDomainId { get; set; }
+        public int ProjectManagerId { get; set; }
+        public int? ProjectAccountManagerId { get; set; }
+        public int SowId { get; set; }
+        public int IsActive { get; set; }
+        public DateTime? LastModifiedOn { get; set; }
+        public int? ModifiedById { get; set; }
+
+    }
+
+    #endregion
+
 
     #region Stage
     public class StageViewModel
     {
-        public int StageId { get; set; }        
-        public string StageName { get; set; }        
+        public int StageId { get; set; }
+        public string StageName { get; set; }
     }
     #endregion
 
-    
+
     public class ArtefactDownload
     {
         public string DisplayName { get; set; }
@@ -242,5 +324,126 @@ namespace CFS.Model.Models
         public int? ModifiedById { get; set; }
     }
 
+    #endregion
+
+    #region SOWResponse
+    public class InsertUpdateSowResponseModel
+    {
+        public int? AccountId { get; set; }
+        public int? ProjectId { get; set; }
+        public int? SowId { get; set; }
+        public DateTime? SowStartDate { get; set; }
+        public DateTime? SowEndDate { get; set; }
+        public string SowName { get; set; }
+        public string EngagementWeeks { get; set; }
+        public string SowValue { get; set; }
+        public int? OpportunityId { get; set; }
+        public int? CurrencyId { get; set; }
+        public int? ContractTypeId { get; set; }
+        public string SowPath { get; set; }
+        public string ProjectDuration { get; set; }
+        public int IsActive { get; set; }
+    }
+
+    public class SOWViewModel
+    {
+        public int SowId { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string SowName { get; set; }
+        public string SowAmount { get; set; }
+        public int? OpportunityId { get; set; }
+        public int? CurrencyId { get; set; }
+        public int? ContractTypeId { get; set; }
+        public string SowPath { get; set; }
+        public string ProjectDuration { get; set; }
+        public string EngagementWeeks { get; set; }
+        public int ProjectId { get; set; }
+        public int AccountId { get; set; }
+        public int IsActive { get; set; }
+        public DateTime? LastModifiedOn { get; set; }
+        public int? ModifiedById { get; set; }
+    }
+
+    public class SowDataViewModel
+    {
+        public int SowId { get; set; }
+        public DateTime? SOWStartDate { get; set; }
+        public DateTime? SOWEndDate { get; set; }
+        public string SOWValue { get; set; }
+        public int? ContractTypeId { get; set; }
+        public string ContractType { get; set; }
+        public int? ProjectTypeId { get; set; }
+        public string ProjectType { get; set;}
+        public string SowPath { get; set; }
+        public string ProjectDuration { get; set; }
+        public int IsActive { get; set; }
+        public string ClientContactPerson { get; set; }
+        public string ClientEmailId { get; set; }
+    }
+    public class AccountResponseViewModel
+    {
+        public int AccountId { get; set; }
+        public string AccountName { get; set; }
+        public string AccountDescription { get; set; }
+        public int AccountManagerId { get; set; }
+        public string AccountManager { get; set; }
+        public string HeadQuater { get; set; }
+        public string State { get; set; }
+        public string Country { get; set; }
+        public string PhoneNumber { get; set; }
+        public string MSA { get; set; }
+        public string Geography { get; set; }
+        public int EmployeeStrength { get; set; }
+        public string CeoName { get; set; }
+        public int YearlyRevenue { get; set; }
+        public int LeadChannelTypeId { get; set; }
+        public string LeadChannel { get; set; }
+        public int IsActive { get; set; }
+        public DateTime LastModifiedOn { get; set; }
+        public int ModifiedById { get; set; }
+
+    }
+    public class InsertAccountResponseModel
+    {
+        [Key]
+
+        public string AccountName { get; set; }
+        public string AccountDescription { get; set; }
+        public int AccountManagerId { get; set; }
+        public string HeadQuater { get; set; }
+        public string State { get; set; }
+        public string Country { get; set; }
+        public string PhoneNumber { get; set; }
+        public string MSA { get; set; }
+        public string Geography { get; set; }
+        public string CeoName { get; set; }
+        public int LeadChannelTypeId { get; set; }
+        public int EmployeeStrength { get; set; }
+        public int YearlyRevenue { get; set; }
+        public int ModifiedById { get; set; }
+
+    }
+    public class UpdateAccountResponseModel
+    {
+        [Key]
+        public int AccountId { get; set; }
+        public string AccountName { get; set; }
+        public string AccountDescription { get; set; }
+        public int AccountManagerId { get; set; }
+        public string HeadQuater { get; set; }
+        public string State { get; set; }
+        public string Country { get; set; }
+        public string PhoneNumber { get; set; }
+        public string MSA { get; set; }
+        public string Geography { get; set; }
+        public string CeoName { get; set; }
+        public int LeadChannelTypeId { get; set; }
+        public int EmployeeStrength { get; set; }
+        public int YearlyRevenue { get; set; }
+        public int ModifiedById { get; set; }
+        public int IsActive { get; set; }
+
+    }
     #endregion
 }

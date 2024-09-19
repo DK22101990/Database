@@ -1,0 +1,36 @@
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net6.0\CFS.BusinessLogic.deps.json
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net6.0\CFS.BusinessLogic.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net6.0\CFS.BusinessLogic.pdb
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net6.0\CFS.Data.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net6.0\CFS.Model.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net6.0\CFS.Data.pdb
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net6.0\CFS.Model.pdb
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net6.0\CFS.BusinessLogic.csproj.AssemblyReference.cache
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net6.0\CFS.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net6.0\CFS.BusinessLogic.AssemblyInfoInputs.cache
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net6.0\CFS.BusinessLogic.AssemblyInfo.cs
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net6.0\CFS.BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net6.0\CFS.BusinessLogic.sourcelink.json
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net6.0\CFS.BusinessLogic.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net6.0\refint\CFS.BusinessLogic.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net6.0\CFS.BusinessLogic.pdb
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net6.0\ref\CFS.BusinessLogic.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net6.0\CFS.Busi.24F5894D.Up2Date
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net6.0\CFS.BusinessLogic.deps.json
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net6.0\CFS.BusinessLogic.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net6.0\CFS.BusinessLogic.pdb
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net6.0\CFS.Data.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net6.0\CFS.Model.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net6.0\CFS.Data.pdb
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\bin\Debug\net6.0\CFS.Model.pdb
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net6.0\CFS.BusinessLogic.csproj.AssemblyReference.cache
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net6.0\CFS.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net6.0\CFS.BusinessLogic.AssemblyInfoInputs.cache
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net6.0\CFS.BusinessLogic.AssemblyInfo.cs
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net6.0\CFS.BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net6.0\CFS.BusinessLogic.sourcelink.json
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net6.0\CFS.Busi.24F5894D.Up2Date
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net6.0\CFS.BusinessLogic.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net6.0\refint\CFS.BusinessLogic.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net6.0\CFS.BusinessLogic.pdb
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\2. BusinessLogic\CFS.BusinessLogic\obj\Debug\net6.0\ref\CFS.BusinessLogic.dll

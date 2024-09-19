@@ -17,6 +17,7 @@ namespace CFS.Data.Models
         public int? IsActive { get; set; }
         public DateTime? LastModifiedDate { get; set; }
         public int? ModifiedById { get; set; }
+        public int AccountId { get; set; }
 
         public virtual Employee AccountManager { get; set; }
         public virtual Employee Manager { get; set; }

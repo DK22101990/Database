@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\inetpub\wwwroot\FW_PR</_PublishTargetUrl>
+    <History>True|2023-12-26T16:49:22.5402427Z;True|2023-12-13T05:14:08.9130134-08:00;True|2023-12-08T00:42:05.5864740-08:00;False|2023-12-08T00:41:21.1738659-08:00;True|2023-12-07T00:16:24.6500831-08:00;False|2023-12-07T00:15:35.0647667-08:00;True|2023-11-30T04:21:55.2728027-08:00;True|2023-07-20T04:12:08.6283997-07:00;False|2023-07-20T04:11:24.9947960-07:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

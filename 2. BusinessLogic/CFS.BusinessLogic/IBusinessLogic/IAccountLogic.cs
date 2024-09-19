@@ -1,4 +1,5 @@
-﻿using CFS.Model.Models;
+﻿using CFS.Data.Models;
+using CFS.Model.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,12 @@ namespace CFS.BusinessLogic.IBusinessLogic
         /// </summary>
         /// <returns></returns>
         Task<List<AccountListViewModel>> GetAccountList();
+        /// <summary>
+        /// Get Account Response
+        /// </summary>
+        /// <returns></returns>
+
+        Task<List<AccountResponseViewModel>> GetAccountResponseList();
 
         // <summary>
         /// Get ComplianceType List
@@ -50,13 +57,25 @@ namespace CFS.BusinessLogic.IBusinessLogic
         /// <summary>
         /// Get SOW
         /// </summary>
-        /// <param name="ProjectId"></param>
+        ///
         /// <returns></returns>
-        Task<List<SOWViewModel>> GetSOWList(int ProjectId);
+        /// 
+        Task<List<ProjectDomainViewModel>> GetProjectDomainList();
+
+        /// <summary>
+        /// Get SOW
+        /// </summary>
+        
+       
+        
+        /// <returns></returns>
+        Task<List<SOWViewModel>> GetSOWList(int ProjectId, int AccountId);
 
         /// <summary>
         /// Get Stage
-        /// </summary>        
+        /// </summary>       
+        /// <param name="ProjectId">
+        /// <param name="AccountId"
         /// <returns></returns>
         Task<List<StageViewModel>> GetStageList();
 
@@ -93,7 +112,6 @@ namespace CFS.BusinessLogic.IBusinessLogic
         /// </summary>
         /// <returns></returns>
         Task<List<SelectListViewModel>> GetMasterList(string Entity);
-       
 
         /// <summary>
         /// Get Question List
@@ -101,6 +119,7 @@ namespace CFS.BusinessLogic.IBusinessLogic
         /// <param name="StageId"></param>
         /// <param name="ComplianceTypeId"></param>
         /// <returns></returns>
+        /// 
         Task<List<QuestionListViewModel>> GetQuestionList(int StageId, int ComplianceTypeId);
 
         /// <summary>
@@ -176,5 +195,92 @@ namespace CFS.BusinessLogic.IBusinessLogic
         Task<ReturnResponseModel> DeleteSprintAsync(int sprintId);
         #endregion
 
+        #region Projects
+
+        /// <summary>
+        /// Update insert project response
+        /// </summary>
+        /// <param name="objprojectModel"></param>
+        /// <returns></returns>
+        Task<ReturnResponseModel> InsertProjectResponse(InsertProjectResponseModel objprojectModel);
+
+        /// <summary>
+        /// insert project response
+        /// </summary>
+        /// <param name="objprojectModel"></param>
+        /// <returns></returns>
+        Task<ReturnResponseModel> UpdateProjectResponse(UpdateProjectResponseModel objprojectModel);
+
+        /// <summary>
+        /// Get All Project Response
+        /// </summary>
+        /// <param name="AccountId"></param>
+        /// <returns></returns>
+        Task<List<ProjectViewModel>> GetAllProjectResponse(int AccountId);
+
+        /// <summary>
+        /// Delete Project Response
+        /// </summary>
+        /// <param name="projectId">project id</param>
+        /// <returns></returns>
+        Task<ReturnResponseModel> DeleteProjectResponse(int projectId);
+
+        #endregion
+
+        #region SOWResponse
+
+        /// <summary>
+        /// Insert SOW Response
+        /// </summary>
+        /// <param name="objSowResponse"></param>
+        /// <returns></returns>
+        Task<ReturnResponseModel> InsertSowResponse(InsertUpdateSowResponseModel objSowResponse);
+
+        /// <summary>
+        /// Update SOW Response
+        /// </summary>
+        /// <param name="objSowResponse"></param>
+        /// <returns></returns>
+        Task<ReturnResponseModel> UpdateSowResponse(InsertUpdateSowResponseModel objSowResponse);
+
+        /// <summary>
+        /// Get All Project Response
+        /// </summary>
+        /// <returns></returns>
+        Task<List<SOWViewModel>> GetAllSowResponse(int AccountId, int ProjectId);
+
+        /// <summary>
+        /// Delete SOW Response
+        /// </summary>
+        /// <param name="sowId">sowId</param>
+        /// <returns></returns>
+        Task<ReturnResponseModel> DeleteSowResponse(int sowId);
+
+        /// <summary>
+        /// Get Sow Response By Id
+        /// </summary>
+        /// <param name="sowId"></param>
+        /// <returns></returns>
+        Task<SowDataViewModel> GetSowByIdAsync(int sowId);
+        /// <summary>
+        /// Insert Account Response
+        /// </summary>
+        /// <param name="objAccountModel"></param>
+        /// <returns></returns>
+        Task<ReturnResponseModel> InsertAccountResponse(InsertAccountResponseModel objAccountModel);
+
+        /// <summary>
+        /// Update Account Response 
+        /// </summary>
+        /// <param name="objAccountModel"></param>
+        /// <returns></returns>
+        Task<ReturnResponseModel> UpdateAccountResponse(UpdateAccountResponseModel objAccountModel);
+        /// <summary>
+        /// Delete Account Response
+        /// </summary>
+        /// <param name="AccountId">project id</param>
+        /// <returns></returns>
+        Task<ReturnResponseModel> DeleteAccountResponse(int AccountId);
+        #endregion
     }
 }

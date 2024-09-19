@@ -50,6 +50,7 @@ namespace CFS.Data.Models
         public virtual DbSet<StageComplianceType> StageComplianceTypes { get; set; }
         public virtual DbSet<StageDatum> StageData { get; set; }
         public virtual DbSet<Variance> Variances { get; set; }
+        public virtual DbSet<ProjectDomain> ProjectDomains { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -309,7 +310,7 @@ namespace CFS.Data.Models
                     .HasMaxLength(100)
                     .IsUnicode(false);
 
-                entity.Property(e => e.HireDate).HasColumnType("date");
+                entity.Property(e => e.DateOfJoining).HasColumnType("date");
 
                 entity.Property(e => e.LastModifiedOn).HasColumnType("datetime");
 
@@ -452,7 +453,7 @@ namespace CFS.Data.Models
                     .HasMaxLength(100)
                     .IsUnicode(false);
 
-                entity.Property(e => e.ProjectType)
+                entity.Property(e => e.ProjectTypeId)
                     .HasMaxLength(100)
                     .IsUnicode(false);
 

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ez/uHnetQpCjHabcl2IfHl05f4N662GBjenxry+KtWU=",
+  "Source": "CFS.WebAPI",
+  "BasePath": "_content/CFS.WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

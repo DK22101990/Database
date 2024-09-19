@@ -1,0 +1,36 @@
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\3. DataAccess\CFS.Data\bin\Debug\net6.0\CFS.Data.deps.json
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\3. DataAccess\CFS.Data\bin\Debug\net6.0\CFS.Data.runtimeconfig.json
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\3. DataAccess\CFS.Data\bin\Debug\net6.0\CFS.Data.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\3. DataAccess\CFS.Data\bin\Debug\net6.0\CFS.Data.pdb
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\3. DataAccess\CFS.Data\bin\Debug\net6.0\CFS.Model.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\3. DataAccess\CFS.Data\bin\Debug\net6.0\CFS.Model.pdb
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\3. DataAccess\CFS.Data\obj\Debug\net6.0\CFS.Data.csproj.AssemblyReference.cache
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\3. DataAccess\CFS.Data\obj\Debug\net6.0\CFS.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\3. DataAccess\CFS.Data\obj\Debug\net6.0\CFS.Data.AssemblyInfoInputs.cache
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\3. DataAccess\CFS.Data\obj\Debug\net6.0\CFS.Data.AssemblyInfo.cs
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\3. DataAccess\CFS.Data\obj\Debug\net6.0\CFS.Data.csproj.CoreCompileInputs.cache
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\3. DataAccess\CFS.Data\obj\Debug\net6.0\CFS.Data.sourcelink.json
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\3. DataAccess\CFS.Data\obj\Debug\net6.0\CFS.Data.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\3. DataAccess\CFS.Data\obj\Debug\net6.0\refint\CFS.Data.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\3. DataAccess\CFS.Data\obj\Debug\net6.0\CFS.Data.pdb
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\3. DataAccess\CFS.Data\obj\Debug\net6.0\CFS.Data.genruntimeconfig.cache
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\3. DataAccess\CFS.Data\obj\Debug\net6.0\ref\CFS.Data.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\3. DataAccess\CFS.Data\obj\Debug\net6.0\CFS.Data.csproj.Up2Date
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\3. DataAccess\CFS.Data\bin\Debug\net6.0\CFS.Data.deps.json
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\3. DataAccess\CFS.Data\bin\Debug\net6.0\CFS.Data.runtimeconfig.json
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\3. DataAccess\CFS.Data\bin\Debug\net6.0\CFS.Data.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\3. DataAccess\CFS.Data\bin\Debug\net6.0\CFS.Data.pdb
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\3. DataAccess\CFS.Data\bin\Debug\net6.0\CFS.Model.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\3. DataAccess\CFS.Data\bin\Debug\net6.0\CFS.Model.pdb
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\3. DataAccess\CFS.Data\obj\Debug\net6.0\CFS.Data.csproj.AssemblyReference.cache
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\3. DataAccess\CFS.Data\obj\Debug\net6.0\CFS.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\3. DataAccess\CFS.Data\obj\Debug\net6.0\CFS.Data.AssemblyInfoInputs.cache
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\3. DataAccess\CFS.Data\obj\Debug\net6.0\CFS.Data.AssemblyInfo.cs
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\3. DataAccess\CFS.Data\obj\Debug\net6.0\CFS.Data.csproj.CoreCompileInputs.cache
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\3. DataAccess\CFS.Data\obj\Debug\net6.0\CFS.Data.sourcelink.json
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\3. DataAccess\CFS.Data\obj\Debug\net6.0\CFS.Data.csproj.Up2Date
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\3. DataAccess\CFS.Data\obj\Debug\net6.0\CFS.Data.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\3. DataAccess\CFS.Data\obj\Debug\net6.0\refint\CFS.Data.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\3. DataAccess\CFS.Data\obj\Debug\net6.0\CFS.Data.pdb
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\3. DataAccess\CFS.Data\obj\Debug\net6.0\CFS.Data.genruntimeconfig.cache
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\3. DataAccess\CFS.Data\obj\Debug\net6.0\ref\CFS.Data.dll

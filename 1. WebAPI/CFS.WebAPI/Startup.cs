@@ -67,6 +67,10 @@ namespace CFS.WebAPI
 
             services.AddTransient<IProjectAllocationLogic, ProjectAllocationLogic>();
             services.AddTransient<IProjectAllocationRepository, ProjectAllocationRepository>();
+
+            services.AddTransient<IEmpMonthlyHoursLogic, EmpMonthlyHoursLogic>();
+            services.AddTransient<IEmpMonthlyHoursRepository, EmpMonthlyHoursRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -86,8 +90,8 @@ namespace CFS.WebAPI
                 string swaggerJsonBasePath = string.IsNullOrWhiteSpace(c.RoutePrefix) ? "." : "..";
                 c.SwaggerEndpoint(swaggerJsonBasePath + "/swagger/v1/swagger.json", "CFS.WebAPI v1");
             });
-            app.UseHttpsRedirection();
-
+            //app.UseHttpsRedirection();
+            
             app.UseRouting();
 
             app.UseAuthorization();

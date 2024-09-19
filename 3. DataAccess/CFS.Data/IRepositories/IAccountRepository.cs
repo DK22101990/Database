@@ -16,6 +16,12 @@ namespace CFS.Data.IRepositories
         /// </summary>
         /// <returns></returns>
         Task<List<AccountList>> GetAccountList();
+        /// <summary>
+        /// Get Account Response
+        /// </summary>
+        /// <returns></returns>
+
+        Task<List<AccountResponseList>> GetAccountResponseList();
 
         // <summary>
         /// Get ComplianceType List
@@ -99,9 +105,42 @@ namespace CFS.Data.IRepositories
         /// <summary>
         /// Get SOW
         /// </summary>
-        /// <param name="ProjectId"></param>
+        ///
         /// <returns></returns>
-        Task<List<SOW>> GetSOWList(int ProjectId);
+
+        Task<List<ProjectDomain>> GetProjectDomainList();
+
+        #region Projects
+
+        // <summary>
+        /// Insert project response
+        /// </summary>
+        /// <param name="objprojectModel"></param>
+        /// <returns></returns>
+        Task<ReturnResponseModel> InsertProjectResponse(InsertProjectResponseModel objprojectModel);
+
+
+        // <summary>
+        /// Update project response
+        /// </summary>
+        /// <param name="objprojectModel"></param>
+        /// <returns></returns>
+        Task<ReturnResponseModel> UpdateProjectResponse(UpdateProjectResponseModel objprojectModel);
+      
+        /// <summary>
+        /// Get All Project Response
+        /// </summary>
+        /// <param name="AccountId"></param>
+        /// <returns></returns>
+        Task<List<ProjectResponse>> GetAllProjectResponse(int AccountId);
+
+        #endregion
+
+        /// <summary>
+        /// Get SOW
+        /// </summary>
+        /// <returns></returns>
+        Task<List<SOW>> GetSOWList(int ProjectId, int AccountId);
 
         /// <summary>
         /// Get Stage
@@ -178,6 +217,78 @@ namespace CFS.Data.IRepositories
         /// <param name="sprintId"></param>
         /// <returns></returns>
         Task<ReturnResponseModel> DeleteSprintAsync(int sprintId);
+        #endregion
+
+        /// <summary>
+        /// Delete Project Response
+        /// </summary>
+        /// <param name="projectId"></param>
+        /// <returns>Response Model</returns>
+        Task DeleteProjectResponse(int projectId);
+
+        #region SowResponse
+
+        /// <summary>
+        /// Insert SowResponse
+        /// </summary>
+        /// <param name="SowResponse"></param>
+        /// <returns></returns>
+        Task<ReturnResponseModel> InsertSowResponseAsync(InsertUpdateSowResponseModel SowResponse);
+
+        /// <summary>
+        /// Update SowResponse
+        /// </summary>
+        /// <param name="SowResponse"></param>
+        /// <returns></returns>
+        Task<ReturnResponseModel> UpdateSowResponseAsync(InsertUpdateSowResponseModel SowResponse);
+
+        /// <summary>
+        /// Get All Project Response
+        /// </summary>
+        /// <param name="AccountId"></param>
+        /// <returns></returns>
+        Task<List<SowResponse>> GetAllSowResponseAsync(int AccountId, int ProjectId);
+
+
+        /// <summary>
+        /// Get Sow By Id
+        /// </summary>
+        /// <param name="SowId"></param>
+        /// <returns></returns>
+        Task<Sow> GetSowByIdAsync(int SowId);
+
+        /// <summary>
+        /// Delete SOW Response
+        /// </summary>
+        /// <param name="sowId">sowId</param>
+        /// <returns></returns>
+        Task DeleteSowResponseAsync(int sowId);
+
+        /// <summary>
+        /// Get Sow Response By Id
+        /// </summary>
+        /// <param name="sowId"></param>
+        /// <returns></returns>
+        Task<SowDataResponse> GetSowDataByIdAsync(int sowId);
+        /// <summary>
+        /// Insert Account Response
+        /// </summary>
+        /// <returns></returns>
+        Task<ReturnResponseModel> InsertAccountResponse(InsertAccountResponseModel objAccountModel);
+        // <summary>
+        /// Update Account response
+        /// </summary>
+        /// <param name="objAccountModel"></param>
+        /// <returns></returns>
+        Task<ReturnResponseModel> UpdateAccountResponse(UpdateAccountResponseModel objAccountModel);
+        /// <summary>
+        /// Delete Account Response
+        /// </summary>
+        /// <param name="AccountId"></param>
+        /// <returns>Response Model</returns>
+        Task DeleteAccountResponse(int AccountId);
+
+
         #endregion
     }
 }

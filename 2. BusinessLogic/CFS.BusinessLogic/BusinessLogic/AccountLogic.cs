@@ -51,6 +51,20 @@ namespace CFS.BusinessLogic.BusinessLogic
         {
             return _mapper.Map<List<AccountListViewModel>>(await _iAccountRepository.GetAccountList());
         }
+        /// <summary>
+        /// Get Account response
+        /// </summary>
+        /// <returns></returns>
+        /// <summary>
+        /// Get Account List2
+        /// </summary>
+        /// <returns></returns>
+        public async Task<List<AccountResponseViewModel>> GetAccountResponseList()
+        {
+            return _mapper.Map<List<AccountResponseViewModel>>(await _iAccountRepository.GetAccountResponseList());
+        }
+
+
 
 
         /// <summary>
@@ -123,9 +137,20 @@ namespace CFS.BusinessLogic.BusinessLogic
         /// Get SOW List
         /// </summary>
         /// <returns></returns>
-        public async Task<List<SOWViewModel>> GetSOWList(int ProjectId)
+
+        public async Task<List<ProjectDomainViewModel>> GetProjectDomainList( )
         {
-            return _mapper.Map<List<SOWViewModel>>(await _iAccountRepository.GetSOWList(ProjectId));
+            return _mapper.Map<List<ProjectDomainViewModel>>(await _iAccountRepository.GetProjectDomainList());
+        }
+
+        /// <summary>
+        /// Get SOW List
+        /// </summary>
+        /// <returns></returns>
+
+        public async Task<List<SOWViewModel>> GetSOWList(int ProjectId, int AccountId)
+        {
+            return _mapper.Map<List<SOWViewModel>>(await _iAccountRepository.GetSOWList(ProjectId, AccountId));
         }
 
         /// <summary>
@@ -143,6 +168,8 @@ namespace CFS.BusinessLogic.BusinessLogic
         /// <param name="StageId"></param>
         /// <param name="ComplianceTypeId"></param>
         /// <returns></returns>
+        /// 
+
         public async Task<List<QuestionListViewModel>> GetQuestionList(int StageId, int ComplianceTypeId)
         {
             return _mapper.Map<List<QuestionListViewModel>>(await _iAccountRepository.GetQuestionList(StageId, ComplianceTypeId));
@@ -445,6 +472,237 @@ namespace CFS.BusinessLogic.BusinessLogic
             };
         }
 
+
         #endregion
+
+
+        #region Projects
+
+        /// <summary>
+        /// Insert project response
+        /// </summary>
+        /// <param name="objprojectModel"></param>
+        /// <returns></returns>
+        public async Task<ReturnResponseModel> InsertProjectResponse(InsertProjectResponseModel objprojectModel)
+        {
+            var objResult = await _iAccountRepository.InsertProjectResponse(objprojectModel);
+            if (objResult.Status)
+            {
+                return new ReturnResponseModel
+                {
+                    Status = true,
+                    Message = string.Format(ApplicationMessage.SaveSuccessfully, "Project Response")
+                };
+            }
+            return new ReturnResponseModel
+            {
+                Status = false,
+                Message = string.Format(ApplicationMessage.BadRequst)
+            };
+        }
+
+
+
+
+
+        /// <summary>
+        /// Insert project response
+        /// </summary>
+        /// <param name="objprojectModel"></param>
+        /// <returns></returns>
+        public async Task<ReturnResponseModel> UpdateProjectResponse(UpdateProjectResponseModel objprojectModel)
+        {
+            var objResult = await _iAccountRepository.UpdateProjectResponse(objprojectModel);
+            if (objResult.Status)
+            {
+                return new ReturnResponseModel
+                {
+                    Status = true,
+                    Message = string.Format(ApplicationMessage.UpdateSuccessfully, "Project Response")
+                };
+            }
+            return new ReturnResponseModel
+            {
+                Status = false,
+                Message = string.Format(ApplicationMessage.BadRequst)
+            };
+        }
+
+        /// <summary>
+        /// Get All Project Response
+        /// </summary>
+        /// <returns></returns>
+        public async Task<List<ProjectViewModel>> GetAllProjectResponse(int AccountId)
+        {
+            return _mapper.Map<List<ProjectViewModel>>(await _iAccountRepository.GetAllProjectResponse(AccountId));
+        }
+
+        /// <summary>
+        /// Delete Project Response
+        /// </summary>
+        /// <param name="projectId"></param>
+        /// <returns>Response Model</returns>
+        public async Task<ReturnResponseModel> DeleteProjectResponse(int projectId)
+        {
+            ReturnResponseModel result = new ReturnResponseModel();
+            //var objProjectResponse = await _iAccountRepository.GetArtefactById(projectId);
+            if (1 == 1)
+            {
+                await _iAccountRepository.DeleteProjectResponse(projectId);
+                return new ReturnResponseModel { Status = true };
+            }
+            return new ReturnResponseModel { Status = false, Message = ApplicationMessage.ProjectNotFound };
+        }
+
+        #endregion
+
+        #region SowResponse
+        /// <summary>
+        /// Insert SOW Response
+        /// </summary>
+        /// <param name="objSowResponse"></param>
+        /// <returns></returns>
+        public async Task<ReturnResponseModel> InsertSowResponse(InsertUpdateSowResponseModel objSowResponse)
+        {
+            var objResult = await _iAccountRepository.InsertSowResponseAsync(objSowResponse);
+            if (objResult.Status)
+            {
+                return new ReturnResponseModel
+                {
+                    Status = true,
+                    Message = string.Format(ApplicationMessage.SaveSuccessfully, "SOW Response")
+                };
+            }
+            return new ReturnResponseModel
+            {
+                Status = false,
+                Message = string.Format(ApplicationMessage.BadRequst)
+            };
+          
+        }
+
+        /// <summary>
+        /// Update SOW Response
+        /// </summary>
+        /// <param name="objSowResponse"></param>
+        /// <returns></returns>
+        public async Task<ReturnResponseModel> UpdateSowResponse(InsertUpdateSowResponseModel objSowResponse)
+        {
+            var objResult = await _iAccountRepository.UpdateSowResponseAsync(objSowResponse);
+            if (objResult.Status)
+            {
+                return new ReturnResponseModel
+                {
+                    Status = true,
+                    Message = string.Format(ApplicationMessage.UpdateSuccessfully, "SOW Response")
+                };
+            }
+            return new ReturnResponseModel
+            {
+                Status = false,
+                Message = string.Format(ApplicationMessage.BadRequst)
+            };
+            
+        }
+
+        /// <summary>
+        /// Get All Project Response
+        /// </summary>
+        /// <returns></returns>
+        public async Task<List<SOWViewModel>> GetAllSowResponse(int AccountId, int ProjectId)
+        {
+            return _mapper.Map<List<SOWViewModel>>(await _iAccountRepository.GetAllSowResponseAsync(AccountId,ProjectId));
+        }
+
+        /// <summary>
+        /// Delete SOW Response
+        /// </summary>
+        /// <param name="sowId">sowId</param>
+        /// <returns></returns>
+        public async Task<ReturnResponseModel> DeleteSowResponse(int sowId)
+        {
+            ReturnResponseModel result = new ReturnResponseModel();
+            var objResponse = await _iAccountRepository.GetSowByIdAsync(sowId);
+            if (objResponse != null && objResponse.SowId > 0)
+            {
+                await _iAccountRepository.DeleteSowResponseAsync(sowId);
+                return new ReturnResponseModel { Status = true };
+            }
+            return new ReturnResponseModel { Status = false, Message = string.Format(ApplicationMessage.NotFound, "SOW") };
+        }
+
+        /// <summary>
+        /// Get Sow Response By Id
+        /// </summary>
+        /// <param name="sowId"></param>
+        /// <returns></returns>
+        public async Task<SowDataViewModel> GetSowByIdAsync(int sowId)
+        {
+            //return new SowDataViewModel();
+            return _mapper.Map<SowDataViewModel>(await _iAccountRepository.GetSowDataByIdAsync(sowId));
+        }
+        /// <summary>
+        /// Insert Account response
+        /// </summary>
+        /// <param name="objAccountModel"></param>
+        /// <returns></returns>
+        public async Task<ReturnResponseModel> InsertAccountResponse(InsertAccountResponseModel objAccountModel)
+        {
+            var objResult = await _iAccountRepository.InsertAccountResponse(objAccountModel);
+            if (objResult.Status)
+            {
+                return new ReturnResponseModel
+                {
+                    Status = true,
+                    Message = string.Format(ApplicationMessage.SaveSuccessfully, "Account Response")
+                };
+            }
+            return new ReturnResponseModel
+            {
+                Status = false,
+                Message = string.Format(ApplicationMessage.BadRequst)
+            };
+        }
+        /// <summary>
+        /// Insert Account response
+        /// </summary>
+        /// <param name="objAccountModel"></param>
+        /// <returns></returns>
+        public async Task<ReturnResponseModel> UpdateAccountResponse(UpdateAccountResponseModel objAccountModel)
+        {
+            var objResult = await _iAccountRepository.UpdateAccountResponse(objAccountModel);
+            if (objResult.Status)
+            {
+                return new ReturnResponseModel
+                {
+                    Status = true,
+                    Message = string.Format(ApplicationMessage.UpdateSuccessfully, "Account Response")
+                };
+            }
+            return new ReturnResponseModel
+            {
+                Status = false,
+                Message = string.Format(ApplicationMessage.BadRequst)
+            };
+        }
+        /// <summary>
+        /// Delete Accoount Response
+        /// </summary>
+        /// <param name="AccountId"></param>
+        /// <returns>Response Model</returns>
+        public async Task<ReturnResponseModel> DeleteAccountResponse(int AccountId)
+        {
+            ReturnResponseModel result = new ReturnResponseModel();
+
+            if (1 == 1)
+            {
+                await _iAccountRepository.DeleteAccountResponse(AccountId);
+                return new ReturnResponseModel { Status = true };
+            }
+            return new ReturnResponseModel { Status = false, Message = ApplicationMessage.AccountNotFound };
+        }
+
+        #endregion
+
     }
 }

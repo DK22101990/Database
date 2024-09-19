@@ -1,4 +1,7 @@
-﻿using CFS.BusinessLogic.IBusinessLogic;
+﻿using CFS.BusinessLogic.BusinessLogic;
+using CFS.BusinessLogic.IBusinessLogic;
+using CFS.Data.Domains;
+using CFS.Data.Models;
 using CFS.Model.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -48,10 +51,21 @@ namespace CFS.WebAPI.Controllers
         /// <returns></returns>
         [Route("InsertProjectAllocation")]
         [HttpPost]
-        public async Task InsertProjectAllocation([FromBody] InsertProjectAllocation projectAllocation)
+        public async Task<IActionResult> InsertProjectAllocation([FromBody] InsertProjectAllocation projectAllocation)
         {
-            await _iProjectAllocationLogic.InsertProjectAllocation(projectAllocation);
+
+            ReturnResponseModel result = new ReturnResponseModel();
+            if (projectAllocation != null)
+            {
+                result = await _iProjectAllocationLogic.InsertProjectAllocation(projectAllocation);
+                if (result.Status)
+                {
+                    return Ok(result);
+                }
+            }
+            return BadRequest(result);
         }
+
 
         /// <summary>
         /// Update Account Manager Map
@@ -72,10 +86,22 @@ namespace CFS.WebAPI.Controllers
         /// <returns></returns>
         [Route("UpdateProjectAllocation")]
         [HttpPost]
-        public async Task UpdateProjectAllocation([FromBody] InsertProjectAllocation projectAllocation)
+        public async Task<IActionResult> UpdateProjectAllocation([FromBody] UpdateProjectAllocation projectAllocation)
         {
-            await _iProjectAllocationLogic.UpdateProjectAllocation(projectAllocation);
+            ReturnResponseModel result = new ReturnResponseModel();
+            if (projectAllocation != null)
+            {
+                result = await _iProjectAllocationLogic.UpdateProjectAllocation(projectAllocation);
+                if (result.Status)
+                {
+                    return Ok(result);
+                }
+            }
+            return BadRequest(result);
         }
+
+
+
 
         /// <summary>
         /// Delete Account Manager
@@ -99,14 +125,14 @@ namespace CFS.WebAPI.Controllers
         /// <summary>
         /// Delete Project Allocation
         /// </summary>
-        /// <param name="AccountId">document id</param>
+        /// <param name="ProjectAllocationsId">document id</param>
         /// <returns></returns>
         [Route("DeleteProjectAllocation")]
         [HttpDelete]
-        public async Task<IActionResult> DeleteProjectAllocation(int AccountId)
+        public async Task<IActionResult> DeleteProjectAllocation(int ProjectAllocationsId)
         {
             ReturnResponseModel result = new ReturnResponseModel();
-            result = await _iProjectAllocationLogic.DeleteProjectAllocation(AccountId);
+            result = await _iProjectAllocationLogic.DeleteProjectAllocation(ProjectAllocationsId);
             if (result.Status)
             {
                 return NoContent();
@@ -131,17 +157,20 @@ namespace CFS.WebAPI.Controllers
         /// <summary>
         /// Get Project Allocation
         /// </summary>
-        /// <param name="employeeId"></param>
+        /// <param name="managerId"></param>
         /// <param name="projectId"></param>
         /// <param name="sowId"></param>
         /// <param name="accountId"></param>
         /// <returns></returns>
         [Route("GetProjectAllocation")]
         [HttpGet]
-        public async Task<IActionResult> GetProjectAllocationAsync(int employeeId, int projectId, int sowId, int accountId)
+        public async Task<IActionResult> GetProjectAllocationAsync(int managerId, int projectId, int sowId, int accountId)
         {
-            return Ok(await _iProjectAllocationLogic.GetProjectAllocationAsync(employeeId, projectId, sowId, accountId));
+            return Ok(await _iProjectAllocationLogic.GetProjectAllocationAsync(managerId, projectId, sowId, accountId));
         }
+
+
+       
 
         /// <summary>
         /// Get Employee Billability
@@ -155,12 +184,28 @@ namespace CFS.WebAPI.Controllers
             return Ok(await _iProjectAllocationLogic.GetEmployeeBillabilityAsync(employeeId));
         }
 
+        /// <summary>
+        /// Get Accounts Project Manager List
+        /// </summary>
+        /// <param name="managerId"></param>
+        /// <returns></returns>
+        [Route("GetAccountListOnProjectManager")]
+        [HttpGet]
+        public async Task<List<ProjectAccountManagerViewModel>> GetAccountListOnProjectManagerAsync(int managerId)
+        {
+            return await _iProjectAllocationLogic.GetAccountListOnProjectManagerAsync(managerId);
+        }
+
+
         #region Employee Module
         /// <summary>
         /// Get Employee Details
         /// </summary>
         /// <param name="employeeId"></param>
         /// <returns></returns>
+        /// 
+
+
         [Route("GetEmployeeDetail/{employeeId}")]
         [HttpGet]
         public async Task<IActionResult> GetEmployeeDetailAsync(int employeeId)
@@ -175,7 +220,7 @@ namespace CFS.WebAPI.Controllers
         /// <returns></returns>
         [Route("InsertEmployeeDetail")]
         [HttpPost]
-        public async Task InsertEmployeeDetail([FromBody] EmployeeDetailsModel employee)
+        public async Task InsertEmployeeDetail([FromBody] InsertEmployeeDetailsModel employee)
         {
             await _iProjectAllocationLogic.InsertEmployeeDetailAsync(employee);
         }
@@ -187,7 +232,7 @@ namespace CFS.WebAPI.Controllers
         /// <returns></returns>
         [Route("UpdateEmployeeDetail")]
         [HttpPost]
-        public async Task UpdateEmployeeDetail([FromBody] EmployeeDetailsModel employee)
+        public async Task UpdateEmployeeDetail([FromBody] UpdateEmployeeDetailsModel employee)
         {
             await _iProjectAllocationLogic.UpdateEmployeeDetailAsync(employee);
         }
@@ -208,7 +253,34 @@ namespace CFS.WebAPI.Controllers
             }
             return BadRequest(result);
         }
+
+
+        /// <summary>
+        /// GetBillabilityandUtilizationAsync 
+        /// </summary>
+        /// <param name="utilizationRequest"></param>
+        /// <returns></returns>
+        [Route("GetBillabilityandUtilization")]
+        [HttpPost]
+        public async Task<IActionResult> GetBillabilityandUtilizationAsync([FromBody] BillabilityandUtilizationRequest utilizationRequest)
+        {
+            return Ok(await _iProjectAllocationLogic.GetBillabilityandUtilizationAsync(utilizationRequest));
+        }
+
+        /// <summary>
+        /// GetBillabilityandUtilizationAsync 
+        /// </summary>
+        /// <param name="utilizationRequest"></param>
+        /// <returns></returns>
+        [Route("GetBillabilityandUtilizationTest")]
+        [HttpPost]
+        public async Task<IActionResult> GetBillabilityandUtilizationTest([FromBody] BillabilityandUtilizationRequest utilizationRequest)
+        {
+            return Ok(await _iProjectAllocationLogic.GetBillabilityandUtilizationAsync(utilizationRequest));
+        }
         #endregion
+
         #endregion
     }
+   
 }

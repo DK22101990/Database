@@ -18,5 +18,8 @@ namespace CFS.Model.Helpers
         public const string UpdateSuccessfully = "{0} updated successfully";
         public const string BadRequst = "Please provide valid information";
         public const string DeleteSuccessfully = "{0} deleted successfully";
+        public const string ProjectNotFound = "Project not found.";
+        public const string NotFound = "{0} not found.";
+        public const string AccountNotFound = "{0} not found.";
     }
 }

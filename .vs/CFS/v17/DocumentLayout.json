@@ -1,0 +1,463 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FF6FAEBD-72A4-4F7F-9F2C-EBF3B02D4C62}|1. WebAPI\\CFS.WebAPI\\CFS.WebAPI.csproj|c:\\users\\dnarvekar\\onedrive - aarete, llc\\documents\\docker .net\\complianceframework\\1. webapi\\cfs.webapi\\cfs.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FF6FAEBD-72A4-4F7F-9F2C-EBF3B02D4C62}|1. WebAPI\\CFS.WebAPI\\CFS.WebAPI.csproj|solutionrelative:1. webapi\\cfs.webapi\\cfs.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{747A9C82-6623-4898-A40E-249C473A0E06}|3. DataAccess\\CFS.Data\\CFS.Data.csproj|c:\\users\\dnarvekar\\onedrive - aarete, llc\\documents\\docker .net\\complianceframework\\3. dataaccess\\cfs.data\\cfs.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{747A9C82-6623-4898-A40E-249C473A0E06}|3. DataAccess\\CFS.Data\\CFS.Data.csproj|solutionrelative:3. dataaccess\\cfs.data\\cfs.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{747A9C82-6623-4898-A40E-249C473A0E06}|3. DataAccess\\CFS.Data\\CFS.Data.csproj|c:\\users\\dnarvekar\\onedrive - aarete, llc\\documents\\docker .net\\complianceframework\\3. dataaccess\\cfs.data\\repositories\\empmonthlyhoursrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{747A9C82-6623-4898-A40E-249C473A0E06}|3. DataAccess\\CFS.Data\\CFS.Data.csproj|solutionrelative:3. dataaccess\\cfs.data\\repositories\\empmonthlyhoursrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF6FAEBD-72A4-4F7F-9F2C-EBF3B02D4C62}|1. WebAPI\\CFS.WebAPI\\CFS.WebAPI.csproj|c:\\users\\dnarvekar\\onedrive - aarete, llc\\documents\\docker .net\\complianceframework\\1. webapi\\cfs.webapi\\controllers\\empmonthlyhourscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF6FAEBD-72A4-4F7F-9F2C-EBF3B02D4C62}|1. WebAPI\\CFS.WebAPI\\CFS.WebAPI.csproj|solutionrelative:1. webapi\\cfs.webapi\\controllers\\empmonthlyhourscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8795FA4-D787-4361-B3F5-1FE97D0F44CC}|2. BusinessLogic\\CFS.BusinessLogic\\CFS.BusinessLogic.csproj|c:\\users\\dnarvekar\\onedrive - aarete, llc\\documents\\docker .net\\complianceframework\\2. businesslogic\\cfs.businesslogic\\automapper\\datamappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8795FA4-D787-4361-B3F5-1FE97D0F44CC}|2. BusinessLogic\\CFS.BusinessLogic\\CFS.BusinessLogic.csproj|solutionrelative:2. businesslogic\\cfs.businesslogic\\automapper\\datamappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{747A9C82-6623-4898-A40E-249C473A0E06}|3. DataAccess\\CFS.Data\\CFS.Data.csproj|c:\\users\\dnarvekar\\onedrive - aarete, llc\\documents\\docker .net\\complianceframework\\3. dataaccess\\cfs.data\\domains\\empmonthlyhourslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{747A9C82-6623-4898-A40E-249C473A0E06}|3. DataAccess\\CFS.Data\\CFS.Data.csproj|solutionrelative:3. dataaccess\\cfs.data\\domains\\empmonthlyhourslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{747A9C82-6623-4898-A40E-249C473A0E06}|3. DataAccess\\CFS.Data\\CFS.Data.csproj|c:\\users\\dnarvekar\\onedrive - aarete, llc\\documents\\docker .net\\complianceframework\\3. dataaccess\\cfs.data\\context\\cfscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{747A9C82-6623-4898-A40E-249C473A0E06}|3. DataAccess\\CFS.Data\\CFS.Data.csproj|solutionrelative:3. dataaccess\\cfs.data\\context\\cfscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72367416-B31F-4DE6-883E-005501B23D09}|4. Infrastructure\\CFS.Model\\CFS.Model.csproj|c:\\users\\dnarvekar\\onedrive - aarete, llc\\documents\\docker .net\\complianceframework\\4. infrastructure\\cfs.model\\constants\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72367416-B31F-4DE6-883E-005501B23D09}|4. Infrastructure\\CFS.Model\\CFS.Model.csproj|solutionrelative:4. infrastructure\\cfs.model\\constants\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{747A9C82-6623-4898-A40E-249C473A0E06}|3. DataAccess\\CFS.Data\\CFS.Data.csproj|c:\\users\\dnarvekar\\onedrive - aarete, llc\\documents\\docker .net\\complianceframework\\3. dataaccess\\cfs.data\\irepositories\\iempmonthlyhoursrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{747A9C82-6623-4898-A40E-249C473A0E06}|3. DataAccess\\CFS.Data\\CFS.Data.csproj|solutionrelative:3. dataaccess\\cfs.data\\irepositories\\iempmonthlyhoursrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8795FA4-D787-4361-B3F5-1FE97D0F44CC}|2. BusinessLogic\\CFS.BusinessLogic\\CFS.BusinessLogic.csproj|c:\\users\\dnarvekar\\onedrive - aarete, llc\\documents\\docker .net\\complianceframework\\2. businesslogic\\cfs.businesslogic\\businesslogic\\empmonthlyhourslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8795FA4-D787-4361-B3F5-1FE97D0F44CC}|2. BusinessLogic\\CFS.BusinessLogic\\CFS.BusinessLogic.csproj|solutionrelative:2. businesslogic\\cfs.businesslogic\\businesslogic\\empmonthlyhourslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8795FA4-D787-4361-B3F5-1FE97D0F44CC}|2. BusinessLogic\\CFS.BusinessLogic\\CFS.BusinessLogic.csproj|c:\\users\\dnarvekar\\onedrive - aarete, llc\\documents\\docker .net\\complianceframework\\2. businesslogic\\cfs.businesslogic\\ibusinesslogic\\iempmonthlyhourslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8795FA4-D787-4361-B3F5-1FE97D0F44CC}|2. BusinessLogic\\CFS.BusinessLogic\\CFS.BusinessLogic.csproj|solutionrelative:2. businesslogic\\cfs.businesslogic\\ibusinesslogic\\iempmonthlyhourslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72367416-B31F-4DE6-883E-005501B23D09}|4. Infrastructure\\CFS.Model\\CFS.Model.csproj|c:\\users\\dnarvekar\\onedrive - aarete, llc\\documents\\docker .net\\complianceframework\\4. infrastructure\\cfs.model\\models\\empmonthlyhoursmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72367416-B31F-4DE6-883E-005501B23D09}|4. Infrastructure\\CFS.Model\\CFS.Model.csproj|solutionrelative:4. infrastructure\\cfs.model\\models\\empmonthlyhoursmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF6FAEBD-72A4-4F7F-9F2C-EBF3B02D4C62}|1. WebAPI\\CFS.WebAPI\\CFS.WebAPI.csproj|c:\\users\\dnarvekar\\onedrive - aarete, llc\\documents\\docker .net\\complianceframework\\1. webapi\\cfs.webapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF6FAEBD-72A4-4F7F-9F2C-EBF3B02D4C62}|1. WebAPI\\CFS.WebAPI\\CFS.WebAPI.csproj|solutionrelative:1. webapi\\cfs.webapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{747A9C82-6623-4898-A40E-249C473A0E06}|3. DataAccess\\CFS.Data\\CFS.Data.csproj|c:\\users\\dnarvekar\\onedrive - aarete, llc\\documents\\docker .net\\complianceframework\\3. dataaccess\\cfs.data\\models\\years.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{747A9C82-6623-4898-A40E-249C473A0E06}|3. DataAccess\\CFS.Data\\CFS.Data.csproj|solutionrelative:3. dataaccess\\cfs.data\\models\\years.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8795FA4-D787-4361-B3F5-1FE97D0F44CC}|2. BusinessLogic\\CFS.BusinessLogic\\CFS.BusinessLogic.csproj|c:\\users\\dnarvekar\\onedrive - aarete, llc\\documents\\docker .net\\complianceframework\\2. businesslogic\\cfs.businesslogic\\businesslogic\\accountlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8795FA4-D787-4361-B3F5-1FE97D0F44CC}|2. BusinessLogic\\CFS.BusinessLogic\\CFS.BusinessLogic.csproj|solutionrelative:2. businesslogic\\cfs.businesslogic\\businesslogic\\accountlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{747A9C82-6623-4898-A40E-249C473A0E06}|3. DataAccess\\CFS.Data\\CFS.Data.csproj|c:\\users\\dnarvekar\\onedrive - aarete, llc\\documents\\docker .net\\complianceframework\\3. dataaccess\\cfs.data\\repositories\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{747A9C82-6623-4898-A40E-249C473A0E06}|3. DataAccess\\CFS.Data\\CFS.Data.csproj|solutionrelative:3. dataaccess\\cfs.data\\repositories\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF6FAEBD-72A4-4F7F-9F2C-EBF3B02D4C62}|1. WebAPI\\CFS.WebAPI\\CFS.WebAPI.csproj|c:\\users\\dnarvekar\\onedrive - aarete, llc\\documents\\docker .net\\complianceframework\\1. webapi\\cfs.webapi\\controllers\\projectallocationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF6FAEBD-72A4-4F7F-9F2C-EBF3B02D4C62}|1. WebAPI\\CFS.WebAPI\\CFS.WebAPI.csproj|solutionrelative:1. webapi\\cfs.webapi\\controllers\\projectallocationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8795FA4-D787-4361-B3F5-1FE97D0F44CC}|2. BusinessLogic\\CFS.BusinessLogic\\CFS.BusinessLogic.csproj|c:\\users\\dnarvekar\\onedrive - aarete, llc\\documents\\docker .net\\complianceframework\\2. businesslogic\\cfs.businesslogic\\businesslogic\\projectallocationlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8795FA4-D787-4361-B3F5-1FE97D0F44CC}|2. BusinessLogic\\CFS.BusinessLogic\\CFS.BusinessLogic.csproj|solutionrelative:2. businesslogic\\cfs.businesslogic\\businesslogic\\projectallocationlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72367416-B31F-4DE6-883E-005501B23D09}|4. Infrastructure\\CFS.Model\\CFS.Model.csproj|c:\\users\\dnarvekar\\onedrive - aarete, llc\\documents\\docker .net\\complianceframework\\4. infrastructure\\cfs.model\\models\\projectallocationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72367416-B31F-4DE6-883E-005501B23D09}|4. Infrastructure\\CFS.Model\\CFS.Model.csproj|solutionrelative:4. infrastructure\\cfs.model\\models\\projectallocationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{747A9C82-6623-4898-A40E-249C473A0E06}|3. DataAccess\\CFS.Data\\CFS.Data.csproj|c:\\users\\dnarvekar\\onedrive - aarete, llc\\documents\\docker .net\\complianceframework\\3. dataaccess\\cfs.data\\domains\\accountlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{747A9C82-6623-4898-A40E-249C473A0E06}|3. DataAccess\\CFS.Data\\CFS.Data.csproj|solutionrelative:3. dataaccess\\cfs.data\\domains\\accountlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{747A9C82-6623-4898-A40E-249C473A0E06}|3. DataAccess\\CFS.Data\\CFS.Data.csproj|c:\\users\\dnarvekar\\onedrive - aarete, llc\\documents\\docker .net\\complianceframework\\3. dataaccess\\cfs.data\\irepositories\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{747A9C82-6623-4898-A40E-249C473A0E06}|3. DataAccess\\CFS.Data\\CFS.Data.csproj|solutionrelative:3. dataaccess\\cfs.data\\irepositories\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72367416-B31F-4DE6-883E-005501B23D09}|4. Infrastructure\\CFS.Model\\CFS.Model.csproj|c:\\users\\dnarvekar\\onedrive - aarete, llc\\documents\\docker .net\\complianceframework\\4. infrastructure\\cfs.model\\models\\accountlistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72367416-B31F-4DE6-883E-005501B23D09}|4. Infrastructure\\CFS.Model\\CFS.Model.csproj|solutionrelative:4. infrastructure\\cfs.model\\models\\accountlistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{747A9C82-6623-4898-A40E-249C473A0E06}|3. DataAccess\\CFS.Data\\CFS.Data.csproj|c:\\users\\dnarvekar\\onedrive - aarete, llc\\documents\\docker .net\\complianceframework\\3. dataaccess\\cfs.data\\models\\timesheetexport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{747A9C82-6623-4898-A40E-249C473A0E06}|3. DataAccess\\CFS.Data\\CFS.Data.csproj|solutionrelative:3. dataaccess\\cfs.data\\models\\timesheetexport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{747A9C82-6623-4898-A40E-249C473A0E06}|3. DataAccess\\CFS.Data\\CFS.Data.csproj|c:\\users\\dnarvekar\\onedrive - aarete, llc\\documents\\docker .net\\complianceframework\\3. dataaccess\\cfs.data\\models\\holidaylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{747A9C82-6623-4898-A40E-249C473A0E06}|3. DataAccess\\CFS.Data\\CFS.Data.csproj|solutionrelative:3. dataaccess\\cfs.data\\models\\holidaylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{747A9C82-6623-4898-A40E-249C473A0E06}|3. DataAccess\\CFS.Data\\CFS.Data.csproj|c:\\users\\dnarvekar\\onedrive - aarete, llc\\documents\\docker .net\\complianceframework\\3. dataaccess\\cfs.data\\models\\employeesmonthlyhours.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{747A9C82-6623-4898-A40E-249C473A0E06}|3. DataAccess\\CFS.Data\\CFS.Data.csproj|solutionrelative:3. dataaccess\\cfs.data\\models\\employeesmonthlyhours.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{747A9C82-6623-4898-A40E-249C473A0E06}|3. DataAccess\\CFS.Data\\CFS.Data.csproj|c:\\users\\dnarvekar\\onedrive - aarete, llc\\documents\\docker .net\\complianceframework\\3. dataaccess\\cfs.data\\repositories\\projectallocationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{747A9C82-6623-4898-A40E-249C473A0E06}|3. DataAccess\\CFS.Data\\CFS.Data.csproj|solutionrelative:3. dataaccess\\cfs.data\\repositories\\projectallocationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF6FAEBD-72A4-4F7F-9F2C-EBF3B02D4C62}|1. WebAPI\\CFS.WebAPI\\CFS.WebAPI.csproj|c:\\users\\dnarvekar\\onedrive - aarete, llc\\documents\\docker .net\\complianceframework\\1. webapi\\cfs.webapi\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF6FAEBD-72A4-4F7F-9F2C-EBF3B02D4C62}|1. WebAPI\\CFS.WebAPI\\CFS.WebAPI.csproj|solutionrelative:1. webapi\\cfs.webapi\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmpMonthlyHoursController.cs",
+              "DocumentMoniker": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\1. WebAPI\\CFS.WebAPI\\Controllers\\EmpMonthlyHoursController.cs",
+              "RelativeDocumentMoniker": "1. WebAPI\\CFS.WebAPI\\Controllers\\EmpMonthlyHoursController.cs",
+              "ToolTip": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\1. WebAPI\\CFS.WebAPI\\Controllers\\EmpMonthlyHoursController.cs",
+              "RelativeToolTip": "1. WebAPI\\CFS.WebAPI\\Controllers\\EmpMonthlyHoursController.cs",
+              "ViewState": "AQIAAGEAAAAAZmZmZqYgwHMAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-23T12:13:14.968Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IEmpMonthlyHoursLogic.cs",
+              "DocumentMoniker": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\2. BusinessLogic\\CFS.BusinessLogic\\IBusinessLogic\\IEmpMonthlyHoursLogic.cs",
+              "RelativeDocumentMoniker": "2. BusinessLogic\\CFS.BusinessLogic\\IBusinessLogic\\IEmpMonthlyHoursLogic.cs",
+              "ToolTip": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\2. BusinessLogic\\CFS.BusinessLogic\\IBusinessLogic\\IEmpMonthlyHoursLogic.cs",
+              "RelativeToolTip": "2. BusinessLogic\\CFS.BusinessLogic\\IBusinessLogic\\IEmpMonthlyHoursLogic.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAArwB0AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-23T12:18:08.638Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EmpMonthlyHoursLogic.cs",
+              "DocumentMoniker": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\2. BusinessLogic\\CFS.BusinessLogic\\BusinessLogic\\EmpMonthlyHoursLogic.cs",
+              "RelativeDocumentMoniker": "2. BusinessLogic\\CFS.BusinessLogic\\BusinessLogic\\EmpMonthlyHoursLogic.cs",
+              "ToolTip": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\2. BusinessLogic\\CFS.BusinessLogic\\BusinessLogic\\EmpMonthlyHoursLogic.cs",
+              "RelativeToolTip": "2. BusinessLogic\\CFS.BusinessLogic\\BusinessLogic\\EmpMonthlyHoursLogic.cs",
+              "ViewState": "AQIAAG0AAAAAAAAAAAAEwHoAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-23T12:43:59.639Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IEmpMonthlyHoursRepository.cs",
+              "DocumentMoniker": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\3. DataAccess\\CFS.Data\\IRepositories\\IEmpMonthlyHoursRepository.cs",
+              "RelativeDocumentMoniker": "3. DataAccess\\CFS.Data\\IRepositories\\IEmpMonthlyHoursRepository.cs",
+              "ToolTip": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\3. DataAccess\\CFS.Data\\IRepositories\\IEmpMonthlyHoursRepository.cs",
+              "RelativeToolTip": "3. DataAccess\\CFS.Data\\IRepositories\\IEmpMonthlyHoursRepository.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAArwBoAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-23T12:53:11.948Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EmpMonthlyHoursModel.cs",
+              "DocumentMoniker": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\4. Infrastructure\\CFS.Model\\Models\\EmpMonthlyHoursModel.cs",
+              "RelativeDocumentMoniker": "4. Infrastructure\\CFS.Model\\Models\\EmpMonthlyHoursModel.cs",
+              "ToolTip": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\4. Infrastructure\\CFS.Model\\Models\\EmpMonthlyHoursModel.cs",
+              "RelativeToolTip": "4. Infrastructure\\CFS.Model\\Models\\EmpMonthlyHoursModel.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAArwDgAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-23T12:32:58.209Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CFS.WebAPI.csproj",
+              "DocumentMoniker": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\1. WebAPI\\CFS.WebAPI\\CFS.WebAPI.csproj",
+              "RelativeDocumentMoniker": "1. WebAPI\\CFS.WebAPI\\CFS.WebAPI.csproj",
+              "ToolTip": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\1. WebAPI\\CFS.WebAPI\\CFS.WebAPI.csproj",
+              "RelativeToolTip": "1. WebAPI\\CFS.WebAPI\\CFS.WebAPI.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-12T15:04:12.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CFS.Data.csproj",
+              "DocumentMoniker": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\3. DataAccess\\CFS.Data\\CFS.Data.csproj",
+              "RelativeDocumentMoniker": "3. DataAccess\\CFS.Data\\CFS.Data.csproj",
+              "ToolTip": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\3. DataAccess\\CFS.Data\\CFS.Data.csproj",
+              "RelativeToolTip": "3. DataAccess\\CFS.Data\\CFS.Data.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-12T15:04:07.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmpMonthlyHoursRepository.cs",
+              "DocumentMoniker": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\3. DataAccess\\CFS.Data\\Repositories\\EmpMonthlyHoursRepository.cs",
+              "RelativeDocumentMoniker": "3. DataAccess\\CFS.Data\\Repositories\\EmpMonthlyHoursRepository.cs",
+              "ToolTip": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\3. DataAccess\\CFS.Data\\Repositories\\EmpMonthlyHoursRepository.cs",
+              "RelativeToolTip": "3. DataAccess\\CFS.Data\\Repositories\\EmpMonthlyHoursRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-23T13:31:26.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DataMappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\2. BusinessLogic\\CFS.BusinessLogic\\AutoMapper\\DataMappingProfile.cs",
+              "RelativeDocumentMoniker": "2. BusinessLogic\\CFS.BusinessLogic\\AutoMapper\\DataMappingProfile.cs",
+              "ToolTip": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\2. BusinessLogic\\CFS.BusinessLogic\\AutoMapper\\DataMappingProfile.cs",
+              "RelativeToolTip": "2. BusinessLogic\\CFS.BusinessLogic\\AutoMapper\\DataMappingProfile.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAmwBQAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-29T10:06:00.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AccountLogic.cs",
+              "DocumentMoniker": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\2. BusinessLogic\\CFS.BusinessLogic\\BusinessLogic\\AccountLogic.cs",
+              "RelativeDocumentMoniker": "2. BusinessLogic\\CFS.BusinessLogic\\BusinessLogic\\AccountLogic.cs",
+              "ToolTip": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\2. BusinessLogic\\CFS.BusinessLogic\\BusinessLogic\\AccountLogic.cs",
+              "RelativeToolTip": "2. BusinessLogic\\CFS.BusinessLogic\\BusinessLogic\\AccountLogic.cs",
+              "ViewState": "AQIAAJYAAAAAAAAAAIA6wKEAAABUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-29T10:26:32.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EmpMonthlyHoursList.cs",
+              "DocumentMoniker": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\3. DataAccess\\CFS.Data\\Domains\\EmpMonthlyHoursList.cs",
+              "RelativeDocumentMoniker": "3. DataAccess\\CFS.Data\\Domains\\EmpMonthlyHoursList.cs",
+              "ToolTip": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\3. DataAccess\\CFS.Data\\Domains\\EmpMonthlyHoursList.cs",
+              "RelativeToolTip": "3. DataAccess\\CFS.Data\\Domains\\EmpMonthlyHoursList.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAIA8wBoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-29T08:13:46.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CFSContext.cs",
+              "DocumentMoniker": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\3. DataAccess\\CFS.Data\\Context\\CFSContext.cs",
+              "RelativeDocumentMoniker": "3. DataAccess\\CFS.Data\\Context\\CFSContext.cs",
+              "ToolTip": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\3. DataAccess\\CFS.Data\\Context\\CFSContext.cs",
+              "RelativeToolTip": "3. DataAccess\\CFS.Data\\Context\\CFSContext.cs",
+              "ViewState": "AQIAAEcAAACYmZmZmdknwFIAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-23T13:24:54.078Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Years.cs",
+              "DocumentMoniker": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\3. DataAccess\\CFS.Data\\Models\\Years.cs",
+              "RelativeDocumentMoniker": "3. DataAccess\\CFS.Data\\Models\\Years.cs",
+              "ToolTip": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\3. DataAccess\\CFS.Data\\Models\\Years.cs",
+              "RelativeToolTip": "3. DataAccess\\CFS.Data\\Models\\Years.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-22T07:07:37.707Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Constants.cs",
+              "DocumentMoniker": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\4. Infrastructure\\CFS.Model\\Constants\\Constants.cs",
+              "RelativeDocumentMoniker": "4. Infrastructure\\CFS.Model\\Constants\\Constants.cs",
+              "ToolTip": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\4. Infrastructure\\CFS.Model\\Constants\\Constants.cs",
+              "RelativeToolTip": "4. Infrastructure\\CFS.Model\\Constants\\Constants.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAawEoAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-03-29T08:23:40.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\1. WebAPI\\CFS.WebAPI\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "1. WebAPI\\CFS.WebAPI\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\1. WebAPI\\CFS.WebAPI\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "1. WebAPI\\CFS.WebAPI\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAAC0BAAAAAAAAAAAMwNEAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-03-29T08:17:18.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AccountRepository.cs",
+              "DocumentMoniker": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\3. DataAccess\\CFS.Data\\Repositories\\AccountRepository.cs",
+              "RelativeDocumentMoniker": "3. DataAccess\\CFS.Data\\Repositories\\AccountRepository.cs",
+              "ToolTip": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\3. DataAccess\\CFS.Data\\Repositories\\AccountRepository.cs",
+              "RelativeToolTip": "3. DataAccess\\CFS.Data\\Repositories\\AccountRepository.cs",
+              "ViewState": "AQIAAGsCAAAAhDMzM7MSwHgCAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-03-29T08:17:18.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ProjectAllocationController.cs",
+              "DocumentMoniker": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\1. WebAPI\\CFS.WebAPI\\Controllers\\ProjectAllocationController.cs",
+              "RelativeDocumentMoniker": "1. WebAPI\\CFS.WebAPI\\Controllers\\ProjectAllocationController.cs",
+              "ToolTip": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\1. WebAPI\\CFS.WebAPI\\Controllers\\ProjectAllocationController.cs",
+              "RelativeToolTip": "1. WebAPI\\CFS.WebAPI\\Controllers\\ProjectAllocationController.cs",
+              "ViewState": "AQIAAIkAAAAAAAAAAAArwJkAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-03-29T06:50:28.239Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ProjectAllocationLogic.cs",
+              "DocumentMoniker": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\2. BusinessLogic\\CFS.BusinessLogic\\BusinessLogic\\ProjectAllocationLogic.cs",
+              "RelativeDocumentMoniker": "2. BusinessLogic\\CFS.BusinessLogic\\BusinessLogic\\ProjectAllocationLogic.cs",
+              "ToolTip": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\2. BusinessLogic\\CFS.BusinessLogic\\BusinessLogic\\ProjectAllocationLogic.cs",
+              "RelativeToolTip": "2. BusinessLogic\\CFS.BusinessLogic\\BusinessLogic\\ProjectAllocationLogic.cs",
+              "ViewState": "AQIAAIIAAAAAAAAAAAAnwJMAAABmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-03-29T06:50:28.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ProjectAllocationViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\4. Infrastructure\\CFS.Model\\Models\\ProjectAllocationViewModel.cs",
+              "RelativeDocumentMoniker": "4. Infrastructure\\CFS.Model\\Models\\ProjectAllocationViewModel.cs",
+              "ToolTip": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\4. Infrastructure\\CFS.Model\\Models\\ProjectAllocationViewModel.cs",
+              "RelativeToolTip": "4. Infrastructure\\CFS.Model\\Models\\ProjectAllocationViewModel.cs",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAnwFAAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-03-29T06:50:28.261Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AccountList.cs",
+              "DocumentMoniker": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\3. DataAccess\\CFS.Data\\Domains\\AccountList.cs",
+              "RelativeDocumentMoniker": "3. DataAccess\\CFS.Data\\Domains\\AccountList.cs",
+              "ToolTip": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\3. DataAccess\\CFS.Data\\Domains\\AccountList.cs",
+              "RelativeToolTip": "3. DataAccess\\CFS.Data\\Domains\\AccountList.cs",
+              "ViewState": "AQIAANwAAAAAAAAAAIAwwOYAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-04-12T13:53:45.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IAccountRepository.cs",
+              "DocumentMoniker": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\3. DataAccess\\CFS.Data\\IRepositories\\IAccountRepository.cs",
+              "RelativeDocumentMoniker": "3. DataAccess\\CFS.Data\\IRepositories\\IAccountRepository.cs",
+              "ToolTip": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\3. DataAccess\\CFS.Data\\IRepositories\\IAccountRepository.cs",
+              "RelativeToolTip": "3. DataAccess\\CFS.Data\\IRepositories\\IAccountRepository.cs",
+              "ViewState": "AQIAAG4AAAAAAAAAAIA4wJQAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-04-12T14:15:06.862Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AccountListViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\4. Infrastructure\\CFS.Model\\Models\\AccountListViewModel.cs",
+              "RelativeDocumentMoniker": "4. Infrastructure\\CFS.Model\\Models\\AccountListViewModel.cs",
+              "ToolTip": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\4. Infrastructure\\CFS.Model\\Models\\AccountListViewModel.cs",
+              "RelativeToolTip": "4. Infrastructure\\CFS.Model\\Models\\AccountListViewModel.cs",
+              "ViewState": "AQIAAIAAAAAAAAAAAAAjwOUAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-03-29T08:17:49.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "TimeSheetExport.cs",
+              "DocumentMoniker": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\3. DataAccess\\CFS.Data\\Models\\TimeSheetExport.cs",
+              "RelativeDocumentMoniker": "3. DataAccess\\CFS.Data\\Models\\TimeSheetExport.cs",
+              "ToolTip": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\3. DataAccess\\CFS.Data\\Models\\TimeSheetExport.cs",
+              "RelativeToolTip": "3. DataAccess\\CFS.Data\\Models\\TimeSheetExport.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-13T10:10:05.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "HolidayList.cs",
+              "DocumentMoniker": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\3. DataAccess\\CFS.Data\\Models\\HolidayList.cs",
+              "RelativeDocumentMoniker": "3. DataAccess\\CFS.Data\\Models\\HolidayList.cs",
+              "ToolTip": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\3. DataAccess\\CFS.Data\\Models\\HolidayList.cs",
+              "RelativeToolTip": "3. DataAccess\\CFS.Data\\Models\\HolidayList.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-13T06:00:41.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "EmployeesMonthlyHours.cs",
+              "DocumentMoniker": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\3. DataAccess\\CFS.Data\\Models\\EmployeesMonthlyHours.cs",
+              "RelativeDocumentMoniker": "3. DataAccess\\CFS.Data\\Models\\EmployeesMonthlyHours.cs",
+              "ToolTip": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\3. DataAccess\\CFS.Data\\Models\\EmployeesMonthlyHours.cs",
+              "RelativeToolTip": "3. DataAccess\\CFS.Data\\Models\\EmployeesMonthlyHours.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-23T13:25:59.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ProjectAllocationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\3. DataAccess\\CFS.Data\\Repositories\\ProjectAllocationRepository.cs",
+              "RelativeDocumentMoniker": "3. DataAccess\\CFS.Data\\Repositories\\ProjectAllocationRepository.cs",
+              "ToolTip": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\3. DataAccess\\CFS.Data\\Repositories\\ProjectAllocationRepository.cs",
+              "RelativeToolTip": "3. DataAccess\\CFS.Data\\Repositories\\ProjectAllocationRepository.cs",
+              "ViewState": "AQIAAAUBAADAmZmZmVkgwPgAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-03-29T06:50:28.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\1. WebAPI\\CFS.WebAPI\\Startup.cs",
+              "RelativeDocumentMoniker": "1. WebAPI\\CFS.WebAPI\\Startup.cs",
+              "ToolTip": "C:\\Users\\dnarvekar\\OneDrive - AArete, LLC\\Documents\\docker .net\\ComplianceFramework\\1. WebAPI\\CFS.WebAPI\\Startup.cs",
+              "RelativeToolTip": "1. WebAPI\\CFS.WebAPI\\Startup.cs",
+              "ViewState": "AQIAADgAAACAzMzMzEwewEcAAABbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-29T10:11:32.15Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

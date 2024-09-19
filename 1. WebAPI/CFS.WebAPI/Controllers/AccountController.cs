@@ -1,4 +1,7 @@
-﻿using CFS.BusinessLogic.IBusinessLogic;
+﻿using CFS.BusinessLogic.BusinessLogic;
+using CFS.BusinessLogic.IBusinessLogic;
+using CFS.Data.Domains;
+using CFS.Data.Models;
 using CFS.Model.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -44,6 +47,25 @@ namespace CFS.WebAPI.Controllers
             _logger.LogInformation(Message);
             return await _iAccountLogic.GetAccountList();
         }
+
+
+        /// <summary>
+        /// Get All Accounts
+        /// </summary>
+        /// <returns></returns>
+        /// 
+
+        [Route("GetAllAccountResponse")]
+        [HttpGet]
+        public async Task<List<AccountResponseViewModel>> GetAccountResponseList()
+        {
+            string Message = $"GetAccountResponseList at {DateTime.UtcNow.ToLongTimeString()}";
+            _logger.LogInformation(Message);
+            return await _iAccountLogic.GetAccountResponseList();
+
+        }
+
+
         /// <summary>
         /// Get All Accounts
         /// </summary>
@@ -55,7 +77,7 @@ namespace CFS.WebAPI.Controllers
             return await _iAccountLogic.GetSprintList(SowId);
         }
         /// <summary>
-        /// Get All Complience Types
+        /// Get All Compliance Types
         /// </summary>
         /// <param name="RoleId"></param>
         /// <returns></returns>
@@ -118,28 +140,33 @@ namespace CFS.WebAPI.Controllers
         }
 
         /// <summary>
-        /// Get All Complience Types
+        /// Get All Project
         /// </summary>
-        /// <param name="RoleId"></param>
+        /// <param name="ProjectId"></param>
         /// <returns></returns>
-        [Route("GetAllProjectList")]
+        /// 
+
+        [Route("GetAllProjectDomainList")]
         [HttpGet]
-        public async Task<List<ProjectViewModel>> GetProjectList(int AccountId)
+        public async Task<List<ProjectDomainViewModel>> ProjectDomainList()
         {
-            return await _iAccountLogic.GetProjectList(AccountId);
+            return await _iAccountLogic.GetProjectDomainList();
         }
 
         /// <summary>
         /// Get All Project
         /// </summary>
-        /// <param name="ProjectId"></param>
+        /// 
         /// <returns></returns>
         [Route("GetAllSOWList")]
         [HttpGet]
-        public async Task<List<SOWViewModel>> GetSOWList(int ProjectId)
+        public async Task<List<SOWViewModel>> GetSOWList(int ProjectId, int AccountId)
         {
-            return await _iAccountLogic.GetSOWList(ProjectId);
+            return await _iAccountLogic.GetSOWList(ProjectId, AccountId);
         }
+
+
+
 
         /// <summary>
         /// Get All SOW
@@ -240,6 +267,7 @@ namespace CFS.WebAPI.Controllers
             return await _iAccountLogic.SaveAgileQuestionResponse(request);
 
         }
+
 
         /// <summary>
         /// Delete Sow Question Response
@@ -375,6 +403,228 @@ namespace CFS.WebAPI.Controllers
                 return Ok(result);
             return BadRequest(result);
         }
+        #endregion      
+
+        #region Projects
+
+        /// <summary>
+        /// insert project response
+        /// </summary>
+        /// <param name="objprojectModel"></param>
+        /// <returns></returns>
+        [Route("InsertProjectResponse")]
+        [HttpPost]
+        public async Task<IActionResult> InsertProjectResponse([FromBody] InsertProjectResponseModel objprojectModel)
+        {
+
+            ReturnResponseModel result = new ReturnResponseModel();
+            if (objprojectModel != null)
+            {
+                result = await _iAccountLogic.InsertProjectResponse(objprojectModel);
+                if (result.Status)
+                {
+                    return Ok(result);
+                }
+            }
+            return BadRequest(result);
+        }
+
+        /// <summary>
+        /// Update project response
+        /// </summary>
+        /// <param name="objprojectModel"></param>
+        /// <returns></returns>
+        [Route("UpdateProjectResponse")]
+        [HttpPost]
+        public async Task<IActionResult> UpdateProjectResponse([FromBody] UpdateProjectResponseModel objprojectModel)
+        {
+            ReturnResponseModel result = new ReturnResponseModel();
+            if (objprojectModel != null)
+            {
+                result = await _iAccountLogic.UpdateProjectResponse(objprojectModel);
+                if (result.Status)
+                {
+                    return Ok(result);
+                }
+            }
+            return BadRequest(result);
+        }
+
+        /// <summary>
+        /// Get All Compliance Types
+        /// </summary>
+        /// <param name="AccountId"></param>
+        /// <returns></returns>
+        [Route("GetAllProjectList")]
+        [HttpGet]
+        public async Task<List<ProjectViewModel>> GetProjectList(int AccountId)
+        {
+            return await _iAccountLogic.GetProjectList(AccountId);
+        }
+
+        /// <summary>
+        /// Get All Project Response
+        /// </summary>
+        /// <param name="AccountId"></param>
+        /// <returns></returns>
+        [Route("GetAllProjectResponse")]
+        [HttpGet]
+        public async Task<List<ProjectViewModel>> GetAllProjectResponse(int AccountId)
+        {
+
+            return await _iAccountLogic.GetAllProjectResponse(AccountId);
+        }
+
+
+        /// <summary>
+        /// Delete Project Response
+        /// </summary>
+        /// <param name="projectId">project id</param>
+        /// <returns></returns>
+        [Route("DeleteProjectResponse")]
+        [HttpDelete]
+        public async Task<IActionResult> DeleteProjectResponse(int projectId)
+        {
+            ReturnResponseModel result = new ReturnResponseModel();
+            result = await _iAccountLogic.DeleteProjectResponse(projectId);
+            if (result.Status)
+            {
+                return NoContent();
+            }
+            return BadRequest(result);
+        }
+
+        #endregion
+
+        #region SOWResponse
+
+        /// <summary>
+        /// Insert Sow Response
+        /// </summary>
+        /// <param name="objResponse"></param>
+        /// <returns></returns>
+        [Route("SowResponse")]
+        [HttpPost]
+        public async Task InsertSowResponse([FromBody] InsertUpdateSowResponseModel objResponse)
+        {
+            await _iAccountLogic.InsertSowResponse(objResponse);
+        }
+
+        /// <summary>
+        /// Update Sow Response
+        /// </summary>
+        /// <param name="objResponse"></param>
+        /// <returns></returns>
+        [Route("SowResponse")]
+        [HttpPut]
+        public async Task UpdateSowResponse([FromBody] InsertUpdateSowResponseModel objResponse)
+        {
+            await _iAccountLogic.UpdateSowResponse(objResponse);
+        }
+
+        /// <summary>
+        /// Get Sow Response
+        /// </summary>
+        /// <param name="AccountId"></param>
+        /// <returns></returns>
+        [Route("SowResponse")]
+        [HttpGet]
+        public async Task<List<SOWViewModel>> SowResponse(int AccountId, int ProjectId)
+        {
+
+            return await _iAccountLogic.GetAllSowResponse(AccountId,ProjectId);
+        }
+
+        /// <summary>
+        /// Delete SOW Response
+        /// </summary>
+        /// <param name="sowId">sowId</param>
+        /// <returns></returns>
+        [Route("SowResponse")]
+        [HttpDelete]
+        public async Task<IActionResult> DeleteSowResponse(int sowId)
+        {
+            ReturnResponseModel result = new ReturnResponseModel();
+            result = await _iAccountLogic.DeleteSowResponse(sowId);
+            if (result.Status)
+            {
+                return NoContent();
+            }
+            return BadRequest(result);
+        }
+
+        /// <summary>
+        /// Get Sow Response By Id
+        /// </summary>
+        /// <param name="sowId"></param>
+        /// <returns></returns>
+        [Route("GetSowById")]
+        [HttpGet]
+        public async Task<SowDataViewModel> GetSowById(int sowId)
+        {
+            return await _iAccountLogic.GetSowByIdAsync(sowId);
+        }
+        /// <summary>
+        /// insert Account response
+        /// </summary>
+        /// <param name="ObjAccountModel"></param>
+        /// <returns></returns>
+        [Route("InsertAccountResponse")]
+        [HttpPost]
+        public async Task<IActionResult> InsertAccountResponse([FromBody] InsertAccountResponseModel objAccountModel)
+        {
+
+            ReturnResponseModel result = new ReturnResponseModel();
+            if (objAccountModel != null)
+            {
+                result = await _iAccountLogic.InsertAccountResponse(objAccountModel);
+                if (result.Status)
+                {
+                    return Ok(result);
+                }
+            }
+            return BadRequest(result);
+        }
+        /// <summary>
+        /// Update Account response
+        /// </summary>
+        /// <param name="objAccountModel"></param>
+        /// <returns></returns>
+        [Route("UpdateAccountResponse")]
+        [HttpPost]
+        public async Task<IActionResult> UpdateAccountResponse([FromBody] UpdateAccountResponseModel objAccountModel)
+        {
+            ReturnResponseModel result = new ReturnResponseModel();
+            if (objAccountModel != null)
+            {
+                result = await _iAccountLogic.UpdateAccountResponse(objAccountModel);
+                if (result.Status)
+                {
+                    return Ok(result);
+                }
+            }
+            return BadRequest(result);
+        }
+
+        /// <summary>
+        /// Delete Account Response
+        /// </summary>
+        /// <param name="AccountId">document id</param>
+        /// <returns></returns>
+        [Route("DeleteAccountResponse")]
+        [HttpDelete]
+        public async Task<IActionResult> DeleteAccountResponse(int AccountId)
+        {
+            ReturnResponseModel result = new ReturnResponseModel();
+            result = await _iAccountLogic.DeleteAccountResponse(AccountId);
+            if (result.Status)
+            {
+                return NoContent();
+            }
+            return BadRequest(result);
+        }
+
+
         #endregion
     }
 }

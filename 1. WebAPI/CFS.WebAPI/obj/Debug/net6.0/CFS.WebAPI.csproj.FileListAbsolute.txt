@@ -1,0 +1,156 @@
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\appsettings.Development.json
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\appsettings.json
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\CFS.WebAPI.exe
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\CFS.WebAPI.deps.json
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\CFS.WebAPI.runtimeconfig.json
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\CFS.WebAPI.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\CFS.WebAPI.pdb
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\AutoMapper.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Humanizer.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\CFS.BusinessLogic.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\CFS.Data.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\CFS.Model.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\CFS.BusinessLogic.pdb
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\CFS.Model.pdb
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\CFS.Data.pdb
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\CFS.WebAPI.csproj.AssemblyReference.cache
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\CFS.WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\CFS.WebAPI.AssemblyInfoInputs.cache
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\CFS.WebAPI.AssemblyInfo.cs
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\CFS.WebAPI.csproj.CoreCompileInputs.cache
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\CFS.WebAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\CFS.WebAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\CFS.WebAPI.sourcelink.json
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\staticwebassets.build.json
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\staticwebassets.development.json
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\staticwebassets\msbuild.CFS.WebAPI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\staticwebassets\msbuild.build.CFS.WebAPI.props
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.CFS.WebAPI.props
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.CFS.WebAPI.props
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\scopedcss\bundle\CFS.WebAPI.styles.css
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\CFS.WebAPI.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\refint\CFS.WebAPI.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\CFS.WebAPI.pdb
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\CFS.WebAPI.genruntimeconfig.cache
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\ref\CFS.WebAPI.dll
+C:\Complaince Fw\Projects\FW_PR\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\CFS.WebAPI.csproj.Up2Date
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\appsettings.json
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\CFS.WebAPI.exe
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\CFS.WebAPI.deps.json
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\CFS.WebAPI.runtimeconfig.json
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\CFS.WebAPI.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\CFS.WebAPI.pdb
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Humanizer.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\CFS.BusinessLogic.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\CFS.Data.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\CFS.Model.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\CFS.BusinessLogic.pdb
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\CFS.Model.pdb
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\bin\Debug\net6.0\CFS.Data.pdb
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\CFS.WebAPI.csproj.AssemblyReference.cache
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\CFS.WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\CFS.WebAPI.AssemblyInfoInputs.cache
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\CFS.WebAPI.AssemblyInfo.cs
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\CFS.WebAPI.csproj.CoreCompileInputs.cache
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\CFS.WebAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\CFS.WebAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\CFS.WebAPI.sourcelink.json
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\staticwebassets\msbuild.CFS.WebAPI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\staticwebassets\msbuild.build.CFS.WebAPI.props
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.CFS.WebAPI.props
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.CFS.WebAPI.props
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\scopedcss\bundle\CFS.WebAPI.styles.css
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\CFS.WebAPI.csproj.Up2Date
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\CFS.WebAPI.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\refint\CFS.WebAPI.dll
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\CFS.WebAPI.pdb
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\CFS.WebAPI.genruntimeconfig.cache
+C:\Users\dnarvekar\OneDrive - AArete, LLC\Documents\docker .net\ComplianceFramework\1. WebAPI\CFS.WebAPI\obj\Debug\net6.0\ref\CFS.WebAPI.dll

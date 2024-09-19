@@ -1,0 +1,1272 @@
+[
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "DeleteAccountResponse",
+    "RelativePath": "api/v1/Account/DeleteAccountResponse",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AccountId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "DeleteProjectResponse",
+    "RelativePath": "api/v1/Account/DeleteProjectResponse",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "projectId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "DeleteSowQuestionResponse",
+    "RelativePath": "api/v1/Account/DeleteSowQuestionResponse",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ArtefactId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "DeleteSprintInformationAsync",
+    "RelativePath": "api/v1/Account/DeleteSprintInformation",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sprintId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "DeleteSprintQuestionResponse",
+    "RelativePath": "api/v1/Account/DeleteSprintQuestionResponse",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ArtefactId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "DownloadArtefact",
+    "RelativePath": "api/v1/Account/DownloadArtefact",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ArtefactId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "GetAgileQuestionList",
+    "RelativePath": "api/v1/Account/GetAgileQuestions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ComplianceTypeId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProjectId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "AccountId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SowId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "StageId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SprintId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CFS.Model.Models.AgileQuestionViewModel, CFS.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "GetAccountResponseList",
+    "RelativePath": "api/v1/Account/GetAllAccountResponse",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CFS.Model.Models.AccountResponseViewModel, CFS.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "GetAccountList",
+    "RelativePath": "api/v1/Account/GetAllAccounts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CFS.Model.Models.AccountListViewModel, CFS.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "GetComplianceTypeList",
+    "RelativePath": "api/v1/Account/GetAllComplianceTypes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "StageId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CFS.Model.Models.ComplianceTypeViewModel, CFS.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "ProjectDomainList",
+    "RelativePath": "api/v1/Account/GetAllProjectDomainList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CFS.Model.Models.ProjectDomainViewModel, CFS.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "GetProjectList",
+    "RelativePath": "api/v1/Account/GetAllProjectList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AccountId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CFS.Model.Models.ProjectViewModel, CFS.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "GetAllProjectResponse",
+    "RelativePath": "api/v1/Account/GetAllProjectResponse",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AccountId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CFS.Model.Models.ProjectViewModel, CFS.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "GetQuestionList",
+    "RelativePath": "api/v1/Account/GetAllQuestionList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "StageId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ComplianceTypeId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CFS.Model.Models.QuestionListViewModel, CFS.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "GetSOWList",
+    "RelativePath": "api/v1/Account/GetAllSOWList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProjectId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "AccountId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CFS.Model.Models.SOWViewModel, CFS.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "GetSprintList",
+    "RelativePath": "api/v1/Account/GetAllSprints",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "SowId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CFS.Model.Models.SprintViewModel, CFS.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "GetStageList",
+    "RelativePath": "api/v1/Account/GetAllStageList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CFS.Model.Models.StageViewModel, CFS.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "GetProjectKickStartQuestionList",
+    "RelativePath": "api/v1/Account/GetProjectKickStartQuestions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ComplianceTypeId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProjectId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "AccountId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SowId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "StageId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CFS.Model.Models.ProjectKickStartQuestionViewModel, CFS.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "GetSowById",
+    "RelativePath": "api/v1/Account/GetSowById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sowId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CFS.Model.Models.SowDataViewModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "GetSprintById",
+    "RelativePath": "api/v1/Account/GetSprintById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sprintId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "GetSprintInformationAsync",
+    "RelativePath": "api/v1/Account/GetSprintInformation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sowId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "projectId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "InsertAccountResponse",
+    "RelativePath": "api/v1/Account/InsertAccountResponse",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objAccountModel",
+        "Type": "CFS.Model.Models.InsertAccountResponseModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "InsertProjectResponse",
+    "RelativePath": "api/v1/Account/InsertProjectResponse",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objprojectModel",
+        "Type": "CFS.Model.Models.InsertProjectResponseModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "InsertSOWKickStartQuestion",
+    "RelativePath": "api/v1/Account/InsertSOWKickStartQuestion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "SowQuestion",
+        "Type": "CFS.Model.Models.InsertQuestion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "InsertSprintDetails",
+    "RelativePath": "api/v1/Account/InsertSprintDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objsprintModel",
+        "Type": "CFS.Model.Models.SprintModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "InsertSprintKickStartQuestion",
+    "RelativePath": "api/v1/Account/InsertSprintKickStartQuestion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "SprintQuestion",
+        "Type": "CFS.Model.Models.InsertQuestion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "SaveAgileQuestionResponse",
+    "RelativePath": "api/v1/Account/SaveAgileQuestionResponse",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CFS.Model.Models.SaveAgileQuestionResponse",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CFS.Model.Models.ReturnResponseModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "SaveSowQuestionResponse",
+    "RelativePath": "api/v1/Account/SaveSowQuestionResponse",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CFS.Model.Models.SaveSowQuestionResponse",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CFS.Model.Models.ReturnResponseModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "GetMasterList",
+    "RelativePath": "api/v1/Account/SelectList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Entity",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CFS.Model.Models.SelectListViewModel, CFS.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "InsertSowResponse",
+    "RelativePath": "api/v1/Account/SowResponse",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objResponse",
+        "Type": "CFS.Model.Models.InsertUpdateSowResponseModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "UpdateSowResponse",
+    "RelativePath": "api/v1/Account/SowResponse",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objResponse",
+        "Type": "CFS.Model.Models.InsertUpdateSowResponseModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "SowResponse",
+    "RelativePath": "api/v1/Account/SowResponse",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AccountId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProjectId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CFS.Model.Models.SOWViewModel, CFS.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "DeleteSowResponse",
+    "RelativePath": "api/v1/Account/SowResponse",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sowId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "UpdateAccountResponse",
+    "RelativePath": "api/v1/Account/UpdateAccountResponse",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objAccountModel",
+        "Type": "CFS.Model.Models.UpdateAccountResponseModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "UpdateProjectResponse",
+    "RelativePath": "api/v1/Account/UpdateProjectResponse",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objprojectModel",
+        "Type": "CFS.Model.Models.UpdateProjectResponseModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.AccountController",
+    "Method": "UpdateSprintDetails",
+    "RelativePath": "api/v1/Account/UpdateSprintDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objsprintModel",
+        "Type": "CFS.Model.Models.SprintModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.EmpMonthlyHoursController",
+    "Method": "GetEmployeeMonthlyHours",
+    "RelativePath": "api/v1/EmpMonthlyHours/GetEmployeeMonthlyHours",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "EmployeeId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CFS.Model.Models.EmpMonthlyHoursViewModel, CFS.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.EmpMonthlyHoursController",
+    "Method": "GetMonths",
+    "RelativePath": "api/v1/EmpMonthlyHours/GetMonths",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CFS.Model.Models.GetMonthsModel, CFS.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.EmpMonthlyHoursController",
+    "Method": "GetYears",
+    "RelativePath": "api/v1/EmpMonthlyHours/GetYears",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CFS.Model.Models.GetYearsModel, CFS.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.EmpMonthlyHoursController",
+    "Method": "InsertEmpMonthlyHours",
+    "RelativePath": "api/v1/EmpMonthlyHours/InsertEmpMonthlyHours",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objEmpMonthlyHoursModel",
+        "Type": "CFS.Model.Models.InsertEmpMonthlyHoursResponseModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.EmpMonthlyHoursController",
+    "Method": "InsertHolidayList",
+    "RelativePath": "api/v1/EmpMonthlyHours/InsertHolidayList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objHolidayListModel",
+        "Type": "System.Collections.Generic.List\u00601[[CFS.Model.Models.InsertHolidayListModel, CFS.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.EmpMonthlyHoursController",
+    "Method": "InsertTimesheetExport",
+    "RelativePath": "api/v1/EmpMonthlyHours/InsertTimesheetExport",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "insertTimesheetExportObj",
+        "Type": "System.Collections.Generic.List\u00601[[CFS.Model.Models.InsertTimesheetExportModel, CFS.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      },
+      {
+        "Name": "Year",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Month",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.ProjectAllocationController",
+    "Method": "DeleteAccountManagerMap",
+    "RelativePath": "api/v1/ProjectAllocation/DeleteAccountManagerMap",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "accountManagerMapId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.ProjectAllocationController",
+    "Method": "DeleteEmployeeDetail",
+    "RelativePath": "api/v1/ProjectAllocation/DeleteEmployeeDetail",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "employeeId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.ProjectAllocationController",
+    "Method": "DeleteProjectAllocation",
+    "RelativePath": "api/v1/ProjectAllocation/DeleteProjectAllocation",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProjectAllocationsId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.ProjectAllocationController",
+    "Method": "GetAccountListOnProjectManagerAsync",
+    "RelativePath": "api/v1/ProjectAllocation/GetAccountListOnProjectManager",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "managerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CFS.Model.Models.ProjectAccountManagerViewModel, CFS.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.ProjectAllocationController",
+    "Method": "GetAccountManagerMapAsync",
+    "RelativePath": "api/v1/ProjectAllocation/GetAccountManagerMap",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "projectId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sowId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "accountId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.ProjectAllocationController",
+    "Method": "GetBillabilityandUtilizationAsync",
+    "RelativePath": "api/v1/ProjectAllocation/GetBillabilityandUtilization",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "utilizationRequest",
+        "Type": "BillabilityandUtilizationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.ProjectAllocationController",
+    "Method": "GetBillabilityandUtilizationTest",
+    "RelativePath": "api/v1/ProjectAllocation/GetBillabilityandUtilizationTest",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "utilizationRequest",
+        "Type": "BillabilityandUtilizationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.ProjectAllocationController",
+    "Method": "GetEmployeeBillabilityAsync",
+    "RelativePath": "api/v1/ProjectAllocation/GetEmployeeBillability",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "employeeId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.ProjectAllocationController",
+    "Method": "GetEmployeeDetailAsync",
+    "RelativePath": "api/v1/ProjectAllocation/GetEmployeeDetail/{employeeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "employeeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.ProjectAllocationController",
+    "Method": "GetProjectAllocationAsync",
+    "RelativePath": "api/v1/ProjectAllocation/GetProjectAllocation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "managerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "projectId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sowId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "accountId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.ProjectAllocationController",
+    "Method": "InsertAccountManagerMap",
+    "RelativePath": "api/v1/ProjectAllocation/InsertAccountManagerMap",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "accountManager",
+        "Type": "CFS.Model.Models.InsertAccountManager",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.ProjectAllocationController",
+    "Method": "InsertEmployeeDetail",
+    "RelativePath": "api/v1/ProjectAllocation/InsertEmployeeDetail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "employee",
+        "Type": "InsertEmployeeDetailsModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.ProjectAllocationController",
+    "Method": "InsertProjectAllocation",
+    "RelativePath": "api/v1/ProjectAllocation/InsertProjectAllocation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "projectAllocation",
+        "Type": "CFS.Model.Models.InsertProjectAllocation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.ProjectAllocationController",
+    "Method": "UpdateAccountManagerMap",
+    "RelativePath": "api/v1/ProjectAllocation/UpdateAccountManagerMap",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "accountManager",
+        "Type": "CFS.Model.Models.InsertAccountManager",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.ProjectAllocationController",
+    "Method": "UpdateEmployeeDetail",
+    "RelativePath": "api/v1/ProjectAllocation/UpdateEmployeeDetail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "employee",
+        "Type": "CFS.Model.Models.UpdateEmployeeDetailsModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.ProjectAllocationController",
+    "Method": "UpdateProjectAllocation",
+    "RelativePath": "api/v1/ProjectAllocation/UpdateProjectAllocation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "projectAllocation",
+        "Type": "CFS.Model.Models.UpdateProjectAllocation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CFS.WebAPI.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[CFS.WebAPI.WeatherForecast, CFS.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

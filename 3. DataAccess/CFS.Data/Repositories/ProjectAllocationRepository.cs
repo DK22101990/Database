@@ -1,12 +1,14 @@
 ﻿using CFS.Data.Context;
 using CFS.Data.Domains;
 using CFS.Data.IRepositories;
+using CFS.Data.Models;
 using CFS.Model.Constants;
 using CFS.Model.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -46,19 +48,34 @@ namespace CFS.Data.Repositories
         /// </summary>
         /// <param name="projectAllocation"></param>
         /// <returns></returns>
-        public async Task InsertProjectAllocation(InsertProjectAllocation projectAllocation)
+        public async Task<ReturnResponseModel> InsertProjectAllocation(InsertProjectAllocation projectAllocation)
         {
-            var commandText = string.Format(StoreProcedure.InsertProjectAllocation,
+            try
+            {
+                var commandText = string.Format(StoreProcedure.InsertProjectAllocation,
                 projectAllocation.EmployeeId,
+                projectAllocation.ManagerId,
                 projectAllocation.ProjectId,
                 projectAllocation.SowId,
                 projectAllocation.AccountId,
-                projectAllocation.StartDate,
-                projectAllocation.EndDate,
+                projectAllocation.ProjectOnBoardingDate,
+                projectAllocation.ProjectOffBoardingDate,
+                projectAllocation.SowHourlyRate,
+                projectAllocation.UtilizationStatus,
                 projectAllocation.Billability,
-                projectAllocation.AllocationType);
-            await Context.Database.ExecuteSqlRawAsync(commandText);
+                projectAllocation.AllocationType,
+                projectAllocation.AllocatedUtilization,
+                projectAllocation.AllocatedBillability,
+                projectAllocation.Comments);
+                await Context.Database.ExecuteSqlRawAsync(commandText);
+                return new ReturnResponseModel { Status = true };
+            }
+            catch (Exception)
+            {
+                return new ReturnResponseModel { Status = false };
+            }
         }
+
 
         /// <summary>
         /// Update Account Manager Map
@@ -80,19 +97,37 @@ namespace CFS.Data.Repositories
         /// </summary>
         /// <param name="projectAllocation"></param>
         /// <returns></returns>
-        public async Task UpdateProjectAllocation(InsertProjectAllocation projectAllocation)
+        public async Task<ReturnResponseModel> UpdateProjectAllocation(UpdateProjectAllocation projectAllocation)
         {
-            var commandText = string.Format(StoreProcedure.UpdateProjectAllocation,
+            try
+            {
+                var commandText = string.Format(StoreProcedure.UpdateProjectAllocation,
+
                 projectAllocation.EmployeeId,
+                projectAllocation.ProjectAllocationId,
                 projectAllocation.ProjectId,
                 projectAllocation.SowId,
                 projectAllocation.AccountId,
-                projectAllocation.StartDate,
-                projectAllocation.EndDate,
+                projectAllocation.ProjectOnBoardingDate,
+                projectAllocation.ProjectOffBoardingDate,
+                projectAllocation.SowHourlyRate,
+                projectAllocation.UtilizationStatus,
                 projectAllocation.Billability,
-                projectAllocation.AllocationType);
-            await Context.Database.ExecuteSqlRawAsync(commandText);
+                projectAllocation.AllocationType,
+                projectAllocation.AllocatedUtilization,
+                projectAllocation.AllocatedBillability,
+                projectAllocation.isactive,
+                projectAllocation.Comments);
+                await Context.Database.ExecuteSqlRawAsync(commandText);
+
+                return new ReturnResponseModel { Status = true };
+            }
+            catch (Exception)
+            {
+                return new ReturnResponseModel { Status = false };
+            }
         }
+
 
         /// <summary>
         /// Delete Account Manager
@@ -108,11 +143,11 @@ namespace CFS.Data.Repositories
         /// <summary>
         /// Delete Project Allocation
         /// </summary>
-        /// <param name="AccountId"></param>
+        /// <param name="ProjectAllocationsId"></param>
         /// <returns></returns>
-        public async Task DeleteProjectAllocation(int AccountId)
+        public async Task DeleteProjectAllocation(int ProjectAllocationsId)
         {
-            var commandText = string.Format(StoreProcedure.DeleteProjectAllocation, AccountId);
+            var commandText = string.Format(StoreProcedure.DeleteProjectAllocation, ProjectAllocationsId);
             await Context.Database.ExecuteSqlRawAsync(commandText);
         }
 
@@ -132,17 +167,19 @@ namespace CFS.Data.Repositories
         /// <summary>
         /// Get Project Allocation
         /// </summary>
-        /// <param name="employeeId"></param>
+        /// <param name="managerId"></param>
         /// <param name="projectId"></param>
         /// <param name="sowId"></param>
         /// <param name="accountId"></param>
         /// <returns></returns>
-        public async Task<List<ProjectAllocationList>> GetProjectAllocationAsync(int employeeId, int projectId, int sowId, int accountId)
+        public async Task<List<ProjectAllocationList>> GetProjectAllocationAsync(int managerId, int projectId, int sowId, int accountId)
         {
-            var commandText = string.Format(StoreProcedure.GetProjectAllocation, employeeId, projectId, sowId, accountId);
+            var commandText = string.Format(StoreProcedure.GetProjectAllocation, managerId, projectId, sowId, accountId);
             return await Context.GetProjectAllocationList.FromSqlRaw<ProjectAllocationList>(commandText).ToListAsync();
         }
 
+
+       
         /// <summary>
         /// Get Employee Billability
         /// </summary>
@@ -169,7 +206,7 @@ namespace CFS.Data.Repositories
         /// </summary>
         /// <param name="employee"></param>
         /// <returns></returns>
-        public async Task InsertEmployeeDetailAsync(EmployeeDetailsModel employee)
+        public async Task InsertEmployeeDetailAsync(InsertEmployeeDetailsModel employee)
         {
             var commandText = string.Format(StoreProcedure.InsertEmployeeDetail,
                 employee.Firstname,
@@ -181,7 +218,9 @@ namespace CFS.Data.Repositories
                 employee.DepartmentId,
                 employee.Email,
                 employee.PhoneNumber,
-                employee.HireDate,
+                employee.DateOfJoining,
+                employee.PositionHiredFor,
+                employee.Title,
                 employee.ExitDate,
                 employee.PrimarySkill,
                 employee.SecondarySkill);
@@ -193,7 +232,7 @@ namespace CFS.Data.Repositories
         /// </summary>
         /// <param name="employee"></param>
         /// <returns></returns>
-        public async Task UpdateEmployeeDetailAsync(EmployeeDetailsModel employee)
+        public async Task UpdateEmployeeDetailAsync(UpdateEmployeeDetailsModel employee)
         {
             var commandText = string.Format(StoreProcedure.UpdateEmployeeDetail,
                 employee.EmployeeId,
@@ -206,7 +245,9 @@ namespace CFS.Data.Repositories
                 employee.DepartmentId,
                 employee.Email,
                 employee.PhoneNumber,
-                employee.HireDate,
+                employee.DateOfJoining,
+                employee.PositionHiredFor,
+                employee.Title,
                 employee.ExitDate,
                 employee.PrimarySkill,
                 employee.SecondarySkill);
@@ -223,6 +264,32 @@ namespace CFS.Data.Repositories
             var commandText = string.Format(StoreProcedure.DeleteEmployeeDetail, employeeId);
             await Context.Database.ExecuteSqlRawAsync(commandText);
         }
+
+        /// <summary>
+        /// Get Accounts Project Manager List
+        /// </summary>
+        /// <param name="managerId"></param>
+        /// <returns></returns>
+        public async Task<List<ProjectAccountManagerList>> GetAccountListOnProjectManagerAsync(int managerId)
+        {
+            var commandText = string.Format(StoreProcedure.GetAccountListOnProjectManager, managerId);
+            return await Context.GetAccountListOnProjectManager.FromSqlRaw<ProjectAccountManagerList>(commandText).ToListAsync();
+        }
+
+        /// <summary>
+        /// Get Billability and Utilization
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <returns></returns>
+        public async Task<List<BilllabilityandUtilizationList>> GetBillabilityandUtilizationAsync(BillabilityandUtilizationRequest request)
+        {
+            var commandText = string.Format(StoreProcedure.GetBillabilityandUtilization, request.EmployeeId, request.IsEditable, request.ProjectId,
+                        request.SowId, request.ProjectAllocationsId,request.AllocatedBillability, request.AllocatedUtilization, request.StartDate, request.EndDate);
+            return await Context.GetBillabilityandUtilization.FromSqlRaw<BilllabilityandUtilizationList>(commandText).ToListAsync();
+        }
+
         #endregion
+
     }
+
 }
